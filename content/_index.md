@@ -1,4 +1,4 @@
 ---
 title: My First Page
 ---
-Foo Bar
+Foo Bar Baz

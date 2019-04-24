@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/ccnmtl/histologylab-static.git"
+    "url": "git://github.com/ccnmtl/ohcoe-hugo.git"
   },
   "author": "Center for Teaching and Learning, Columbia University",
   "license": "BSD-2-Clause",

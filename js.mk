@@ -16,7 +16,7 @@
 #
 # Using quotes here will cause eslint to ignore this argument.
 #
-JS_FILES ?= themes/ctl-histologylab/static/js/src
+JS_FILES ?= themes/ohcoe/static/js/src
 
 NODE_MODULES ?= ./node_modules
 JS_SENTINAL ?= $(NODE_MODULES)/sentinal
@@ -32,5 +32,8 @@ eslint: $(JS_SENTINAL)
 
 jstest: $(JS_SENTINAL)
 	npm test
+
+build-scss: $(JS_SENTINAL)
+	npm run build-scss
 
 .PHONY: eslint jstest

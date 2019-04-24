@@ -1,0 +1,11 @@
+public
+.DS_Store
+._.DS_Store
+._*
+node_modules
+scratch/
+.ropeproject
+*.pyc
+ve/
+scrape/histology/content/
+local.mk

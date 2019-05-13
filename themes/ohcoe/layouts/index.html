@@ -3,8 +3,18 @@
     {{ partial "head.html" }}
     <body>
         {{ partial "nav.html" }}
-        <h1>Index Template</h1>
-        {{ partial "main.html" }}
+        <main>
+            <div class="container">
+                <h1>Index Template</h1>
+                <h1>{{ .Title }}</h1>
+                {{ .Content }}
+            </div>
+        </main>
     </body>
     {{ partial "footer.html" }}
+    <div class="container">
+        <code>
+            {{ printf "%#v" .  }} 
+        </code>
+    </div>
 </html>

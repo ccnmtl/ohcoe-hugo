@@ -3,6 +3,7 @@ title: Pre-Assessment
 date: 2019-05-13
 layout: learning-objective-pre-assessment
 type: learning-objective-pre-assessment
+weight: 1
 ---
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
 tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At

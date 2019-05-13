@@ -1,5 +1,5 @@
 ---
-title: Demonstrate Awareness of Different Opioid Risk Assessment and Drug Monitoring Tools That Help to Identify At-Risk Patients 
+title: Screen for substance disorders and patients at risk in the dental setting 
 date: 2019-05-13
 layout: learning-objective
 type: learning-objective

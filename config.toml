@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://ohcoe.ctl.columbia.edu"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Oral Health Care in the Opioid Crisis"
 theme = "ohcoe"

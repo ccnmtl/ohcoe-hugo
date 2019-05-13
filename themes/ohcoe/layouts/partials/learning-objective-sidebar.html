@@ -1,0 +1,12 @@
+<nav>
+    <ul>
+        {{ range .Parent.Parent.Sections.ByWeight  }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        <ul>
+            {{ range .Pages.ByWeight }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ul>
+        {{ end }}
+    </ul>
+</nav>

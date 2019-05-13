@@ -2,19 +2,41 @@
 <html lang="en">
     {{ partial "head.html" }}
     <body>
-        {{ partial "nav.html" }}
-        <main>
-            <div class="container">
-                <h1>Domain Template</h1>
-                <h1>{{ .Title }}</h1>
-                {{ .Content }}
+        {{ partial "nav.html" . }}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{{ .Title }}</h1>
+                </div>
             </div>
-        </main>
+            <div class="row">
+                <div class="col-md-9">
+                    <main>
+                        {{ .Content }}
+                    </main>
+                </div>
+                <div class="col-md-3">
+                    <nav>
+                        <ul>
+                        {{ range .Sections.ByWeight  }}
+                        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                            <ul>
+                            {{ range .Pages }}
+                            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                            {{ end }}
+                            </ul>
+                        {{ end }}
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
     </body>
-    {{ partial "footer.html" }}
+    {{ partial "footer.html" . }}
     <div class="container">
         <code>
-            {{ printf "%#v" .  }} 
+            {{ .CurrentSection  }} 
+            {{ printf "%#v" .CurrentSection  }} 
         </code>
     </div>
 </html>

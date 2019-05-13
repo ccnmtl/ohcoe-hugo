@@ -3,13 +3,23 @@
     {{ partial "head.html" }}
     <body>
         {{ partial "nav.html" }}
-        <main>
-            <div class="container">
-                <h1>Learning Objective Video Template</h1>
-                <h1>{{ .Title }}</h1>
-                {{ .Content }}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{{ .Title }}</h1>
+                </div>
             </div>
-        </main>
+            <div class="row">
+                <div class="col-md-9">
+                    <main>
+                        {{ .Content }}
+                    </main>
+                </div>
+                <div class="col-md-3">
+                    {{ partial "learning-objective-sidebar.html" . }}
+                </div>
+            </div>
+        </div>
     </body>
     {{ partial "footer.html" }}
     <div class="container">

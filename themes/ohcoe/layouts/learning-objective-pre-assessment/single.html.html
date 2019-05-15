@@ -2,19 +2,36 @@
 <html lang="en">
     {{ partial "head.html" }}
     <body>
-        {{ partial "nav.html" }}
-        <main>
-            <div class="container">
-                <h1>Learning Objective Pre-Assessment Template</h1>
-                <h1>{{ .Title }}</h1>
-                {{ .Content }}
+        {{ partial "nav.html" . }}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{{ .Title }}</h1>
+                </div>
             </div>
-        </main>
+            <div class="row">
+                <div class="col-md-9">
+                    <main>
+                        {{ .Content }}
+                    </main>
+                </div>
+                <div class="col-md-3">
+                    {{ partial "learning-objective-sidebar.html" . }}
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-2">
+                {{ range first 1 (where .Parent.Pages "Type" "learning-objective-video") }}   
+                <a class="btn btn-primary btn-lg" href="{{.Permalink }}">{{ .Title }} -></a>
+                {{ end }}
+                </div>
+            </div>
+        </div>
     </body>
     {{ partial "footer.html" }}
     <div class="container">
         <code>
-            {{ printf "%#v" .  }} 
+            {{ printf "%#v" .Parent.Pages }} 
         </code>
     </div>
 </html>

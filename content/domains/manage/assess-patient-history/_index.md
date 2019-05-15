@@ -1,9 +1,9 @@
 ---
-title: Demonstrate Awareness of Different Opioid Risk Assessment and Drug Monitoring Tools That Help to Identify At-Risk Patients 
+title: Assess a patient’s current and past drug use history to determine treatment options 
 date: 2019-05-13
 layout: learning-objective
 type: learning-objective
-weight: 1
+weight: 2
 ---
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
 tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At

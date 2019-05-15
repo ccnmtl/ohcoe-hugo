@@ -1,5 +1,5 @@
 ---
-title: Demonstrate Awareness of Different Opioid Risk Assessment and Drug Monitoring Tools That Help to Identify At-Risk Patients 
+title: Identify appropriate and/or alternative pain management methods 
 date: 2019-05-13
 layout: learning-objective
 type: learning-objective

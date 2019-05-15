@@ -3,7 +3,7 @@ title: Demonstrate Awareness of Different Opioid Risk Assessment and Drug Monito
 date: 2019-05-13
 layout: learning-objective
 type: learning-objective
-weight: 1
+weight: 2
 ---
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
 tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At

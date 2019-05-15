@@ -2,19 +2,47 @@
 <html lang="en">
     {{ partial "head.html" }}
     <body>
-        {{ partial "nav.html" }}
-        <main>
-            <div class="container">
-                <h1>Learning Objective Template</h1>
-                <h1>{{ .Title }}</h1>
-                {{ .Content }}
+        {{ partial "nav.html" . }}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{{ .Title }}</h1>
+                </div>
             </div>
-        </main>
+            <div class="row">
+                <div class="col-md-9">
+                    <main>
+                        {{ .Content }}
+                    </main>
+                </div>
+                <div class="col-md-3">
+                    <nav>
+                        <ul>
+                        {{ range .Parent.Sections.ByWeight  }}
+                        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                            <ul>
+                            {{ range .Pages }}
+                            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                            {{ end }}
+                            </ul>
+                        {{ end }}
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-4">
+                {{ range first 1 (where .Pages "Type" "learning-objective-pre-assessment") }}   
+                <a class="btn btn-primary btn-lg" href="{{.Permalink }}">{{ .Title }} -></a>
+                {{ end }}
+                </div>
+            </div>
+        </div>
     </body>
     {{ partial "footer.html" }}
     <div class="container">
         <code>
-            {{ printf "%#v" .  }} 
+            {{ printf "%#v" .Pages  }} 
         </code>
     </div>
 </html>

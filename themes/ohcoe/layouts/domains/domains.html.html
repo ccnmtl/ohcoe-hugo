@@ -30,13 +30,19 @@
                     </nav>
                 </div>
             </div>
+            <div class="row justify-content-center">
+                <div class="col-2">
+                {{ range first 1 .Sections.ByWeight}}   
+                <a class="btn btn-primary btn-lg" href="{{.Permalink }}">{{ .Title }} -></a>
+                {{ end }}
+                </div>
+            </div>
         </div>
     </body>
     {{ partial "footer.html" . }}
     <div class="container">
         <code>
-            {{ .CurrentSection  }} 
-            {{ printf "%#v" .CurrentSection  }} 
+            {{ printf "%#v" .Sections }} 
         </code>
     </div>
 </html>

@@ -19,6 +19,13 @@
                     {{ partial "learning-objective-sidebar.html" . }}
                 </div>
             </div>
+            <div class="row justify-content-center">
+                <div class="col-4">
+                {{ range first 1 (where .Parent.Pages "Type" "learning-objective-post-assessment") }}   
+                <a class="btn btn-primary btn-lg" href="{{.Permalink }}">{{ .Title }} -></a>
+                {{ end }}
+                </div>
+            </div>
         </div>
     </body>
     {{ partial "footer.html" }}

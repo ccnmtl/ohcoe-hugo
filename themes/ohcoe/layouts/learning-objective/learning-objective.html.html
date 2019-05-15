@@ -30,12 +30,19 @@
                     </nav>
                 </div>
             </div>
+            <div class="row justify-content-center">
+                <div class="col-4">
+                {{ range first 1 (where .Pages "Type" "learning-objective-pre-assessment") }}   
+                <a class="btn btn-primary btn-lg" href="{{.Permalink }}">{{ .Title }} -></a>
+                {{ end }}
+                </div>
+            </div>
         </div>
     </body>
     {{ partial "footer.html" }}
     <div class="container">
         <code>
-            {{ printf "%#v" .  }} 
+            {{ printf "%#v" .Pages  }} 
         </code>
     </div>
 </html>

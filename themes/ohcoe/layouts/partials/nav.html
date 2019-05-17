@@ -9,9 +9,8 @@
                 {{ $currentPage := .  }}
                 {{ range .Site.Menus.main }}
                 <li class="nav-item">
-                    <a class="nav-link{{ if (or (or ($currentPage.IsMenuCurrent "main" .) ($currentPage.Parent.IsMenuCurrent "main" .)) ($currentPage.Parent.Parent.IsMenuCurrent "main" .)) }} active{{ end  }}" href="{{ .URL }}">{{ .Name }}</a>
+                    <a class="nav-link{{ if (or ($currentPage.IsMenuCurrent "main" .) ($currentPage.Parent.IsMenuCurrent "main" .)) }} active{{ end  }}" href="{{ .URL }}">{{ .Name }}</a>
                 </li>
-                {{ .Parent }}
                 {{ end }}
             </ul>
         </div>

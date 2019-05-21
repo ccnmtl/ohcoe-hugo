@@ -9,4 +9,7 @@ all: eslint
 
 include *.mk
 
+clean:
+	-rm -rf public
+
 .PHONY: clean

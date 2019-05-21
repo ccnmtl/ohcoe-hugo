@@ -19,6 +19,7 @@
                 <div class="col-md-3">
                     <nav>
                         <ul>
+                        <li>{{ .Title }}</li>
                         {{ range .Sections.ByWeight  }}
                         <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
                             <ul>

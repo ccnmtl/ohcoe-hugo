@@ -23,23 +23,9 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-4">
-                {{ $parentWeight := .Parent.Weight }}
-                {{ $grandParentWeight := .Parent.Parent.Weight }}
-                {{ if lt $parentWeight 3 }}
-                    {{ range first 1 (where .Parent.Parent.Sections.ByWeight "Weight" "gt" $parentWeight) }}   
-                    <p>Proceed to next learning objective</p>
-                    <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Next</a>
-                    {{ end }}
-                {{ else }}
-                    {{ if lt $grandParentWeight 3 }}
-                        {{ range first 1 (where .Parent.Parent.Parent.Sections.ByWeight "Weight" "gt" $grandParentWeight) }}   
-                        <p>See your results</p>
-                        <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Next</a>
-                        {{ end }}
-                    {{ else }}
-                        <p>See your cumalative results</p>
-                        <a class="btn btn-primary btn-lg" href="#">Next</a>
-                    {{ end }}
+                {{ range first 1 (where .Parent.Parent.Sections "Type" "review") }}   
+                <p>Review your knowledge</p>
+                <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Next</a>
                 {{ end }}
                 </div>
             </div>

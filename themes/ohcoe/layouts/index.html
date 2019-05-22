@@ -2,8 +2,9 @@
 <html lang="en">
     {{ partial "head.html" }}
     <body>
+        {{ partial "skip.html" }}
         {{ partial "nav.html" }}
-        <main>
+        <main id="content">
             <div class="container">
                 <h1>Index Template</h1>
                 <h1>{{ .Title }}</h1>

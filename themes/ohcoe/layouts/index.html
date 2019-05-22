@@ -3,7 +3,7 @@
     {{ partial "head.html" }}
     <body>
         {{ partial "skip.html" }}
-        {{ partial "nav.html" }}
+        {{ partial "nav.html" . }}
         <main id="content">
             <div class="container">
                 <h1>Index Template</h1>
@@ -15,7 +15,7 @@
     {{ partial "footer.html" }}
     <div class="container">
         <code>
-            {{ printf "%#v" .  }} 
+            {{ printf "%#v" .Pages  }} 
         </code>
     </div>
 </html>

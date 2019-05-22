@@ -2,10 +2,11 @@
 <html lang="en">
     {{ partial "head.html" }}
     <body>
+        {{ partial "skip.html" }}
         {{ partial "nav.html" . }}
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div id="content" class="col-md-12">
                     <div class="domain-title"><span>Domain: {{ .Parent.Title }}</span></div>
                     <h1>Domain Review: {{ .Title }}</h1>
                 </div>

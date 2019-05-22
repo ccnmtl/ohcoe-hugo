@@ -24,7 +24,7 @@
             <div class="row justify-content-center">
                 <div class="col-4">
                 {{ range first 1 (where .Parent.Pages "Type" "learning-objective-post-assessment") }}   
-                <p>Gauge your new understadning</p>
+                <p>Gauge your new understanding</p>
                 <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Next</a>
                 {{ end }}
                 </div>

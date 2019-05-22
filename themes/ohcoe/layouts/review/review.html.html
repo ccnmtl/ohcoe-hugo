@@ -34,16 +34,17 @@
                 </div>
                 <div class="col-md-3">
                     <nav aria-labelledby="knowledge-domain-navigation">
-                        <ul id="knowledge-domain-navigation">
-                        <li><a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a></li>
-                        {{ range .Parent.Sections.ByWeight  }}
-                        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-                            <ul>
-                            {{ range .Pages }}
+                        <div id="knowledge-domain-navigation" class="sr-only">{{ .Parent.Title }} Domain Navigation</div>
+                        <ul>
+                            <li><a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a></li>
+                            {{ range .Parent.Sections.ByWeight  }}
                             <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-                            {{ end }}
+                            <ul>
+                                {{ range .Pages }}
+                                <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                                {{ end }}
                             </ul>
-                        {{ end }}
+                            {{ end }}
                         </ul>
                     </nav>
                 </div>

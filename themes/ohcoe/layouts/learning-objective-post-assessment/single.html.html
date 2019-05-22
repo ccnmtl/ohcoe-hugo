@@ -17,17 +17,17 @@
                     <main>
                         {{ .Content }}
                     </main>
+                    <nav class="row justify-content-center" aria-labelledby="lateral-navigation">
+                        <div id="lateral-navigation" class="col-4">
+                            {{ range first 1 (where .Parent.Parent.Sections "Type" "review") }}   
+                            <p>Review your knowledge</p>
+                            <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Next</a>
+                            {{ end }}
+                        </div>
+                    </nav>
                 </div>
                 <div class="col-md-3">
                     {{ partial "learning-objective-sidebar.html" . }}
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-4">
-                {{ range first 1 (where .Parent.Parent.Sections "Type" "review") }}   
-                <p>Review your knowledge</p>
-                <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Next</a>
-                {{ end }}
                 </div>
             </div>
         </div>

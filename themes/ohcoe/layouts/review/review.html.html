@@ -6,8 +6,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>{{ .Title }}</h1>
-                    <h2>Introduction to {{ .Title }}</h2>
+                    <div class="domain-title"><span>Domain: {{ .Parent.Title }}</span></div>
+                    <h1>Domain Review: {{ .Title }}</h1>
                 </div>
             </div>
             <div class="row">
@@ -19,8 +19,8 @@
                 <div class="col-md-3">
                     <nav>
                         <ul>
-                        <li>{{ .Title }}</li>
-                        {{ range .Sections.ByWeight  }}
+                        <li><a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a></li>
+                        {{ range .Parent.Sections.ByWeight  }}
                         <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
                             <ul>
                             {{ range .Pages }}
@@ -34,18 +34,25 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-4">
-                {{ range first 1 .Sections.ByWeight}}   
-                <p>Meet your first objective</p>
-                <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Next</a>
+                {{ $parentWeight := .Parent.Weight }}
+                {{ $grandParentWeight := .Parent.Parent.Weight }}
+                {{ if lt $parentWeight 3 }}
+                    {{ range first 1 (where .Parent.Parent.Sections.ByWeight "Weight" "gt" $parentWeight) }}   
+                    <p>Proceed to the next domain</p>
+                    <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Next</a>
+                    {{ end }}
+                {{ else }}
+                    <p>See your cumalative results</p>
+                    <a class="btn btn-primary btn-lg" href="#">Next</a>
                 {{ end }}
                 </div>
             </div>
         </div>
     </body>
-    {{ partial "footer.html" . }}
+    {{ partial "footer.html" }}
     <div class="container">
         <code>
-            {{ printf "%#v" .Sections }} 
+            {{ printf "%#v" .Pages  }} 
         </code>
     </div>
 </html>

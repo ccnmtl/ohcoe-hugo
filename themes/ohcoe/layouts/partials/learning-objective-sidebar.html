@@ -1,5 +1,6 @@
 <nav>
     <ul>
+        <li><a href="{{ .Parent.Parent.Permalink }}">{{ .Parent.Parent.Title }}</a></li>
         {{ range .Parent.Parent.Sections.ByWeight  }}
         <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
         <ul>

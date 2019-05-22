@@ -6,6 +6,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
+                    <div class="domain-title"><span>Domain: {{ .Parent.Parent.Title }}</span></div>
+                    <div class="learning-objective-title"><span>Learning Objective: {{ .Parent.Title }}</span></div>
                     <h1>{{ .Title }}</h1>
                 </div>
             </div>
@@ -21,20 +23,9 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-4">
-                {{ $parentWeight := .Parent.Weight }}
-                {{ $grandParentWeight := .Parent.Parent.Weight }}
-                {{ if lt $parentWeight 3 }}
-                    {{ range first 1 (where .Parent.Parent.Sections.ByWeight "Weight" "gt" $parentWeight) }}   
-                    <a class="btn btn-primary btn-lg" href="{{.Permalink }}">{{ .Title }} -></a>
-                    {{ end }}
-                {{ else }}
-                    {{ if lt $grandParentWeight 3 }}
-                        {{ range first 1 (where .Parent.Parent.Parent.Sections.ByWeight "Weight" "gt" $grandParentWeight) }}   
-                        <a class="btn btn-primary btn-lg" href="{{.Permalink }}">{{ .Title }} -></a>
-                        {{ end }}
-                    {{ else }}
-                        Off to Cumalative Assessment
-                    {{ end }}
+                {{ range first 1 (where .Parent.Parent.Sections "Type" "review") }}   
+                <p>Review your knowledge</p>
+                <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Next</a>
                 {{ end }}
                 </div>
             </div>

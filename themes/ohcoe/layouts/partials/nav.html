@@ -1,6 +1,7 @@
 <div class="container">
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Oral Health Care in the Opioid Crisis</a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample" aria-controls="navbarsExample" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-labeledby="primary-navigation">
+        <a id="primary-navigation" class="navbar-brand" href="{{ .Site.BaseURL }}">Oral Health Care in the Opioid Crisis</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample" aria-controls="navbarsExample" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -8,9 +9,15 @@
             <ul class="navbar-nav mr-auto">
                 {{ $currentPage := .  }}
                 {{ range .Site.Menus.main }}
-                <li class="nav-item">
-                    <a class="nav-link{{ if (or ($currentPage.IsMenuCurrent "main" .) ($currentPage.Parent.IsMenuCurrent "main" .)) }} active{{ end  }}" href="{{ .URL }}">{{ .Name }}</a>
-                </li>
+                    {{ if $currentPage.Parent }}
+                    <li class="nav-item">
+                        <a class="nav-link{{ if (or ($currentPage.IsMenuCurrent "main" .) ($currentPage.Parent.IsMenuCurrent "main" .)) }} active{{ end  }}" href="{{ .URL }}">{{ .Name }}</a>
+                    </li>
+                    {{ else }}
+                    <li class="nav-item">
+                        <a class="nav-link{{ if ($currentPage.IsMenuCurrent "main" .) }} active{{ end  }}" href="{{ .URL }}">{{ .Name }}</a>
+                    </li>
+                    {{ end }}
                 {{ end }}
             </ul>
         </div>

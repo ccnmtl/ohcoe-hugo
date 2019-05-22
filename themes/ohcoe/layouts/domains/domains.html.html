@@ -16,29 +16,30 @@
                     <main>
                         {{ .Content }}
                     </main>
-                </div>
-                <div class="col-md-3">
-                    <nav>
-                        <ul>
-                        <li>{{ .Title }}</li>
-                        {{ range .Sections.ByWeight  }}
-                        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-                            <ul>
-                            {{ range .Pages }}
-                            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-                            {{ end }}
-                            </ul>
+                    <nav class="row justify-content-center" aria-labelledby="lateral-navigation">
+                        <div id="lateral-navigation" class="col-4">
+                        {{ range first 1 .Sections.ByWeight}}   
+                        <p>Meet your first objective</p>
+                        <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Next</a>
                         {{ end }}
-                        </ul>
+                        </div>
                     </nav>
                 </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-4">
-                {{ range first 1 .Sections.ByWeight}}   
-                <p>Meet your first objective</p>
-                <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Next</a>
-                {{ end }}
+                <div class="col-md-3">
+                    <nav aria-labelledby="knowledge-domain-navigation">
+                        <div id="knowledge-domain-navigation" class="sr-only">{{ .Title }} Domain Navigation</div>
+                        <ul>
+                            <li>{{ .Title }}</li>
+                            {{ range .Sections.ByWeight  }}
+                            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                            <ul>
+                                {{ range .Pages }}
+                                <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                                {{ end }}
+                            </ul>
+                            {{ end }}
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>

@@ -1,4 +1,5 @@
-<nav>
+<nav aria-labelledby="knowledge-domain-navigation">
+    <div id="knowledge-domain-navigation" class="sr-only">{{ .Parent.Parent.Title }} Domain Navigation</div>
     <ul>
         <li><a href="{{ .Parent.Parent.Permalink }}">{{ .Parent.Parent.Title }}</a></li>
         {{ range .Parent.Parent.Sections.ByWeight  }}

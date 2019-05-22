@@ -16,29 +16,30 @@
                     <main>
                         {{ .Content }}
                     </main>
-                </div>
-                <div class="col-md-3">
-                    <nav>
-                        <ul>
-                        <li><a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a></li>
-                        {{ range .Parent.Sections.ByWeight  }}
-                        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-                            <ul>
-                            {{ range .Pages }}
-                            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                    <nav class="row justify-content-center" aria-labelledby="lateral-navigation">
+                        <div class="col-4">
+                            {{ range first 1 (where .Pages "Type" "learning-objective-pre-assessment") }}   
+                            <p>Gauge your <span>current</span> understanding</p>
+                            <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Next</a>
                             {{ end }}
-                            </ul>
-                        {{ end }}
-                        </ul>
+                        </div>
                     </nav>
                 </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-4">
-                {{ range first 1 (where .Pages "Type" "learning-objective-pre-assessment") }}   
-                <p>Gauge your <span>current</span> understanding</p>
-                <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Next</a>
-                {{ end }}
+                <div class="col-md-3">
+                    <nav aria-labelledby="knowledge-domain-navigation">
+                        <div id="knowledge-domain-navigation" class="sr-only">{{ .Parent.Title }} Domain Navigation</div>
+                        <ul>
+                            <li><a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a></li>
+                            {{ range .Parent.Sections.ByWeight  }}
+                            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                            <ul>
+                                {{ range .Pages }}
+                                <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                                {{ end }}
+                            </ul>
+                            {{ end }}
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>

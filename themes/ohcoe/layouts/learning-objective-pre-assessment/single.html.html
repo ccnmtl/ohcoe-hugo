@@ -9,14 +9,29 @@
                 <div id="content" class="col-md-12">
                     <div class="domain-title"><span>Domain: {{ .Parent.Parent.Title }}</span></div>
                     <div class="learning-objective-title"><span>Learning Objective: {{ .Parent.Title }}</span></div>
-                    <h1>{{ .Title }}</h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-9">
                     <main>
-                        {{ .Content }}
+                        <h1>{{ .Title }}</h1>
+                        <article>
+                            {{ .Content }}
+                        </article>
                     </main>
+                    <section>
+                        <h1>Self Assessment</h1>
+                        <form>
+                            <h2>How would you describe your comfort level?</h2>
+                            {{ $currentPage := . }}
+                            {{ range $idx, $el := .Params.q1 }}
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" name="{{ $currentPage.Parent.Parent.Title }}-{{ $currentPage.Parent.Title }}-pre-q1" id="q1-{{ $idx }}" value="{{ add (int $idx) 1 }}" />
+                                <label class="form-check-label" for="q1-{{ $idx }}">{{ $el }}</label>
+                            </div>
+                            {{ end }}
+                        </form>
+                    </section>
                     <nav class="row justify-content-center" aria-labelledby="lateral-navigation">
                         <div id="lateral-navigation" class="col-2">
                             {{ range first 1 (where .Parent.Pages "Type" "learning-objective-video") }}   

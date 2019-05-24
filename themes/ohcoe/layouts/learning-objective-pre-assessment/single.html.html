@@ -30,6 +30,8 @@
                                 <label class="form-check-label" for="q1-{{ $idx }}">{{ $el }}</label>
                             </div>
                             {{ end }}
+                            <h2>Could you reflect on your comfort level?</h2>
+                            <textarea name="{{ $currentPage.Parent.Parent.Title }}-{{ $currentPage.Parent.Title }}-pre-reflection" id="self-reflection" autocomplete="off" cols="70" rows="5"></textarea>
                         </form>
                     </section>
                     <nav class="row justify-content-center" aria-labelledby="lateral-navigation">

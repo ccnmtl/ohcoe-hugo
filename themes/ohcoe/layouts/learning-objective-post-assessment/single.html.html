@@ -13,7 +13,7 @@
             </div>
             <div class="row">
                 <div class="col-md-9">
-                    <main>
+                    <main id="assessment-page-title" data-domainId="{{ .Parent.Parent.Weight }}-{{ .Parent.Weight }}" data-learning-objective="{{ .Parent.Title }}">
                         <h1>{{ .Title }}</h1>
                         <article>
                             {{ .Content }}
@@ -21,17 +21,17 @@
                     </main>
                     <section>
                         <h1>Self Assessment</h1>
-                        <form>
+                        <form data-domainId="">
                             <h2>How would you describe your comfort level?</h2>
                             {{ $currentPage := . }}
                             {{ range $idx, $el := .Params.q1 }}
                             <div class="form-check">
-                                <input type="radio" class="form-check-input assessment-question" name="{{ anchorize $currentPage.Parent.Parent.Title }}-{{ anchorize $currentPage.Parent.Title }}-post-q1" id="q1-{{ $idx }}" value="{{ add (int $idx) 1 }}" />
+                                <input type="radio" class="form-check-input assessment-question" name="{{ $currentPage.Parent.Parent.Weight }}-{{ $currentPage.Parent.Weight }}-post-q1" id="q1-{{ $idx }}" value="{{ add (int $idx) 1 }}" />
                                 <label class="form-check-label" for="q1-{{ $idx }}">{{ $el }}</label>
                             </div>
                             {{ end }}
                             <h2>Could you reflect on your comfort level?</h2>
-                            <textarea name="{{ anchorize $currentPage.Parent.Parent.Title }}-{{ anchorize $currentPage.Parent.Title }}-post-reflection" id="self-reflection" class="assessment-question" autocomplete="off" cols="70" rows="5"></textarea>
+                            <textarea name="{{ $currentPage.Parent.Parent.Weight }}-{{ $currentPage.Parent.Weight }}-post-reflection" id="self-reflection" class="assessment-question" autocomplete="off" cols="70" rows="5"></textarea>
                         </form>
                     </section>
                     <nav class="row justify-content-center" aria-labelledby="lateral-navigation">

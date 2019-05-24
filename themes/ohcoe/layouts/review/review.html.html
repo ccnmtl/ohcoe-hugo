@@ -15,6 +15,20 @@
                 <div class="col-md-9">
                     <main>
                         {{ .Content }}
+                        <div id="{{ anchorize .Parent.Weight }}" class="domain-results">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Learning Objective</th>
+                                        <th scope="col">Pre-Assessment Score</th>
+                                        <th scope="col">Post-Assessment Score</th>
+                                        <th scope="col">Change in Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody> 
+                            </table>
+                        </div>
                     </main>
                     <nav class="row justify-content-center" aria-labelledby="lateral-navigation">
                         <div id="lateral-navigation" class="col-4">

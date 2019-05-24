@@ -36,9 +36,16 @@
                     </section>
                     <nav class="row justify-content-center" aria-labelledby="lateral-navigation">
                         <div id="lateral-navigation" class="col-4">
-                            {{ range first 1 (where .Parent.Parent.Sections "Type" "review") }}   
-                            <p>Review your knowledge</p>
-                            <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Next</a>
+                            {{ if lt .Parent.Weight 3 }}
+                                {{ range first 1 (where .Parent.Parent.Sections.ByWeight "Weight" "gt" .Parent.Weight) }}   
+                                <p>Review your knowledge</p>
+                                <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Next</a>
+                                {{ end }}
+                            {{ else }}
+                                {{ range first 1 (where .Parent.Parent.Sections "Type" "review") }}   
+                                <p>Review your knowledge</p>
+                                <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Next</a>
+                                {{ end }}
                             {{ end }}
                         </div>
                     </nav>

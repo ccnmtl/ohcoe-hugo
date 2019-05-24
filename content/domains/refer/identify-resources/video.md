@@ -3,7 +3,7 @@ title: Video
 date: 2019-05-13
 layout: learning-objective-video
 type: learning-objective-video
-video: 2
+weight: 2
 ---
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
 tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At

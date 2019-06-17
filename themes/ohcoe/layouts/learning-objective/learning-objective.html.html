@@ -36,7 +36,7 @@
                             <li class="active">{{ .Title }}</li>
                             {{ else }}
                                 
-                            <li {{ if lt .Weight $currentPage.Weight }}class="predecessor"{{ end }}><a href="{{ .Permalink }}">{{ .Title }} {{ .Weight }}</a></li>
+                            <li {{ if lt .Weight $currentPage.Weight }}class="predecessor"{{ end }}><a href="{{ .Permalink }}">{{ .Title }}</a></li>
                             {{ end }}
                             <ul>
                                 {{ range .Pages }}

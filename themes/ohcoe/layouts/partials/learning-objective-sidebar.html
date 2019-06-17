@@ -1,12 +1,22 @@
 <nav aria-labelledby="knowledge-domain-navigation">
     <div id="knowledge-domain-navigation" class="sr-only">{{ .Parent.Parent.Title }} Domain Navigation</div>
     <ul>
-        <li><a href="{{ .Parent.Parent.Permalink }}">{{ .Parent.Parent.Title }}</a></li>
+        <li class="predecessor"><a href="{{ .Parent.Parent.Permalink }}">{{ .Parent.Parent.Title }}</a></li>
+
+        {{ $currentPage := . }}
         {{ range .Parent.Parent.Sections.ByWeight  }}
-        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        <li {{ if le .Weight $currentPage.Parent.Weight }}class="predecessor"{{ end }}><a href="{{ .Permalink }}">{{ .Title }}</a></li>
         <ul>
             {{ range .Pages.ByWeight }}
-            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                {{ if eq $currentPage . }}
+                <li class="active">{{ .Title }}</li>
+                {{ else }}
+                <li {{ if (and (lt .Weight $currentPage.Weight) (le .Parent.Weight $currentPage.Parent.Weight)) }}
+                    class="predecessor"
+                    {{ else if (lt .Parent.Weight $currentPage.Parent.Weight) }}
+                    class="predecessor"
+                    {{ end }}><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                {{ end }}
             {{ end }}
         </ul>
         {{ end }}

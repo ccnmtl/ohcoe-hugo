@@ -50,12 +50,17 @@
                     <nav aria-labelledby="knowledge-domain-navigation">
                         <div id="knowledge-domain-navigation" class="sr-only">{{ .Parent.Title }} Domain Navigation</div>
                         <ul>
-                            <li><a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a></li>
+                            <li class="predecessor"><a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a></li>
+                            {{ $currentPage := . }}
                             {{ range .Parent.Sections.ByWeight  }}
-                            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                            {{ if eq $currentPage . }}
+                            <li class="active">{{ .Title }}</li>
+                            {{ else }}
+                            <li class="predecessor"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                            {{ end }}
                             <ul>
                                 {{ range .Pages }}
-                                <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                                <li class="predecessor"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
                                 {{ end }}
                             </ul>
                             {{ end }}

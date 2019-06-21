@@ -15,6 +15,9 @@
                 <div class="col-md-9">
                     <main>
                         {{ .Content }}
+                        <h2>Total Score</h2>
+                        <div id="domain-score-{{ anchorize .Parent.Weight }}"></div>
+                        <h2>Detailed Score</h2>
                         <div id="{{ anchorize .Parent.Weight }}" class="domain-results">
                             <table class="table">
                                 <thead>

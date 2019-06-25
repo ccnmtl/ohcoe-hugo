@@ -6,16 +6,46 @@
         {{ partial "nav.html" . }}
         <main id="content">
             <div class="container">
-                <h1>Index Template</h1>
-                <h1>{{ .Title }}</h1>
-                {{ .Content }}
-            </div>
+            
+                <div id="hero">
+                  <div class="overlay"></div>
+                  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                    <source src="https://media.istockphoto.com/videos/dentist-and-patient-having-a-conversation-in-dentists-office-video-id1147511991" type="video/mp4">
+                  </video>
+                  <div class="container h-100">
+                    <div class="d-flex h-100 text-center align-items-center">
+                      <div class="w-100 text-white">
+                        <h1 class="display-4">ORAL HEALTH CARE<br />IN THE OPIOID CRISIS</h1>
+                        <h2 class="lead mb-0">Helping Your Patients at Risk for Opiod Addiction</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+
+                <div class="col-md-4">
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean iaculis quis turpis nec maximus. Morbi ut neque vel arcu malesuada euismod. Duis maximus congue nisl, eget convallis justo. Morbi tincidunt sem ac lorem pellentesque, ac suscipit justo maximus. Aliquam gravida, erat sollicitudin facilisis aliquam, massa orci consequat est, vel lobortis eros lacus eu ligula. Vestibulum feugiat risus in mattis aliquet. Nulla rutrum urna in condimentum fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec et ultrices elit.
+                </p>
+                </div>
+
+                <div class="col-md-4">
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean iaculis quis turpis nec maximus. Morbi ut neque vel arcu malesuada euismod. Duis maximus congue nisl, eget convallis justo. Morbi tincidunt sem ac lorem pellentesque, ac suscipit justo maximus. Aliquam gravida, erat sollicitudin facilisis aliquam, massa orci consequat est, vel lobortis eros lacus eu ligula. Vestibulum feugiat risus in mattis aliquet. Nulla rutrum urna in condimentum fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec et ultrices elit.
+                </p>
+                </div>
+
+                <div class="col-md-4">
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean iaculis quis turpis nec maximus. Morbi ut neque vel arcu malesuada euismod. Duis maximus congue nisl, eget convallis justo. Morbi tincidunt sem ac lorem pellentesque, ac suscipit justo maximus. Aliquam gravida, erat sollicitudin facilisis aliquam, massa orci consequat est, vel lobortis eros lacus eu ligula. Vestibulum feugiat risus in mattis aliquet. Nulla rutrum urna in condimentum fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec et ultrices elit.
+                </p>
+                </div>
+
+                </div>
+
+        </div>
         </main>
-    </body>
     {{ partial "footer.html" }}
-    <div class="container">
-        <code>
-            {{ printf "%#v" .Pages  }} 
-        </code>
-    </div>
+    </body>
 </html>

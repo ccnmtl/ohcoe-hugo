@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     {{ partial "head.html" }}
-    <body>
+    <body class="learning-objective-video">
         {{ partial "skip.html" }}
         {{ partial "nav.html" .Parent }}
         <div class="container">
@@ -23,9 +23,16 @@
                         {{ partial "video.html" .Params.primaryVideoId }}
                         <h1>Secondary Video</h1>
                         <p>For a deeper understanding, watch these videos</p>
-                        {{ range .Params.supplimentalVideoIds }}
-                            {{ partial "video.html" . }}
+                        <div class="row">
+                        {{ range $video := .Params.supplimentalVideo }}
+                            <div class="col-md-6 supplimental-video">
+                            {{ partial "video.html" (index $video "id") }}
+                                <aside>
+                                    {{ index $video "desc" }} 
+                                </aside>
+                            </div>
                         {{ end }}
+                        </div>
                     </article>
                     <nav class="row justify-content-center" aria-labelledby="lateral-navigation">
                         <div id="lateral-navigation" class="col-4">

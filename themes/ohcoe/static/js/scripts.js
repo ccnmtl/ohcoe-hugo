@@ -10,14 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var assessmentQuestions = document.querySelectorAll('.assessment-question');
     assessmentQuestions.forEach(function(el){
         var val = localStorage.getItem(el.name);
-        if (val) {
-            if (el.type === 'radio') {
-                if (el.value === val) {
-                    el.checked = true;
-                }
-            } else if (el.type === 'textarea') {
-                el.value = val;
-            }
+        if (val && el.value === val) {
+            el.checked = true;
         }
 
         // Set values for questions

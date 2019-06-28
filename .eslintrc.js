@@ -4,6 +4,9 @@ module.exports = {
         "amd": true,
         "jquery": true
     },
+    "parserOptions": {
+        "ecmaVersion": 6
+    },
     "plugins": [
         "security",
         "scanjs-rules",
@@ -11,7 +14,7 @@ module.exports = {
     ],
     "extends": [
         "eslint:recommended",
-        "plugin:security/recommended",
+        "plugin:security/recommended"
     ],
     "rules": {
         "indent": [
@@ -34,6 +37,12 @@ module.exports = {
             "error",
             "always"
         ],
+        "max-len": [2, {"code": 80, "tabWidth": 4, "ignoreUrls": true}],
+        "space-before-function-paren": ["error", "never"],
+        "space-in-parens": ["error", "never"],
+        "no-trailing-spaces": ["error"],
+        "key-spacing": ["error", { "beforeColon": false  }],
+        "func-call-spacing": ["error", "never"],
 
         /** no-unsafe-innerhtml rule **/
         "no-unsafe-innerhtml/no-unsafe-innerhtml" : 2,

@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Clear data
     document.querySelector('#storage-reset').addEventListener('click', function(e){
         localStorage.clear();
+        location.reload(true);
     })
 
     // Display Results to Users
@@ -67,5 +68,31 @@ document.addEventListener('DOMContentLoaded', function() {
     var scoreContainer = document.getElementById('domain-score-' + currentDomain);
     if (scoreContainer && domainScoreGrowth) {
         scoreContainer.innerHTML = 'You have this much growth: <span id="score-container">' + domainScoreGrowth + '%</span>';
+    }
+
+    /* Demographic Questions */
+    document.querySelectorAll('.demographic-questions input[type="text"]').forEach(function(el){
+        el.addEventListener('focus', function(e){
+            var radioInput = e.target.parentNode.querySelector('input[type="radio"]');
+            radioInput.setAttribute('checked', 'true');
+        })
+        el.addEventListener('blur', function(e){
+            var radioInput = e.target.parentNode.querySelector('input[type="radio"]');
+            radioInput.setAttribute('value', e.target.value);
+        })
+    });
+    document.querySelector('#demographic-info').addEventListener('submit', function(e){
+        e.preventDefault();
+        var role = e.target.elements.role.value;
+        var speciality = e.target.elements.speciality.value;
+        localStorage.setItem('role', role);
+        localStorage.setItem('speciality', speciality);
+        this.style.display = 'none';
+        this.nextElementSibling.style.display = '';
+    });
+
+    // Show the form if the values are not set
+    if (!localStorage.getItem('role') && !localStorage.getItem('speciality')) {
+        document.querySelector('#demographic-info').style.display = '';
     }
 });

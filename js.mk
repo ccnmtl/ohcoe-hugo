@@ -16,7 +16,7 @@
 #
 # Using quotes here will cause eslint to ignore this argument.
 #
-JS_FILES ?= themes/ohcoe/static/js/src
+JS_FILES ?= themes/ohcoe/static/js/**
 
 NODE_MODULES ?= ./node_modules
 JS_SENTINAL ?= $(NODE_MODULES)/sentinal

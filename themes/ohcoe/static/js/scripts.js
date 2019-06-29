@@ -96,6 +96,18 @@ $(function() {
         localStorage.setItem('speciality', speciality);
         this.style.display = 'none';
         this.nextElementSibling.style.display = '';
+
+        gtag('event', 'demographic_question', {
+            'event_category': 'role',
+            'event_label': role,
+            'value': 1
+        });
+
+        gtag('event', 'demographic_question', {
+            'event_category': 'speciality',
+            'event_label': speciality,
+            'value': 1
+        });
     });
 
     // Show the form if the values are not set

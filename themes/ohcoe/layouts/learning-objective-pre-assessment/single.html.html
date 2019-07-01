@@ -26,7 +26,7 @@
                             {{ $currentPage := . }}
                             {{ range $idx, $el := .Params.q1 }}
                             <div class="form-check">
-                                <input type="radio" class="form-check-input assessment-question" name="{{ $currentPage.Parent.Parent.Weight }}-{{ $currentPage.Parent.Weight }}-pre-q1" id="q1-{{ $idx }}" value="{{ add (int $idx) 1 }}" />
+                                <input type="radio" class="form-check-input assessment-question" name="{{ $currentPage.Parent.Parent.Weight }}-{{ $currentPage.Parent.Weight }}-pre-q1" id="q1-{{ $idx }}" value="{{ $idx }}" />
                                 <label class="form-check-label" for="q1-{{ $idx }}">{{ $el }}</label>
                             </div>
                             {{ end }}

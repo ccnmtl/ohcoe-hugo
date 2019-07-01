@@ -18,6 +18,8 @@ module.exports = {
     ],
     "globals": {
         "gtag": true,
+        "onYouTubeIframeAPIReady": true,
+        "YT": true,
     },
     "rules": {
         "indent": [

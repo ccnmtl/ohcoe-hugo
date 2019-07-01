@@ -230,4 +230,36 @@ $(function() {
         e.preventDefault();
         window.print();
     });
+
+    /* Google Analytics YouTube Events */
+    var tag = document.createElement('script');
+    tag.id = 'iframe-api';
+    /* eslint-disable-next-line scanjs-rules/assign_to_src */
+    tag.src = 'https://www.youtube.com/iframe_api';
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    function onPlayerReady(event) {
+        // Stub
+    }
+
+    function onPlayerStateChange(event) {
+        // Stub
+    }
+
+    var players = new Array();
+    window.onYouTubeIframeAPIReady = function() {
+        // Reduce over an array of iFrames on the page, instantiate new
+        // players for each, and push to an array
+        $('.ytplayer').each(function(idx, el){
+            var player = new YT.Player(el.id, {
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+            players.push(player);
+        });
+    };
+    window.players = players;
 });

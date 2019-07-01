@@ -41,8 +41,8 @@ $(function() {
 
     /* Display Results to Users */
     var resultsContainer = $('.domain-results tbody');
-    var cumalativePreScore = new Array();
-    var cumalativePostScore = new Array();
+    var cumulativePreScore = new Array();
+    var cumulativePostScore = new Array();
     $('.domain-results').each(function(idx, domainResults){
         var currentDomain = null;
         if (domainResults) {
@@ -66,8 +66,8 @@ $(function() {
                 resultsContainer[idx].append(tableRow[0]);
                 domainScore += learningObjectiveScore;
                 learningObjectiveCounter += 1;
-                cumalativePreScore.push(Number(preScore));
-                cumalativePostScore.push(Number(postScore));
+                cumulativePreScore.push(Number(preScore));
+                cumulativePostScore.push(Number(postScore));
             }
         });
 
@@ -86,22 +86,22 @@ $(function() {
     });
 
     // Progress Bar
-    var meanPreScore = round(mean(cumalativePreScore));
-    var meanPostScore = round(mean(cumalativePostScore));
+    var meanPreScore = round(mean(cumulativePreScore));
+    var meanPostScore = round(mean(cumulativePostScore));
     var meanPrePct = (meanPreScore / 4) * 100;
     var meanPostPct = (meanPostScore / 4) * 100;
 
-    var preScorePBar = $('#cumalative-pre-score')[0];
+    var preScorePBar = $('#cumulative-pre-score')[0];
     preScorePBar.style.width = meanPrePct + '%';
-    $('#cumalative-pre-score').attr('aria-valuenow', meanPreScore);
+    $('#cumulative-pre-score').attr('aria-valuenow', meanPreScore);
     preScorePBar.append(meanPreScore + ' / 4');
 
-    var postScorePBar = $('#cumalative-post-score')[0];
+    var postScorePBar = $('#cumulative-post-score')[0];
     postScorePBar.style.width = meanPostPct + '%';
-    $('#cumalative-post-score').attr('aria-valuenow', meanPostScore);
+    $('#cumulative-post-score').attr('aria-valuenow', meanPostScore);
     postScorePBar.append(meanPostScore + ' / 4');
 
-    $('#cumalative-growth-diff').append(
+    $('#cumulative-growth-diff').append(
         '<div>You grew ' + (meanPostScore - meanPreScore) + '</div>');
 
     /* Demographic Questions */

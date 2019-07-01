@@ -6,16 +6,16 @@
         {{ partial "nav.html" . }}
         <main id="content">
             <div class="container">
-                <h1>Cumalative Review Template</h1>
+                <h1>Cumulative Review Template</h1>
                 <h1>{{ .Title }}</h1>
                 {{ .Content }}
                 <div class="progress">
-                    <div id="cumalative-pre-score" class="progress-bar bg-danger" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="4"></div>
+                    <div id="cumulative-pre-score" class="progress-bar bg-danger" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="4"></div>
                 </div>
                 <div class="progress">
-                    <div id="cumalative-post-score" class="progress-bar bg-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="4"></div>
+                    <div id="cumulative-post-score" class="progress-bar bg-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="4"></div>
                 </div>
-                <div id="cumalative-growth-diff"></div>
+                <div id="cumulative-growth-diff"></div>
                 {{ range (where $.Site.Pages "Type" "domain")  }}
                 <h2>{{ .Title }}</h2>
                 <div id="domain-score-{{ anchorize .Weight }}"></div>

@@ -86,23 +86,25 @@ $(function() {
     });
 
     // Progress Bar
-    var meanPreScore = round(mean(cumulativePreScore));
-    var meanPostScore = round(mean(cumulativePostScore));
-    var meanPrePct = (meanPreScore / 4) * 100;
-    var meanPostPct = (meanPostScore / 4) * 100;
+    if (document.getElementById('cumulative-review')) {
+        var meanPreScore = round(mean(cumulativePreScore));
+        var meanPostScore = round(mean(cumulativePostScore));
+        var meanPrePct = (meanPreScore / 4) * 100;
+        var meanPostPct = (meanPostScore / 4) * 100;
 
-    var preScorePBar = $('#cumulative-pre-score')[0];
-    preScorePBar.style.width = meanPrePct + '%';
-    $('#cumulative-pre-score').attr('aria-valuenow', meanPreScore);
-    preScorePBar.append(meanPreScore + ' / 4');
+        var preScorePBar = $('#cumulative-pre-score')[0];
+        preScorePBar.style.width = meanPrePct + '%';
+        $('#cumulative-pre-score').attr('aria-valuenow', meanPreScore);
+        preScorePBar.append(meanPreScore + ' / 4');
 
-    var postScorePBar = $('#cumulative-post-score')[0];
-    postScorePBar.style.width = meanPostPct + '%';
-    $('#cumulative-post-score').attr('aria-valuenow', meanPostScore);
-    postScorePBar.append(meanPostScore + ' / 4');
+        var postScorePBar = $('#cumulative-post-score')[0];
+        postScorePBar.style.width = meanPostPct + '%';
+        $('#cumulative-post-score').attr('aria-valuenow', meanPostScore);
+        postScorePBar.append(meanPostScore + ' / 4');
 
-    $('#cumulative-growth-diff').append(
-        '<div>You grew ' + (meanPostScore - meanPreScore) + '</div>');
+        $('#cumulative-growth-diff').append(
+            '<div>You grew ' + (meanPostScore - meanPreScore) + '</div>');
+    }
 
     /* Demographic Questions */
     $('.demographic-questions input[type="text"]').each(function(idx, el){

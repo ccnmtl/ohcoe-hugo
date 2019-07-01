@@ -30,50 +30,51 @@ $(function() {
     });
 
     // Display Results to Users
-    var resultsContainer = $('.domain-results tbody')[0];
-    var domainResults = $('.domain-results')[0];
-    var currentDomain = null;
-    if (domainResults) {
-        currentDomain = domainResults.id;
-    }
-    var domainScore = 0;
-    var learningObjectiveCounter = 0;
+    var resultsContainer = $('.domain-results tbody');
+    $('.domain-results').each(function(idx, domainResults){
+        var currentDomain = null;
+        if (domainResults) {
+            currentDomain = domainResults.id;
+        }
+        var domainScore = 0;
+        var learningObjectiveCounter = 0;
 
-    [...Array(3).keys()].map((el) => {
-        var q = el + 1;
-        var prefix = currentDomain + '-' + q;
-        var preScore = localStorage.getItem(prefix + '-pre-q1');
-        var postScore = localStorage.getItem(prefix + '-post-q1');
-        var learningObjectiveScore = Number(postScore) - Number(preScore);
-        if (preScore && postScore) {
-            var percentageGrowth = Math.round(
-                ((postScore - preScore) / 4) * 100
+        [...Array(3).keys()].map((el) => {
+            var q = el + 1;
+            var prefix = currentDomain + '-' + q;
+            var preScore = localStorage.getItem(prefix + '-pre-q1');
+            var postScore = localStorage.getItem(prefix + '-post-q1');
+            var learningObjectiveScore = Number(postScore) - Number(preScore);
+            if (preScore && postScore) {
+                var percentageGrowth = Math.round(
+                    ((postScore - preScore) / 4) * 100
+                );
+                var tableRow = $('<tr></tr>');
+                tableRow.html('<td>' + localStorage.getItem(prefix) + '</td>' +
+                              '<td>' + preScore + '</td>' +
+                              '<td>' + postScore + '</td>' +
+                              '<td>' + percentageGrowth + '%</td>');
+                resultsContainer[idx].append(tableRow[0]);
+                domainScore += learningObjectiveScore;
+                learningObjectiveCounter += 1;
+            }
+        });
+
+        // Calulate the percentage of growth for the entire domain
+        var domainScoreGrowth = 0;
+        if (learningObjectiveCounter) {
+            domainScoreGrowth = Math.round(
+                (domainScore / (learningObjectiveCounter * 4)) * 100
             );
-            var tableRow = $('<tr></tr>');
-            tableRow.html('<td>' + localStorage.getItem(prefix) + '</td>' +
-                          '<td>' + preScore + '</td>' +
-                          '<td>' + postScore + '</td>' +
-                          '<td>' + percentageGrowth + '%</td>');
-            $(resultsContainer).append(tableRow);
-            domainScore += learningObjectiveScore;
-            learningObjectiveCounter += 1;
+        }
+
+        var scoreContainer = $('#domain-score-' + currentDomain);
+        if (scoreContainer && domainScoreGrowth) {
+            scoreContainer.html(
+                'You have this much growth: <span id="score-container">' +
+                domainScoreGrowth + '%</span>');
         }
     });
-
-    // Calulate the percentage of growth for the entire domain
-    var domainScoreGrowth = 0;
-    if (learningObjectiveCounter) {
-        domainScoreGrowth = Math.round(
-            (domainScore / (learningObjectiveCounter * 4)) * 100
-        );
-    }
-
-    var scoreContainer = $('#domain-score-' + currentDomain);
-    if (scoreContainer && domainScoreGrowth) {
-        scoreContainer.html(
-            'You have this much growth: <span id="score-container">' +
-            domainScoreGrowth + '%</span>');
-    }
 
     /* Demographic Questions */
     $('.demographic-questions input[type="text"]').each(function(idx, el){

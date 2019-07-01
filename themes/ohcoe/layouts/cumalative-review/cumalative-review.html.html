@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{ partial "head.html" . }}
+    <body>
+        {{ partial "skip.html" . }}
+        {{ partial "nav.html" . }}
+        <main id="content">
+            <div class="container">
+                <h1>Cumalative Review Template</h1>
+                <h1>{{ .Title }}</h1>
+                {{ .Content }}
+                {{ range (where $.Site.Pages "Type" "domain")  }}
+                <h2>{{ .Title }}</h2>
+                <div id="domain-score-{{ anchorize .Weight }}"></div>
+                <div id="{{ anchorize .Weight }}" class="domain-results">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Learning Objective</th>
+                                <th scope="col">Pre-Assessment Score</th>
+                                <th scope="col">Post-Assessment Score</th>
+                                <th scope="col">Change in Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody> 
+                    </table>
+                </div>
+                {{ end }}
+            </div>
+        </main>
+    </body>
+    {{ partial "footer.html" }}
+    <div class="container">
+        <code>
+            {{ printf "%#v" .  }} 
+        </code>
+    </div>
+</html>

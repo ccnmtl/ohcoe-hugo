@@ -103,7 +103,8 @@ $(function() {
         postScorePBar.append(meanPostScore + ' / 4');
 
         $('#cumulative-growth-diff').append(
-            '<div>You grew ' + (meanPostScore - meanPreScore) + '</div>');
+            '<div>You grew ' + round(meanPostScore - meanPreScore) +
+            ' confidence intervals.</div>');
     }
 
     /* Demographic Questions */

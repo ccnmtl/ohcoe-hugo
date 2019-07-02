@@ -46,8 +46,10 @@
                             {{ $grandParentWeight := .Parent.Parent.Weight }}
                             {{ if lt $parentWeight 3 }}
                             {{ range first 1 (where .Parent.Parent.Sections.ByWeight "Weight" "gt" $parentWeight) }}   
-                            <p>Proceed to the next domain</p>
-                            <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Next</a>
+                            <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Proceed to the next domain</a>
+                                {{ range first 1 (where $.Site.Pages "Type" "cumulative-review") }}
+                                <a class="btn btn-primary btn-lg" href="{{.Permalink}}">Cumulative Review</a>
+                                {{ end }}
                             {{ end }}
                             {{ else }}
                             <p>See your cumulative results</p>
@@ -55,6 +57,7 @@
                             <a class="btn btn-primary btn-lg" href="{{.Permalink}}">Next</a>
                             {{ end }}
                             {{ end }}
+                            <button id="review-print" class="btn btn-primary btn-lg" href="#">Print</button>
                         </div>
                     </nav>
                 </div>

@@ -222,4 +222,10 @@ $(function() {
         );
         $('#demographic-q-responses').show();
     }
+
+    /* Print review pages */
+    $('#review-print').on('click', function(e){
+        e.preventDefault();
+        window.print();
+    });
 });

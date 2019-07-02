@@ -10,6 +10,14 @@ $(function() {
             return acc + val;
         }) / arr.length;
     }
+
+    function sanitize(s) {
+        // http://shebang.brandonmintern.com/foolproof-html-escaping-in-javascript/
+        var div = document.createElement('div');
+        div.appendChild(document.createTextNode(s));
+        return div.innerHTML;
+    }
+
     /* Get and Set Values from Local Storage */
     // Give ids to each learning objective
     var learningObectiveTitle = document.querySelector(
@@ -91,7 +99,8 @@ $(function() {
     });
 
     // Progress Bar
-    if (document.getElementById('cumulative-review')) {
+    if (document.getElementById('cumulative-review')
+        && cumulativePreScore.lenght && cumulativePostScore.length) {
         var meanPreScore = round(mean(cumulativePreScore));
         var meanPostScore = round(mean(cumulativePostScore));
         var meanPrePct = (meanPreScore / 4) * 100;
@@ -129,8 +138,8 @@ $(function() {
         e.preventDefault();
         var role = e.target.elements.role.value;
         var speciality = e.target.elements.speciality.value;
-        localStorage.setItem('role', role);
-        localStorage.setItem('speciality', speciality);
+        localStorage.setItem('role', sanitize(role));
+        localStorage.setItem('speciality', sanitize(speciality));
         this.style.display = 'none';
         this.nextElementSibling.style.display = '';
 
@@ -150,5 +159,45 @@ $(function() {
     // Show the form if the values are not set
     if (!localStorage.getItem('role') && !localStorage.getItem('speciality')) {
         $('#demographic-info').show();
+    }
+
+    // Render on Cumulative Review page
+    if(document.getElementById('demographic-q-responses') &&
+        localStorage.getItem('role') &&
+        localStorage.getItem('speciality')) {
+        const DEMO_ANSWERS = {
+            role: {
+                prefer_not_answer: 'Prefer not to answer',
+                faculty: 'Faculty',
+                resident: 'Resident',
+                dentist: 'Dentist',
+                student: 'Other'
+            },
+            speciality: {
+                prefer_not_answer: 'Prefer not to answer',
+                public_health: 'Public Health',
+                general: 'General',
+                pediatric: 'Pediatric',
+            }
+        };
+
+        var role = DEMO_ANSWERS.role[localStorage.getItem('role')];
+        var speciality = DEMO_ANSWERS.speciality[
+            localStorage.getItem('speciality')];
+
+        // If 'other' is set, and there's no value in the DEMO_ANSWERS
+        // for the given question, then just use the value in storage.
+        if (!role){
+            role = localStorage.getItem('role');
+        }
+        if (!speciality){
+            speciality = localStorage.getItem('speciality');
+        }
+
+        $('#demographic-q-responses').append(
+            '<p>Role: ' + role + '</p>' +
+            '<p>Speciality: ' + speciality + '</p>'
+        );
+        $('#demographic-q-responses').show();
     }
 });

@@ -17,9 +17,9 @@
                 </div>
                 <div id="cumulative-growth-diff"></div>
                 {{ range (where $.Site.Pages "Type" "domain")  }}
-                <h2>{{ .Title }}</h2>
-                <div id="domain-score-{{ anchorize .Weight }}"></div>
-                <div id="{{ anchorize .Weight }}" class="domain-results">
+                <h2 id="domain-title-{{ anchorize .Weight }}" style="display: none">{{ .Title }}</h2>
+                <div id="domain-score-{{ anchorize .Weight }}" style="display: none"></div>
+                <div id="{{ anchorize .Weight }}" class="domain-results" style="display: none">
                     <table class="table">
                         <thead>
                             <tr>

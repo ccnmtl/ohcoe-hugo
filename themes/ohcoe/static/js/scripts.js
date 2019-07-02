@@ -25,6 +25,8 @@ $(function() {
     if (learningObectiveTitle) {
         localStorage.setItem(learningObectiveTitle.dataset.domainid,
             learningObectiveTitle.dataset.learningObjective);
+        localStorage.setItem(learningObectiveTitle.dataset.domainid + '-url',
+            learningObectiveTitle.dataset.learningObjectiveUrl);
     }
 
     // Get values for questions, if they've been answered by the user
@@ -67,10 +69,17 @@ $(function() {
             var learningObjectiveScore = Number(postScore) - Number(preScore);
             if (preScore && postScore) {
                 var tableRow = $('<tr></tr>');
-                tableRow.html('<td>' + localStorage.getItem(prefix) + '</td>' +
-                              '<td>' + preScore + '</td>' +
-                              '<td>' + postScore + '</td>' +
-                              '<td>' + learningObjectiveScore + '</td>');
+                tableRow.html(
+                    /* eslint-disable-next-line max-len */
+                    '<td><a href="' + localStorage.getItem(prefix + '-url') + '">' +
+                    localStorage.getItem(prefix) + '</a>' +
+                    /* eslint-disable-next-line max-len */
+                    '<a href="' + localStorage.getItem(prefix + '-url') + '" class="btn btn-success btn-sm">' +
+                    'Review Learning Objective</a>' +
+                    '</td>' +
+                    '<td>' + preScore + '</td>' +
+                    '<td>' + postScore + '</td>' +
+                    '<td>' + learningObjectiveScore + '</td>');
                 resultsContainer[idx].append(tableRow[0]);
                 domainScore += learningObjectiveScore;
                 learningObjectiveCounter += 1;

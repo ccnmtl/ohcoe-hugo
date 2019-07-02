@@ -13,7 +13,8 @@
             </div>
             <div class="row">
                 <div class="col-md-9">
-                    <main id="assessment-page-title" data-domainId="{{ .Parent.Parent.Weight }}-{{ .Parent.Weight }}" data-learning-objective="{{ .Parent.Title }}">
+                    <main id="assessment-page-title" data-domainId="{{ .Parent.Parent.Weight }}-{{ .Parent.Weight }}"
+                                                     data-learning-objective="<a href='{{ .Parent.URL }}'>{{ .Parent.Title }}</a>">
                         <h1>{{ .Title }}</h1>
                         <article>
                             {{ .Content }}

@@ -68,6 +68,11 @@ $(function() {
                 learningObjectiveCounter += 1;
                 cumulativePreScore.push(Number(preScore));
                 cumulativePostScore.push(Number(postScore));
+                // Unhide the parent contains if there's at least one question
+                // answered.
+                $('#' + (idx + 1)).show();
+                $('#domain-score-' + (idx + 1)).show();
+                $('#domain-title-' + (idx + 1)).show();
             }
         });
 
@@ -103,7 +108,8 @@ $(function() {
         postScorePBar.append(meanPostScore + ' / 4');
 
         $('#cumulative-growth-diff').append(
-            '<div>You grew ' + (meanPostScore - meanPreScore) + '</div>');
+            '<div>You grew ' + round(meanPostScore - meanPreScore) +
+            ' confidence intervals.</div>');
     }
 
     /* Demographic Questions */

@@ -43,8 +43,10 @@
                             <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Next</a>
                             {{ end }}
                             {{ else }}
-                            <p>See your cumalative results</p>
-                            <a class="btn btn-primary btn-lg" href="#">Next</a>
+                            <p>See your cumulative results</p>
+                            {{ range first 1 (where $.Site.Pages "Type" "cumulative-review") }}
+                            <a class="btn btn-primary btn-lg" href="{{.Permalink}}">Next</a>
+                            {{ end }}
                             {{ end }}
                         </div>
                     </nav>

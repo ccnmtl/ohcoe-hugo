@@ -1,5 +1,15 @@
 /* eslint-disable scanjs-rules/identifier_localStorage */
 $(function() {
+    /* Utility Methods */
+    function round(val){
+        return Math.round(val * 100) / 100;
+    }
+
+    function mean(arr){
+        return arr.reduce(function(acc, val){
+            return acc + val;
+        }) / arr.length;
+    }
     /* Get and Set Values from Local Storage */
     // Give ids to each learning objective
     var learningObectiveTitle = document.querySelector(
@@ -29,50 +39,71 @@ $(function() {
         location.reload(true);
     });
 
-    // Display Results to Users
-    var resultsContainer = $('.domain-results tbody')[0];
-    var domainResults = $('.domain-results')[0];
-    var currentDomain = null;
-    if (domainResults) {
-        currentDomain = domainResults.id;
-    }
-    var domainScore = 0;
-    var learningObjectiveCounter = 0;
+    /* Display Results to Users */
+    var resultsContainer = $('.domain-results tbody');
+    var cumulativePreScore = new Array();
+    var cumulativePostScore = new Array();
+    $('.domain-results').each(function(idx, domainResults){
+        var currentDomain = null;
+        if (domainResults) {
+            currentDomain = domainResults.id;
+        }
+        var domainScore = 0;
+        var learningObjectiveCounter = 0;
 
-    [...Array(3).keys()].map((el) => {
-        var q = el + 1;
-        var prefix = currentDomain + '-' + q;
-        var preScore = localStorage.getItem(prefix + '-pre-q1');
-        var postScore = localStorage.getItem(prefix + '-post-q1');
-        var learningObjectiveScore = Number(postScore) - Number(preScore);
-        if (preScore && postScore) {
-            var percentageGrowth = Math.round(
-                ((postScore - preScore) / 4) * 100
-            );
-            var tableRow = $('<tr></tr>');
-            tableRow.html('<td>' + localStorage.getItem(prefix) + '</td>' +
-                          '<td>' + preScore + '</td>' +
-                          '<td>' + postScore + '</td>' +
-                          '<td>' + percentageGrowth + '%</td>');
-            $(resultsContainer).append(tableRow);
-            domainScore += learningObjectiveScore;
-            learningObjectiveCounter += 1;
+        [...Array(3).keys()].map((el) => {
+            var q = el + 1;
+            var prefix = currentDomain + '-' + q;
+            var preScore = localStorage.getItem(prefix + '-pre-q1');
+            var postScore = localStorage.getItem(prefix + '-post-q1');
+            var learningObjectiveScore = Number(postScore) - Number(preScore);
+            if (preScore && postScore) {
+                var tableRow = $('<tr></tr>');
+                tableRow.html('<td>' + localStorage.getItem(prefix) + '</td>' +
+                              '<td>' + preScore + '</td>' +
+                              '<td>' + postScore + '</td>' +
+                              '<td>' + learningObjectiveScore + '</td>');
+                resultsContainer[idx].append(tableRow[0]);
+                domainScore += learningObjectiveScore;
+                learningObjectiveCounter += 1;
+                cumulativePreScore.push(Number(preScore));
+                cumulativePostScore.push(Number(postScore));
+            }
+        });
+
+        // Calulate the percentage of growth for the entire domain
+        var domainScoreGrowth = 0;
+        if (learningObjectiveCounter) {
+            domainScoreGrowth = round(domainScore / learningObjectiveCounter);
+        }
+
+        var scoreContainer = $('#domain-score-' + currentDomain);
+        if (scoreContainer && domainScoreGrowth) {
+            scoreContainer.html(
+                'You have this much growth: <span id="score-container">' +
+                domainScoreGrowth + ' out of 4 </span>');
         }
     });
 
-    // Calulate the percentage of growth for the entire domain
-    var domainScoreGrowth = 0;
-    if (learningObjectiveCounter) {
-        domainScoreGrowth = Math.round(
-            (domainScore / (learningObjectiveCounter * 4)) * 100
-        );
-    }
+    // Progress Bar
+    if (document.getElementById('cumulative-review')) {
+        var meanPreScore = round(mean(cumulativePreScore));
+        var meanPostScore = round(mean(cumulativePostScore));
+        var meanPrePct = (meanPreScore / 4) * 100;
+        var meanPostPct = (meanPostScore / 4) * 100;
 
-    var scoreContainer = $('#domain-score-' + currentDomain);
-    if (scoreContainer && domainScoreGrowth) {
-        scoreContainer.html(
-            'You have this much growth: <span id="score-container">' +
-            domainScoreGrowth + '%</span>');
+        var preScorePBar = $('#cumulative-pre-score')[0];
+        preScorePBar.style.width = meanPrePct + '%';
+        $('#cumulative-pre-score').attr('aria-valuenow', meanPreScore);
+        preScorePBar.append(meanPreScore + ' / 4');
+
+        var postScorePBar = $('#cumulative-post-score')[0];
+        postScorePBar.style.width = meanPostPct + '%';
+        $('#cumulative-post-score').attr('aria-valuenow', meanPostScore);
+        postScorePBar.append(meanPostScore + ' / 4');
+
+        $('#cumulative-growth-diff').append(
+            '<div>You grew ' + (meanPostScore - meanPreScore) + '</div>');
     }
 
     /* Demographic Questions */

@@ -10,6 +10,14 @@ $(function() {
             return acc + val;
         }) / arr.length;
     }
+
+    function sanitize(s) {
+        // http://shebang.brandonmintern.com/foolproof-html-escaping-in-javascript/
+        var div = document.createElement('div');
+        div.appendChild(document.createTextNode(s));
+        return div.innerHTML;
+    }
+
     /* Get and Set Values from Local Storage */
     // Give ids to each learning objective
     var learningObectiveTitle = document.querySelector(
@@ -17,6 +25,8 @@ $(function() {
     if (learningObectiveTitle) {
         localStorage.setItem(learningObectiveTitle.dataset.domainid,
             learningObectiveTitle.dataset.learningObjective);
+        localStorage.setItem(learningObectiveTitle.dataset.domainid + '-url',
+            learningObectiveTitle.dataset.learningObjectiveUrl);
     }
 
     // Get values for questions, if they've been answered by the user
@@ -59,10 +69,17 @@ $(function() {
             var learningObjectiveScore = Number(postScore) - Number(preScore);
             if (preScore && postScore) {
                 var tableRow = $('<tr></tr>');
-                tableRow.html('<td>' + localStorage.getItem(prefix) + '</td>' +
-                              '<td>' + preScore + '</td>' +
-                              '<td>' + postScore + '</td>' +
-                              '<td>' + learningObjectiveScore + '</td>');
+                tableRow.html(
+                    /* eslint-disable-next-line max-len */
+                    '<td><a href="' + localStorage.getItem(prefix + '-url') + '">' +
+                    localStorage.getItem(prefix) + '</a>' +
+                    /* eslint-disable-next-line max-len */
+                    '<a href="' + localStorage.getItem(prefix + '-url') + '" class="btn btn-success btn-sm">' +
+                    'Review Learning Objective</a>' +
+                    '</td>' +
+                    '<td>' + preScore + '</td>' +
+                    '<td>' + postScore + '</td>' +
+                    '<td>' + learningObjectiveScore + '</td>');
                 resultsContainer[idx].append(tableRow[0]);
                 domainScore += learningObjectiveScore;
                 learningObjectiveCounter += 1;
@@ -91,7 +108,8 @@ $(function() {
     });
 
     // Progress Bar
-    if (document.getElementById('cumulative-review')) {
+    if (document.getElementById('cumulative-review')
+        && cumulativePreScore.length && cumulativePostScore.length) {
         var meanPreScore = round(mean(cumulativePreScore));
         var meanPostScore = round(mean(cumulativePostScore));
         var meanPrePct = (meanPreScore / 4) * 100;
@@ -113,6 +131,7 @@ $(function() {
     }
 
     /* Demographic Questions */
+    // Save responses to localStorage
     $('.demographic-questions input[type="text"]').each(function(idx, el){
         $(el).on('focus', function(e){
             var radioInput = e.target.parentNode.querySelector(
@@ -129,8 +148,8 @@ $(function() {
         e.preventDefault();
         var role = e.target.elements.role.value;
         var speciality = e.target.elements.speciality.value;
-        localStorage.setItem('role', role);
-        localStorage.setItem('speciality', speciality);
+        localStorage.setItem('role', sanitize(role));
+        localStorage.setItem('speciality', sanitize(speciality));
         this.style.display = 'none';
         this.nextElementSibling.style.display = '';
 
@@ -147,8 +166,50 @@ $(function() {
         });
     });
 
+    // Render responces on Cumulative Review page
+    var role = localStorage.getItem('role');
+    var speciality = localStorage.getItem('speciality');
+
+    const DEMO_ANSWERS = {
+        role: {
+            prefer_not_answer: 'Prefer not to answer',
+            faculty: 'Faculty',
+            resident: 'Resident',
+            dentist: 'Dentist',
+            student: 'Other'
+        },
+        speciality: {
+            prefer_not_answer: 'Prefer not to answer',
+            public_health: 'Public Health',
+            general: 'General',
+            pediatric: 'Pediatric',
+        }
+    };
+
     // Show the form if the values are not set
-    if (!localStorage.getItem('role') && !localStorage.getItem('speciality')) {
+    if (!role && !speciality) {
         $('#demographic-info').show();
+    }
+
+    // Render on Cumulative Review page
+    if(document.getElementById('demographic-q-responses') &&
+        role && speciality) {
+        var roleText = DEMO_ANSWERS.role[role];
+        var specialityText = DEMO_ANSWERS.speciality[speciality];
+
+        // If 'other' is set, and there's no value in the DEMO_ANSWERS
+        // for the given question, then just use the value in storage.
+        if (!roleText) {
+            roleText = role;
+        }
+        if (!specialityText) {
+            specialityText = speciality;
+        }
+
+        $('#demographic-q-responses').append(
+            '<p>Role: ' + role + '</p>' +
+            '<p>Speciality: ' + speciality + '</p>'
+        );
+        $('#demographic-q-responses').show();
     }
 });

@@ -199,10 +199,10 @@ $(function() {
 
         // If 'other' is set, and there's no value in the DEMO_ANSWERS
         // for the given question, then just use the value in storage.
-        if (!roleText){
+        if (!roleText) {
             roleText = role;
         }
-        if (!specialityText){
+        if (!specialityText) {
             specialityText = speciality;
         }
 

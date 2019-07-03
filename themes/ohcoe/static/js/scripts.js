@@ -109,7 +109,7 @@ $(function() {
 
     // Progress Bar
     if (document.getElementById('cumulative-review')
-        && cumulativePreScore.lenght && cumulativePostScore.length) {
+        && cumulativePreScore.length && cumulativePostScore.length) {
         var meanPreScore = round(mean(cumulativePreScore));
         var meanPostScore = round(mean(cumulativePostScore));
         var meanPrePct = (meanPreScore / 4) * 100;
@@ -131,6 +131,7 @@ $(function() {
     }
 
     /* Demographic Questions */
+    // Save responses to localStorage
     $('.demographic-questions input[type="text"]').each(function(idx, el){
         $(el).on('focus', function(e){
             var radioInput = e.target.parentNode.querySelector(
@@ -165,42 +166,44 @@ $(function() {
         });
     });
 
+    // Render responces on Cumulative Review page
+    var role = localStorage.getItem('role');
+    var speciality = localStorage.getItem('speciality');
+
+    const DEMO_ANSWERS = {
+        role: {
+            prefer_not_answer: 'Prefer not to answer',
+            faculty: 'Faculty',
+            resident: 'Resident',
+            dentist: 'Dentist',
+            student: 'Other'
+        },
+        speciality: {
+            prefer_not_answer: 'Prefer not to answer',
+            public_health: 'Public Health',
+            general: 'General',
+            pediatric: 'Pediatric',
+        }
+    };
+
     // Show the form if the values are not set
-    if (!localStorage.getItem('role') && !localStorage.getItem('speciality')) {
+    if (!role && !speciality) {
         $('#demographic-info').show();
     }
 
     // Render on Cumulative Review page
     if(document.getElementById('demographic-q-responses') &&
-        localStorage.getItem('role') &&
-        localStorage.getItem('speciality')) {
-        const DEMO_ANSWERS = {
-            role: {
-                prefer_not_answer: 'Prefer not to answer',
-                faculty: 'Faculty',
-                resident: 'Resident',
-                dentist: 'Dentist',
-                student: 'Other'
-            },
-            speciality: {
-                prefer_not_answer: 'Prefer not to answer',
-                public_health: 'Public Health',
-                general: 'General',
-                pediatric: 'Pediatric',
-            }
-        };
-
-        var role = DEMO_ANSWERS.role[localStorage.getItem('role')];
-        var speciality = DEMO_ANSWERS.speciality[
-            localStorage.getItem('speciality')];
+        role && speciality) {
+        var roleText = DEMO_ANSWERS.role[role];
+        var specialityText = DEMO_ANSWERS.speciality[speciality];
 
         // If 'other' is set, and there's no value in the DEMO_ANSWERS
         // for the given question, then just use the value in storage.
-        if (!role){
-            role = localStorage.getItem('role');
+        if (!roleText){
+            roleText = role;
         }
-        if (!speciality){
-            speciality = localStorage.getItem('speciality');
+        if (!specialityText){
+            specialityText = speciality;
         }
 
         $('#demographic-q-responses').append(

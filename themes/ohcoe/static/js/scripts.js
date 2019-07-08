@@ -95,7 +95,9 @@ $(function() {
         });
 
         // Domain Progress Bar
-        if (document.getElementById('domain-review')) {
+        if (document.getElementById('domain-review')
+            && domainPreScore.length
+            && domainPostScore.length) {
             var meanPreScore = round(mean(domainPreScore));
             var meanPostScore = round(mean(domainPostScore));
             var meanPrePct = (meanPreScore / 4) * 100;

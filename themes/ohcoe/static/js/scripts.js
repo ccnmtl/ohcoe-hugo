@@ -40,6 +40,7 @@ $(function() {
         // Set values for questions
         $(el).on('change', function(e){
             localStorage.setItem(el.name, e.target.value);
+            // Clear the domain GA 'sent' flag here
         });
     });
 
@@ -60,6 +61,11 @@ $(function() {
         }
         var domainPreScore = new Array();
         var domainPostScore = new Array();
+
+        // Get flag for GA Status
+        var status = localStorage.getItem(
+            'domain-ga-status-' + currentDomain) === 'sent' ? true : false;
+
 
         [...Array(3).keys()].map((el) => {
             var q = el + 1;
@@ -91,8 +97,20 @@ $(function() {
                 $('#' + (idx + 1)).show();
                 $('#domain-score-' + (idx + 1)).show();
                 $('#domain-title-' + (idx + 1)).show();
+
+                // Ship scores to Google Analytics
+                if (status) {
+                    //gtag('event', 'assessment_question', {
+                        //'event_category': 'domain',
+                        //'event_label': role,
+                        //'value': 1
+                    //});
+                }
             }
         });
+
+        // Mark the current domain 'sent'
+        localStorage.setItem('domain-ga-status-' + currentDomain, 'sent');
 
         // Domain Progress Bar
         if (document.getElementById('domain-review')
@@ -230,6 +248,12 @@ $(function() {
         e.preventDefault();
         window.print();
     });
+
+    /* Google Analytics Learning Objective Scores */
+    // On domain page load, get the domain ID and check if scores have been
+    // shipped to GA. If not, then ship them, then set a value in localStorage
+    // so that you don't ship them again
+
 
     /* Google Analytics YouTube Events */
     var tag = document.createElement('script');

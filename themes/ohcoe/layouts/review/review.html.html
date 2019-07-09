@@ -13,10 +13,17 @@
             </div>
             <div class="row">
                 <div class="col-md-9">
-                    <main>
+                    <main id="domain-review">
                         {{ .Content }}
                         <h2>Total Score</h2>
-                        <div id="domain-score-{{ anchorize .Parent.Weight }}"></div>
+
+                        <div class="progress">
+                            <div id="domain-pre-score" class="progress-bar bg-danger" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="4"></div>
+                        </div>
+                        <div class="progress">
+                            <div id="domain-post-score" class="progress-bar bg-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="4"></div>
+                        </div>
+                        <div id="domain-growth-diff"></div>
                         <h2>Detailed Score</h2>
                         <div id="{{ anchorize .Parent.Weight }}" class="domain-results">
                             <table class="table">
@@ -39,8 +46,10 @@
                             {{ $grandParentWeight := .Parent.Parent.Weight }}
                             {{ if lt $parentWeight 3 }}
                             {{ range first 1 (where .Parent.Parent.Sections.ByWeight "Weight" "gt" $parentWeight) }}   
-                            <p>Proceed to the next domain</p>
-                            <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Next</a>
+                            <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Proceed to the next domain</a>
+                                {{ range first 1 (where $.Site.Pages "Type" "cumulative-review") }}
+                                <a class="btn btn-primary btn-lg" href="{{.Permalink}}">Cumulative Review</a>
+                                {{ end }}
                             {{ end }}
                             {{ else }}
                             <p>See your cumulative results</p>
@@ -48,6 +57,7 @@
                             <a class="btn btn-primary btn-lg" href="{{.Permalink}}">Next</a>
                             {{ end }}
                             {{ end }}
+                            <button id="review-print" class="btn btn-primary btn-lg" href="#">Print</button>
                         </div>
                     </nav>
                 </div>

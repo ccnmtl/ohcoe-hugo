@@ -29,4 +29,4 @@ deploy-prod:
 	&& $(INTERMEDIATE_STEPS) \
 	&& $(S3CMD) $(S3_FLAGS) sync $(PUBLIC)/* s3://$(PROD_BUCKET)/
 
-.PHONY: runserver deploy-stage deploy-prod
+.PHONY: runserver deploy-stage deploy-prod build

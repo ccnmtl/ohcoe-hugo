@@ -9,3 +9,6 @@ scratch/
 ve/
 scrape/histology/content/
 local.mk
+
+cypress/screenshots/
+cypress/videos/

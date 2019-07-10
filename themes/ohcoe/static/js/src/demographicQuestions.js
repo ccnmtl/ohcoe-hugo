@@ -71,8 +71,8 @@ define(function(){
             }
 
             $('#demographic-q-responses').append(
-                '<p>Role: ' + role + '</p>' +
-                '<p>Speciality: ' + speciality + '</p>'
+                '<p>Role: ' + roleText + '</p>' +
+                '<p>Speciality: ' + specialityText + '</p>'
             );
             $('#demographic-q-responses').show();
         }

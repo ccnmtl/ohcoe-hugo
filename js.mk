@@ -16,7 +16,7 @@
 #
 # Using quotes here will cause eslint to ignore this argument.
 #
-JS_FILES ?= themes/ohcoe/static/js/**
+JS_FILES ?= themes/ohcoe/static/js/src/**
 
 NODE_MODULES ?= ./node_modules
 JS_SENTINAL ?= $(NODE_MODULES)/sentinal
@@ -30,10 +30,19 @@ $(JS_SENTINAL): package.json
 eslint: $(JS_SENTINAL)
 	$(ESLINT) $(JS_FILES)
 
-jstest: $(JS_SENTINAL)
-	npm test
+test: eslint
+	npm run test
+
+# Runs the Cypress CLI suite
+jstest: eslint
+	@echo "This needs the site served from localhost:1313"
+	npm run cypress:test
+
+# Launches the full Cypress GUI
+cypress: $(JS_SENTINAL)
+	npm run cypress:open
 
 build-scss: $(JS_SENTINAL)
 	npm run build-scss
 
-.PHONY: eslint jstest
+.PHONY: eslint test jstest cypress build-scss

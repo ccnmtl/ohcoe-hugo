@@ -4,7 +4,10 @@
   "description": "Hugo site Oral Health Care in the Opiod Epidemic",
   "main": "index.js",
   "scripts": {
-    "test": "mocha themes/ohcoe/static/js/tests",
+    "serve": "make runserver",
+    "cypress:test": "cypress run",
+    "cypress:open": "cypress open",
+    "test": "start-server-and-test serve http://localhost:1313 cypress:test",
     "watch-scss": "node-sass --output themes/ohcoe/static/css themes/ohcoe/static/scss/main.scss && postcss -u autoprefixer -r themes/ohcoe/static/css/main.css",
     "build-scss": "nodemon -e scss -x 'npm run watch-scss'",
     "eslint": "eslint themes/ohcoe/static/js/*.js"
@@ -21,6 +24,7 @@
   "devDependencies": {
     "autoprefixer": "^9.0.0",
     "bootstrap": "~4.1.3",
+    "cypress": "^3.3.2",
     "eslint": "~5.16.0",
     "eslint-config-scanjs": "^1.0.0-beta4",
     "eslint-plugin-no-unsafe-innerhtml": "^1.0.16",
@@ -30,7 +34,8 @@
     "mocha": "~6.1.0",
     "node-sass": "^4.7.2",
     "nodemon": "^1.12.5",
-    "postcss-cli": "^6.0.0"
+    "postcss-cli": "^6.0.0",
+    "start-server-and-test": "^1.9.1"
   },
   "homepage": "https://github.com/ccnmtl/ohcoe-hugo#readme",
   "dependencies": {}

@@ -27,6 +27,12 @@ $(JS_SENTINAL): package.json
 	npm install
 	touch $(JS_SENTINAL)
 
+watch: $(JS_SENTINAL)
+	npm run watch
+
+build: $(JS_SENTINAL)
+	npm run build
+
 eslint: $(JS_SENTINAL)
 	$(ESLINT) $(JS_FILES)
 

@@ -6,11 +6,11 @@ function analytics() {
     // On domain review pages, collect any learning objective scores
     // and ship them to Google Analytics
     if (document.getElementById('domain-review')){
-        var currentDomain = $('.domain-results').id;
+        var currentDomain = $('.domain-results')[0].id;
 
         // Get flag for GA Status
         var status = localStorage.getItem(
-            'domain-ga-status-' + currentDomain) === 'sent' ? true : false;
+            'domain-ga-status-' + currentDomain) === 'sent' ? false : true;
 
         if (status) {
             [...Array(3).keys()].map((el) => {

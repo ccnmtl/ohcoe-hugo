@@ -53,22 +53,14 @@ function progressBars() {
         && cumulativePreScore.length && cumulativePostScore.length) {
         var meanPreScore = round(mean(cumulativePreScore));
         var meanPostScore = round(mean(cumulativePostScore));
-        var meanPrePct = (meanPreScore / 4) * 100;
-        var meanPostPct = (meanPostScore / 4) * 100;
 
-        var preScorePBar = $('#cumulative-pre-score')[0];
-        preScorePBar.style.width = meanPrePct + '%';
-        $('#cumulative-pre-score').attr('aria-valuenow', meanPreScore);
-        preScorePBar.append(meanPreScore + ' / 4');
+        sliceScore(meanPreScore).map(applySlicedScore, 'pre-');
+        sliceScore(meanPostScore).map(applySlicedScore, 'post-');
 
-        var postScorePBar = $('#cumulative-post-score')[0];
-        postScorePBar.style.width = meanPostPct + '%';
-        $('#cumulative-post-score').attr('aria-valuenow', meanPostScore);
-        postScorePBar.append(meanPostScore + ' / 4');
-
-        $('#cumulative-growth-diff').append(
-            '<div>You grew ' + round(meanPostScore - meanPreScore) +
-            ' confidence intervals.</div>');
+        $('#cumulative-pre-diff').append(
+            'Pre-Assessment Score: ' + meanPreScore);
+        $('#cumulative-post-diff').append(
+            'Post-Assessment Score: ' + meanPostScore);
     }
 }
 

@@ -3,7 +3,7 @@ import {
     round, mean, sliceScore, applySlicedScore
 } from './utils.js';
 
-function progressBars() {
+function progressIcons() {
     /* Render the progress bars for users */
     var cumulativePreScore = new Array();
     var cumulativePostScore = new Array();
@@ -64,4 +64,4 @@ function progressBars() {
     }
 }
 
-export { progressBars };
+export { progressIcons };

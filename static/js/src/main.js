@@ -1,12 +1,12 @@
 import 'bootstrap';
 import { learningObjectiveQuestions } from './learningObjectiveQuestions.js';
 import { scores } from './scores.js';
-import { progressBars } from './progressBars.js';
+import { progressIcons } from './progressIcons.js';
 import { analytics } from './analytics.js';
 import { demographicQuestions } from './demographicQuestions.js';
 
 learningObjectiveQuestions();
 scores();
-progressBars();
+progressIcons();
 analytics();
 demographicQuestions();

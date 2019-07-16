@@ -39,7 +39,7 @@ function progressBars() {
                 var heartId = 'pre-' + idx;
                 var heartValue = preScoreAcc > 1 ? 1 : preScoreAcc;
                 setHeartValue(heartId, heartValue);
-                if (preScoreAcc >= 0 && preScoreAcc < 1 ) {
+                if (preScoreAcc >= 0 && preScoreAcc < 1) {
                     preScoreAcc = 0;
                 } else {
                     preScoreAcc -= 1;
@@ -51,15 +51,17 @@ function progressBars() {
                 var heartId = 'post-' + idx;
                 var heartValue = postScoreAcc > 1 ? 1 : postScoreAcc;
                 setHeartValue(heartId, heartValue);
-                if (postScoreAcc >= 0 && postScoreAcc < 1 ) {
+                if (postScoreAcc >= 0 && postScoreAcc < 1) {
                     postScoreAcc = 0;
                 } else {
                     postScoreAcc -= 1;
                 }
             });
 
-            $('#domain-pre-diff').append('Pre-Assessment Score: ' + meanPreScore);
-            $('#domain-post-diff').append('Post-Assessment Score: ' + meanPostScore);
+            $('#domain-pre-diff').append(
+                'Pre-Assessment Score: ' + meanPreScore);
+            $('#domain-post-diff').append(
+                'Post-Assessment Score: ' + meanPostScore);
         }
     });
 

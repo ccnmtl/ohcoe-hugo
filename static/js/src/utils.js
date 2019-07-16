@@ -15,4 +15,10 @@ function sanitize(s) {
     return div.innerHTML;
 }
 
-export { round, mean, sanitize };
+function setHeartValue(id, val) {
+    var offset = Math.trunc(val * 100);
+    $('#heart-fill-' + id + '-red')[0].setAttribute('offset', offset + '%');
+    $('#heart-fill-' + id + '-gray')[0].setAttribute('offset', offset + '%');
+}
+
+export { round, mean, sanitize, setHeartValue };

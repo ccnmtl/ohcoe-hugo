@@ -1,5 +1,5 @@
 /* eslint-disable scanjs-rules/identifier_localStorage */
-import { round, mean } from './utils.js';
+import { round, mean, setHeartValue } from './utils.js';
 
 function progressBars() {
     /* Render the progress bars for users */
@@ -33,22 +33,33 @@ function progressBars() {
             && domainPreScore.length && domainPostScore.length) {
             var meanPreScore = round(mean(domainPreScore));
             var meanPostScore = round(mean(domainPostScore));
-            var meanPrePct = (meanPreScore / 4) * 100;
-            var meanPostPct = (meanPostScore / 4) * 100;
 
-            var preScorePBar = $('#domain-pre-score')[0];
-            preScorePBar.style.width = meanPrePct + '%';
-            $('#domain-pre-score').attr('aria-valuenow', meanPreScore);
-            preScorePBar.append(meanPreScore + ' / 4');
+            var preScoreAcc = meanPreScore;
+            [...Array(4).keys()].map(function(idx) {
+                var heartId = 'pre-' + idx;
+                var heartValue = preScoreAcc > 1 ? 1 : preScoreAcc;
+                setHeartValue(heartId, heartValue);
+                if (preScoreAcc >= 0 && preScoreAcc < 1 ) {
+                    preScoreAcc = 0;
+                } else {
+                    preScoreAcc -= 1;
+                }
+            });
 
-            var postScorePBar = $('#domain-post-score')[0];
-            postScorePBar.style.width = meanPostPct + '%';
-            $('#domain-post-score').attr('aria-valuenow', meanPostScore);
-            postScorePBar.append(meanPostScore + ' / 4');
+            var postScoreAcc = meanPostScore;
+            [...Array(4).keys()].map(function(idx) {
+                var heartId = 'post-' + idx;
+                var heartValue = postScoreAcc > 1 ? 1 : postScoreAcc;
+                setHeartValue(heartId, heartValue);
+                if (postScoreAcc >= 0 && postScoreAcc < 1 ) {
+                    postScoreAcc = 0;
+                } else {
+                    postScoreAcc -= 1;
+                }
+            });
 
-            $('#domain-growth-diff').append(
-                '<div>You grew ' + round(meanPostScore - meanPreScore) +
-                ' confidence intervals.</div>');
+            $('#domain-pre-diff').append('Pre-Assessment Score: ' + meanPreScore);
+            $('#domain-post-diff').append('Post-Assessment Score: ' + meanPostScore);
         }
     });
 

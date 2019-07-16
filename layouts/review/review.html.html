@@ -17,11 +17,45 @@
                         {{ .Content }}
                         <h2>Total Score</h2>
 
-                        <div class="progress">
-                            <div id="domain-pre-score" class="progress-bar bg-danger" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="4"></div>
-                        </div>
-                        <div class="progress">
-                            <div id="domain-post-score" class="progress-bar bg-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="4"></div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div id="domain-pre-diff" class="col-12"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        {{ partial "heart-icon.html" "pre-0"}}
+                                    </div>
+                                    <div class="col-md-2">
+                                        {{ partial "heart-icon.html" "pre-1"}}
+                                    </div>
+                                    <div class="col-md-2">
+                                        {{ partial "heart-icon.html" "pre-2"}}
+                                    </div>
+                                    <div class="col-md-2">
+                                        {{ partial "heart-icon.html" "pre-3"}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div id="domain-post-diff" class="col-12"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        {{ partial "heart-icon.html" "post-0"}}
+                                    </div>
+                                    <div class="col-md-2">
+                                        {{ partial "heart-icon.html" "post-1"}}
+                                    </div>
+                                    <div class="col-md-2">
+                                        {{ partial "heart-icon.html" "post-2"}}
+                                    </div>
+                                    <div class="col-md-2">
+                                        {{ partial "heart-icon.html" "post-3"}}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div id="domain-growth-diff"></div>
                         <h2>Detailed Score</h2>

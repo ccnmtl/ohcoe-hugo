@@ -1,5 +1,7 @@
 /* eslint-disable scanjs-rules/identifier_localStorage */
-import { round, mean, setHeartValue } from './utils.js';
+import {
+    round, mean, sliceScore, applySlicedScore
+} from './utils.js';
 
 function progressBars() {
     /* Render the progress bars for users */
@@ -34,29 +36,10 @@ function progressBars() {
             var meanPreScore = round(mean(domainPreScore));
             var meanPostScore = round(mean(domainPostScore));
 
-            var preScoreAcc = meanPreScore;
-            [...Array(4).keys()].map(function(idx) {
-                var heartId = 'pre-' + idx;
-                var heartValue = preScoreAcc > 1 ? 1 : preScoreAcc;
-                setHeartValue(heartId, heartValue);
-                if (preScoreAcc >= 0 && preScoreAcc < 1) {
-                    preScoreAcc = 0;
-                } else {
-                    preScoreAcc -= 1;
-                }
-            });
-
-            var postScoreAcc = meanPostScore;
-            [...Array(4).keys()].map(function(idx) {
-                var heartId = 'post-' + idx;
-                var heartValue = postScoreAcc > 1 ? 1 : postScoreAcc;
-                setHeartValue(heartId, heartValue);
-                if (postScoreAcc >= 0 && postScoreAcc < 1) {
-                    postScoreAcc = 0;
-                } else {
-                    postScoreAcc -= 1;
-                }
-            });
+            // "slice" a score into 4 parts
+            // Then map over that array and set the Heart values
+            sliceScore(meanPreScore).map(applySlicedScore, 'pre-');
+            sliceScore(meanPostScore).map(applySlicedScore, 'post-');
 
             $('#domain-pre-diff').append(
                 'Pre-Assessment Score: ' + meanPreScore);

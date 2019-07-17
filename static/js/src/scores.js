@@ -19,18 +19,14 @@ function scores() {
                 var tableRow = $('<tr id="' + prefix + '"></tr>');
                 tableRow.html(
                     /* eslint-disable-next-line max-len */
-                    '<td id="' + prefix +'-l-obj-title"><a href="' + localStorage.getItem(prefix + '-url') + '">' +
-                    localStorage.getItem(prefix) + '</a>' +
-                    /* eslint-disable-next-line max-len */
-                    '<a href="' + localStorage.getItem(prefix + '-url') + '" class="btn btn-success btn-sm">' +
-                    'Review Learning Objective</a>' +
-                    '</td>' +
-                    /* eslint-disable-next-line max-len */
                     '<td id="' + prefix +'-l-obj-pre-score">' + preScore + '</td>' +
                     /* eslint-disable-next-line max-len */
                     '<td id="' + prefix +'-l-obj-post-score">' + postScore + '</td>' +
                     /* eslint-disable-next-line max-len */
-                    '<td id="' + prefix +'-l-obj-score-diff">' + learningObjectiveScore + '</td>');
+                    '<td id="' + prefix +'-l-obj-score-diff">' + learningObjectiveScore + '</td>' +
+                    /* eslint-disable-next-line max-len */
+                    '<td id="' + prefix +'-l-obj-title"><a href="' + localStorage.getItem(prefix + '-url') + '">' +
+                    localStorage.getItem(prefix) + '</a>');
                 resultsContainer.append(tableRow[0]);
 
                 // Unhide the parent contains if there's at least one

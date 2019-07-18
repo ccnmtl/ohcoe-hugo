@@ -5,46 +5,74 @@
         {{ partial "skip.html" . }}
         {{ partial "nav.html" . }}
         <main id="content">
+            <div class="container p-0">
+                <div id="hp-hero" class="jumbotron-fluid">
+                    <h1 class="display-4">Help your patients who are at risk for opioid addiction.</h1>
+                    <a class="btn btn-light">Start Now</a>
+                </div>
+            </div>
             <div class="container">
-            
-                <div id="hero">
-                  <div class="overlay"></div>
-                  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-                    <source src="https://media.istockphoto.com/videos/dentist-and-patient-having-a-conversation-in-dentists-office-video-id1147511991" type="video/mp4">
-                  </video>
-                  <div class="container h-100">
-                    <div class="d-flex h-100 text-center align-items-center">
-                      <div class="w-100 text-white">
-                        <h1 class="display-4">ORAL HEALTH CARE<br />IN THE OPIOID CRISIS</h1>
-                        <h2 class="lead mb-0">Helping Your Patients at Risk for Opiod Addiction</h2>
-                      </div>
+                <div id="hp-project-intro" class="row">
+                    <div class="col-md-6">
+                        <span>Project OHCOE</span> is an online resource designed to help dental students identify patients at risk opioid addiction, interact with them, and manage their treatment.
                     </div>
-                  </div>
+                    <div class="col-md-6">
+                        <div id="hp-project-intro-logo">
+                            {{ partial "logo-vertical.html" }}
+                        </div>
+                    </div>
                 </div>
-
+            </div>
+            <div class="container">
+                <div id="hp-project-tag" class="row">
+                    <div class="mx-auto">
+                        Learn how to provide a new level of care through <span>three domains of expertise.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
                 <div class="row">
-
-                <div class="col-md-4">
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean iaculis quis turpis nec maximus. Morbi ut neque vel arcu malesuada euismod. Duis maximus congue nisl, eget convallis justo. Morbi tincidunt sem ac lorem pellentesque, ac suscipit justo maximus. Aliquam gravida, erat sollicitudin facilisis aliquam, massa orci consequat est, vel lobortis eros lacus eu ligula. Vestibulum feugiat risus in mattis aliquet. Nulla rutrum urna in condimentum fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec et ultrices elit.
-                </p>
+                    <div class="col-md-4 hp-domains">
+                        <div class="domain-logo">
+                            {{ partial "icon-feature-identify.html" }}
+                        </div>
+                        <h2>Identification</h2>
+                        <p>
+                            Ipsum ipsa aperiam unde ab molestias Ipsam ratione
+                            debitis debitis illo aspernatur id Laborum
+                            explicabo quod incidunt ipsa odio. Et hic
+                            necessitatibus perferendis eius aliquid Fugit non
+                            est voluptate a?
+                        </p>
+                    </div>
+                    <div class="col-md-4 hp-domains">
+                        <div class="domain-logo">
+                            {{ partial "icon-feature-refer.html" }}
+                        </div>
+                        <h2>Refer</h2>
+                        <p>
+                            Ipsum ipsa aperiam unde ab molestias Ipsam ratione
+                            debitis debitis illo aspernatur id Laborum
+                            explicabo quod incidunt ipsa odio. Et hic
+                            necessitatibus perferendis eius aliquid Fugit non
+                            est voluptate a?
+                        </p>
+                    </div>
+                    <div class="col-md-4 hp-domains">
+                        <div class="domain-logo">
+                            {{ partial "icon-feature-manage.html" }}
+                        </div>
+                        <h2>Manage</h2>
+                        <p>
+                            Ipsum ipsa aperiam unde ab molestias Ipsam ratione
+                            debitis debitis illo aspernatur id Laborum
+                            explicabo quod incidunt ipsa odio. Et hic
+                            necessitatibus perferendis eius aliquid Fugit non
+                            est voluptate a?
+                        </p>
+                    </div>
                 </div>
-
-                <div class="col-md-4">
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean iaculis quis turpis nec maximus. Morbi ut neque vel arcu malesuada euismod. Duis maximus congue nisl, eget convallis justo. Morbi tincidunt sem ac lorem pellentesque, ac suscipit justo maximus. Aliquam gravida, erat sollicitudin facilisis aliquam, massa orci consequat est, vel lobortis eros lacus eu ligula. Vestibulum feugiat risus in mattis aliquet. Nulla rutrum urna in condimentum fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec et ultrices elit.
-                </p>
-                </div>
-
-                <div class="col-md-4">
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean iaculis quis turpis nec maximus. Morbi ut neque vel arcu malesuada euismod. Duis maximus congue nisl, eget convallis justo. Morbi tincidunt sem ac lorem pellentesque, ac suscipit justo maximus. Aliquam gravida, erat sollicitudin facilisis aliquam, massa orci consequat est, vel lobortis eros lacus eu ligula. Vestibulum feugiat risus in mattis aliquet. Nulla rutrum urna in condimentum fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec et ultrices elit.
-                </p>
-                </div>
-
-                </div>
-
-        </div>
+            </div>
         </main>
     {{ partial "footer.html" . }}
     </body>

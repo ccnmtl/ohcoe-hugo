@@ -1,11 +1,13 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "variables";
+@import "base/colors";
 @import "base/page";
 @import "base/typography";
 @import "base/icons";
 @import "base/vertical-nav";
 
 @import "components/nav";
+@import "components/homepage";
 @import "components/domain";
 @import "components/learning-objective-video";
 @import "components/heart-icon";

@@ -1,19 +1,16 @@
-$predecessor: rgb(137, 179, 157);
-$active: rgb(230, 178, 87);
-
 nav[aria-labelledby="knowledge-domain-navigation"] {
     li {
         a {
             color: #000000;
         }
         &.predecessor {
-            color: $predecessor;
+            color: $secondary-green;
             a {
-                color: $predecessor;
+                color: $secondary-green;
             }
         }
         &.active {
-            color: $active;
+            color: $secondary-yellow;
             text-decoration: underline;
         }
     }

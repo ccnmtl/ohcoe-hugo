@@ -1,0 +1,30 @@
+$predecessor: rgb(137, 179, 157);
+$active: rgb(230, 178, 87);
+
+nav[aria-labelledby="knowledge-domain-navigation"] {
+    li {
+        a {
+            color: #000000;
+        }
+        &.predecessor {
+            color: $predecessor;
+            a {
+                color: $predecessor;
+            }
+        }
+        &.active {
+            color: $active;
+            text-decoration: underline;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    ol {
+        > li {
+            font-weight: 600;
+        }
+    }
+}

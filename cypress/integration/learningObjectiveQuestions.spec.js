@@ -37,15 +37,4 @@ describe('Learning Objective Questions', function() {
         cy.reload();
         cy.get('#q1-0').should('be.checked');
     });
-
-    it('Clears localStorage when the reset button is clicked', function() {
-        var url = 'http://localhost:1313/domains/identify/screen-for-substance-disorders/post-assessment/';
-        cy.visit(url);
-        cy.get('#q1-0').click();
-        // Visit a page where no values will be saved to localStorage on load
-        cy.visit('http://localhost:1313');
-        cy.get('#storage-reset').click().should(function(win) {
-            expect(localStorage.length).to.eq(0);
-        });
-    });
 });

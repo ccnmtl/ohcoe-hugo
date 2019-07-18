@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     {{ partial "head.html" . }}
-    <body>
+    <body class="learning-objective-post-assessment learning-objective-child">
         {{ partial "skip.html" }}
         {{ partial "nav.html" .Parent }}
         <div class="container">
             <div class="row">
-                <div id="content" class="col-md-12">
-                    <div class="domain-title"><span>Domain: {{ .Parent.Parent.Title }}</span></div>
-                    <div class="learning-objective-title"><span>Learning Objective: {{ .Parent.Title }}</span></div>
+                <div id="content" class="domain-page-titles col-md-12">
+                    <div class="domain-title">{{ .Parent.Parent.Title }}</div>
+                    <div class="learning-objective-title">{{ .Parent.Title }}</div>
                 </div>
             </div>
             <div class="row">
@@ -34,21 +34,23 @@
                             {{ end }}
                         </form>
                     </section>
-                    <nav class="row justify-content-center" aria-labelledby="lateral-navigation">
-                        <div id="lateral-navigation" class="col-4">
-                            {{ if lt .Parent.Weight 3 }}
-                                {{ range first 1 (where .Parent.Parent.Sections.ByWeight "Weight" "gt" .Parent.Weight) }}   
-                                <p>Review your knowledge</p>
-                                <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Next</a>
+                    <div class="container">
+                        <nav class="row justify-content-center" aria-labelledby="lateral-navigation">
+                            <div id="lateral-navigation" class="col-12 btn-toolbar justify-content-center">
+                                <div class="input-group">
+                                {{ if lt .Parent.Weight 3 }}
+                                    {{ range first 1 (where .Parent.Parent.Sections.ByWeight "Weight" "gt" .Parent.Weight) }}   
+                                    <a class="btn btn-secondary btn-lg" href="{{.Permalink }}">Next</a>
+                                    {{ end }}
+                                {{ else }}
+                                    {{ range first 1 (where .Parent.Parent.Sections "Type" "review") }}   
+                                    <a class="btn btn-secondary btn-lg" href="{{.Permalink }}">Next</a>
+                                    {{ end }}
                                 {{ end }}
-                            {{ else }}
-                                {{ range first 1 (where .Parent.Parent.Sections "Type" "review") }}   
-                                <p>Review your knowledge</p>
-                                <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Next</a>
-                                {{ end }}
-                            {{ end }}
-                        </div>
-                    </nav>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
                 </div>
                 <div class="col-md-3">
                     {{ partial "learning-objective-sidebar.html" . }}

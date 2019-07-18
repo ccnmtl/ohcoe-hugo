@@ -1,4 +1,6 @@
 nav[aria-labelledby="knowledge-domain-navigation"] {
+    background-color: #FFFFFF;
+
     li {
         a {
             color: #000000;
@@ -25,3 +27,13 @@ nav[aria-labelledby="knowledge-domain-navigation"] {
         }
     }
 }
+
+nav[aria-labelledby="lateral-navigation"] {
+    background-color: #FFFFFF;
+
+    #lateral-navigation {
+        background-color: $tertiary-green;
+        border-radius: 0.25rem;
+        padding: 2em 1em;
+    }
+} 

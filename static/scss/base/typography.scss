@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
 * {font-family: 'Montserrat', sans-serif;}
 
 p, ul, ol, ul ul, ol ol {font-family: 'Open Sans', sans-serif;}
@@ -5,3 +8,28 @@ p, ul, ol, ul ul, ol ol {font-family: 'Open Sans', sans-serif;}
 a#primary-navigation, h2 {text-transform: uppercase;}
 
 a {color: #a0a61f;}
+
+%page-title {
+    @extend h1;
+    color: $secondary-brown;
+    font-weight: 800;
+}
+
+.domain-page-titles {
+    h1, .learning-objective-title {
+        @extend %page-title;
+    }
+    .domain-title {
+        font-weight: 600;
+        font-size: 2em;
+        font-transform: uppercase;
+    }
+}
+
+body.learning-objective-child main h1 {
+    color: $secondary-brown;
+}
+
+#cumulative-review-title {
+    @extend %page-title;
+}

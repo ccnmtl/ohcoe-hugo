@@ -6,8 +6,7 @@
         {{ partial "nav.html" . }}
         <main id="cumulative-review">
             <div class="container">
-                <h1>Cumulative Review Template</h1>
-                <h1>{{ .Title }}</h1>
+                <h1 id="cumulative-review-title">{{ .Title }}</h1>
                 {{ .Content }}
                 <div id="demographic-q-responses" style="display: none">
                     <h1>Demographic Questions</h1>

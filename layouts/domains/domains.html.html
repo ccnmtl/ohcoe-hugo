@@ -6,9 +6,9 @@
         {{ partial "nav.html" . }}
         <div class="container">
             <div class="row">
-                <div id="content" class="col-md-12">
-                    <h1>{{ .Title }}</h1>
-                    <h2>Introduction to {{ .Title }}</h2>
+                <div id="content" class="domain-page-titles col-md-12">
+                    <div class="domain-title">{{ .Title }}</div>
+                    <h1>Introduction to {{ .Title }}</h1>
                 </div>
             </div>
             <div class="row">
@@ -80,14 +80,17 @@
                         {{ partial "video.html" .Params.videoId }}
                         {{ .Content }}
                     </main>
-                    <nav class="row justify-content-center" aria-labelledby="lateral-navigation">
-                        <div id="lateral-navigation" class="col-4">
-                        {{ range first 1 .Sections.ByWeight}}   
-                        <p>Meet your first objective</p>
-                        <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Next</a>
-                        {{ end }}
-                        </div>
-                    </nav>
+                    <div class="container">
+                        <nav class="row justify-content-center" aria-labelledby="lateral-navigation">
+                            <div id="lateral-navigation" class="col-12 btn-toolbar justify-content-center">
+                                <div class="input-group">
+                                    {{ range first 1 .Sections.ByWeight}}   
+                                    <a class="btn btn-secondary btn-lg" href="{{.Permalink }}">Next</a>
+                                    {{ end }}
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
                 </div>
                 <div class="col-md-3">
                     <nav aria-labelledby="knowledge-domain-navigation">

@@ -6,9 +6,9 @@
         {{ partial "nav.html" . }}
         <div class="container">
             <div class="row">
-                <div id="content" class="col-md-12">
-                    <div class="domain-title"><span>Domain: {{ .Parent.Title }}</span></div>
-                    <h1>Domain Review: {{ .Title }}</h1>
+                <div id="content" class="domain-page-titles col-md-12">
+                    <div class="domain-title">{{ .Parent.Title }}</div>
+                    <h1>{{ .Title }}</h1>
                 </div>
             </div>
             <div class="row">
@@ -16,7 +16,6 @@
                     <main id="domain-review">
                         {{ .Content }}
                         <h2>Total Score</h2>
-
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="row">
@@ -74,26 +73,31 @@
                             </table>
                         </div>
                     </main>
-                    <nav class="row justify-content-center" aria-labelledby="lateral-navigation">
-                        <div id="lateral-navigation" class="col-4">
-                            {{ $parentWeight := .Parent.Weight }}
-                            {{ $grandParentWeight := .Parent.Parent.Weight }}
-                            {{ if lt $parentWeight 3 }}
-                            {{ range first 1 (where .Parent.Parent.Sections.ByWeight "Weight" "gt" $parentWeight) }}   
-                            <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Proceed to the next domain</a>
-                                {{ range first 1 (where $.Site.Pages "Type" "cumulative-review") }}
-                                <a class="btn btn-primary btn-lg" href="{{.Permalink}}">Cumulative Review</a>
+                    <div class="container">
+                        <nav class="row justify-content-center" aria-labelledby="lateral-navigation">
+                            <div id="lateral-navigation" class="col-12 btn-toolbar justify-content-between">
+                                <div class="btn-group">
+                                    <button id="review-print" class="btn btn-secondary btn-lg" href="#">Print</button>
+                                </div>
+                                <div class="input-group">
+                                {{ $parentWeight := .Parent.Weight }}
+                                {{ $grandParentWeight := .Parent.Parent.Weight }}
+                                {{ if lt $parentWeight 3 }}
+                                    {{ range first 1 (where .Parent.Parent.Sections.ByWeight "Weight" "gt" $parentWeight) }}   
+                                        {{ range first 1 (where $.Site.Pages "Type" "cumulative-review") }}
+                                        <a class="btn btn-secondary btn-lg mr-1" href="{{.Permalink}}">Cumulative Assessment</a>
+                                        {{ end }}
+                                    <a class="btn btn-secondary btn-lg" href="{{.Permalink }}">Continue to Next Domain</a>
+                                    {{ end }}
+                                {{ else }}
+                                    {{ range first 1 (where $.Site.Pages "Type" "cumulative-review") }}
+                                    <a class="btn btn-secondary btn-lg" href="{{.Permalink}}">Cumulative Assessment</a>
+                                    {{ end }}
                                 {{ end }}
-                            {{ end }}
-                            {{ else }}
-                            <p>See your cumulative results</p>
-                            {{ range first 1 (where $.Site.Pages "Type" "cumulative-review") }}
-                            <a class="btn btn-primary btn-lg" href="{{.Permalink}}">Next</a>
-                            {{ end }}
-                            {{ end }}
-                            <button id="review-print" class="btn btn-primary btn-lg" href="#">Print</button>
-                        </div>
-                    </nav>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
                 </div>
                 <div class="col-md-3">
                     <nav aria-labelledby="knowledge-domain-navigation">

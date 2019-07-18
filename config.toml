@@ -2,3 +2,9 @@ baseURL = "https://ohcoe.ctl.columbia.edu"
 languageCode = "en-us"
 title = "Oral Health Care in the Opioid Crisis"
 googleAnalytics = "UA-51144540-32"
+
+[menu]
+  [[menu.main]]
+    identifier = "domains"
+    name = "Domains of Expertise"
+    weight = 2

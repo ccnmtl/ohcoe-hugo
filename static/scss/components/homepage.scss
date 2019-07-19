@@ -1,0 +1,48 @@
+#hp-hero {
+    background-image: linear-gradient(
+            rgba(256, 256, 256, 0.6),
+            rgba(256, 256, 256, 0.6)),
+        url('/img/dental-consult.jpg');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    h1 {
+        color: $secondary-brown;
+        text-align: center;
+        font-weight: 900;
+    }
+}
+@include media-breakpoint-up(md) {
+    #hp-hero {
+        padding: 8em 3em;
+    }
+}
+
+#hp-project-intro {
+    background-color: $secondary-green;
+    padding: 2em 1em;
+    color: #FFFFFF;
+
+    #hp-project-intro-logo {
+        width: 100%;
+        fill: #FFFFFF;
+    }
+}
+
+#hp-project-tag {
+    background-color: $secondary-yellow;
+    padding: 2em 1em;
+    color: #FFFFFF;
+}
+
+.hp-domains {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    
+    .domain-logo {
+        width: 50%;
+    }
+}

@@ -13,21 +13,25 @@ a {color: #a0a61f;}
     @extend h1;
     color: $secondary-brown;
     font-weight: 800;
+    margin-top: 1em;
 }
 
 .domain-page-titles {
     h1, .learning-objective-title {
         @extend %page-title;
+        margin-top: 1em;
     }
     .domain-title {
         font-weight: 600;
         font-size: 2em;
-        font-transform: uppercase;
+        text-transform: uppercase;
+        margin-top: 1em;
     }
 }
 
 body.learning-objective-child main h1 {
     color: $secondary-brown;
+    margin-top: 1em;
 }
 
 #cumulative-review-title {
@@ -38,3 +42,6 @@ form.assessment-form h1#assessment-form-title {
     font-weight: 800;
     font-size: 1.25em;
 }
+
+a:hover {text-decoration: underline!important;}
+

@@ -1,22 +1,26 @@
 #hp-hero {
     background-image: linear-gradient(
-            rgba(256, 256, 256, 0.6),
-            rgba(256, 256, 256, 0.6)),
-        url('/img/dental-consult.jpg');
-    background-position: center center;
+    rgba(256, 256, 256, .8),
+     rgba(256, 256, 256, .8)),
+    url('/img/dental-consult.jpg');
+    background-position: center 30%;
     background-size: cover;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    padding: 3em;
+    
     h1 {
         color: $secondary-brown;
         text-align: center;
         font-weight: 900;
+        margin: 0em 0em .5em 0em;
     }
 }
+
 @include media-breakpoint-up(md) {
     #hp-hero {
-        padding: 8em 3em;
+        padding: 3em;
     }
 }
 
@@ -42,7 +46,18 @@
     flex-flow: column nowrap;
     align-items: center;
     
+    p {
+        padding: 0em 3em 3em 3em;
+    }
     .domain-logo {
         width: 50%;
     }
 }
+
+#get-started {color: #FFFFFF;}
+
+h3#mission {padding: 1em 0em 1em 1em;}
+h3#mission a {color: #FFFFFF;}
+
+
+.hp-domains h3.display-4 {margin-top: -50px;}

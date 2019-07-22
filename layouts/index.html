@@ -8,15 +8,16 @@
             <div class="container p-0">
                 <div id="hp-hero" class="jumbotron-fluid">
                     <h1 class="display-4">Help your patients who are at risk for opioid addiction.</h1>
-                    <a class="btn btn-light">Start Now</a>
+                    <a id="get-started" class="btn btn-secondary btn-lg">Get Started</a>
                 </div>
             </div>
             <div class="container">
                 <div id="hp-project-intro" class="row">
-                    <div class="col-md-6">
-                        <span>Project OHCOE</span> is an online resource designed to help dental students identify patients at risk for opioid addiction, interact with them, and manage their treatment.
+                    <div class="col-md-9">
+                        <h3 id="mission"><strong><a href="#">Project OHCOE</a></strong> is an online resource designed to help dental students 
+                        identify patients at risk for opioid addiction, interact with them, and manage their treatment.</h3>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-3">
                         <div id="hp-project-intro-logo">
                             {{ partial "logo-vertical.html" }}
                         </div>
@@ -26,7 +27,7 @@
             <div class="container">
                 <div id="hp-project-tag" class="row">
                     <div class="mx-auto">
-                        Learn how to provide a new level of care through <span>three domains of expertise.</span>
+                        <h3>Learn how to provide a new level of care through <strong>three domains of expertise</strong>.</h3>
                     </div>
                 </div>
             </div>
@@ -34,9 +35,9 @@
                 <div class="row">
                     <div class="col-md-4 hp-domains">
                         <div class="domain-logo">
-                            {{ partial "icon-feature-identify.html" }}
+                            <a href="#">{{ partial "icon-feature-identify.html" }}</a>
                         </div>
-                        <h2>Identify</h2>
+                        <h3 class="display-4">Identify</h3>
                         <p>
                             Ipsum ipsa aperiam unde ab molestias Ipsam ratione
                             debitis debitis illo aspernatur id Laborum
@@ -47,9 +48,9 @@
                     </div>
                     <div class="col-md-4 hp-domains">
                         <div class="domain-logo">
-                            {{ partial "icon-feature-refer.html" }}
+                            <a href="#">{{ partial "icon-feature-refer.html" }}</a>
                         </div>
-                        <h2>Refer</h2>
+                        <h3 class="display-4">Refer</h3>
                         <p>
                             Ipsum ipsa aperiam unde ab molestias Ipsam ratione
                             debitis debitis illo aspernatur id Laborum
@@ -60,9 +61,9 @@
                     </div>
                     <div class="col-md-4 hp-domains">
                         <div class="domain-logo">
-                            {{ partial "icon-feature-manage.html" }}
+                            <a href="#">{{ partial "icon-feature-manage.html" }}</a>
                         </div>
-                        <h2>Manage</h2>
+                        <h3 class="display-4">Manage</h3>
                         <p>
                             Ipsum ipsa aperiam unde ab molestias Ipsam ratione
                             debitis debitis illo aspernatur id Laborum

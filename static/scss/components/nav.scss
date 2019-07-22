@@ -5,8 +5,25 @@ nav, footer > .container {
 footer > .container {
     color: #FFFFFF;
     background-color: $primary-green;
+    padding: 1em;
+    text-align: center;
 }
 
 .navbar-container {
     padding: 0px;
 }
+
+nav a.nav-link {color: white!important;}
+
+.dropdown-menu {background-color: $primary-green;}
+
+.dropdown-item {
+    color: #FFFFFF;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+#lateral-navigation {margin-bottom: 2em;}

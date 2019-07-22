@@ -1,6 +1,6 @@
 <nav aria-labelledby="knowledge-domain-navigation">
     <div id="knowledge-domain-navigation" class="sr-only">{{ .Parent.Parent.Title }} Domain Navigation</div>
-    <ol>
+    <ul>
         <li class="predecessor"><a href="{{ .Parent.Parent.Permalink }}">{{ .Parent.Parent.Title }}</a></li>
 
         {{ $currentPage := . }}
@@ -20,5 +20,5 @@
             {{ end }}
         </ul>
         {{ end }}
-    </ol>
+    </ul>
 </nav>

@@ -95,7 +95,7 @@
                 <div class="col-md-3">
                     <nav aria-labelledby="knowledge-domain-navigation">
                         <div id="knowledge-domain-navigation" class="sr-only">{{ .Title }} Domain Navigation</div>
-                        <ol>
+                        <ul>
                             <li class="active">{{ .Title }}</li>
                             {{ range .Sections.ByWeight  }}
                             <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
@@ -105,7 +105,7 @@
                                 {{ end }}
                             </ul>
                             {{ end }}
-                        </ol>
+                        </ul>
                     </nav>
                 </div>
             </div>

@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     {{ partial "head.html" . }}
-    <body class="learning-objective-video">
+    <body class="learning-objective-video learning-objective-child">
         {{ partial "skip.html" }}
         {{ partial "nav.html" .Parent }}
         <div class="container">
             <div class="row">
-                <div id="content" class="col-md-12">
-                    <div class="domain-title"><span>Domain: {{ .Parent.Parent.Title }}</span></div>
-                    <div class="learning-objective-title"><span>Learning Objective: {{ .Parent.Title }}</span></div>
-                    <h1>{{ .Title }}</h1>
+                <div id="content" class="domain-page-titles col-md-12">
+                    <div class="domain-title">{{ .Parent.Parent.Title }}</div>
+                    <div class="learning-objective-title">{{ .Parent.Title }}</div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-9">
                     <main>
+                        <h1>{{ .Title }}</h1>
                         {{ .Content }}
                     </main>
                     <article>
@@ -34,14 +34,17 @@
                         {{ end }}
                         </div>
                     </article>
-                    <nav class="row justify-content-center" aria-labelledby="lateral-navigation">
-                        <div id="lateral-navigation" class="col-4">
-                            {{ range first 1 (where .Parent.Pages "Type" "learning-objective-post-assessment") }}   
-                            <p>Gauge your new understanding</p>
-                            <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Next</a>
-                            {{ end }}
-                        </div>
-                    </nav>
+                    <div class="container">
+                        <nav class="row justify-content-center" aria-labelledby="lateral-navigation">
+                            <div id="lateral-navigation" class="col-12 btn-toolbar justify-content-center">
+                                <div class="input-group">
+                                    {{ range first 1 (where .Parent.Pages "Type" "learning-objective-post-assessment") }}   
+                                    <a class="btn btn-secondary btn-lg" href="{{.Permalink }}">Next</a>
+                                    {{ end }}
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
                 </div>
                 <div class="col-md-3">
                     {{ partial "learning-objective-sidebar.html" . }}

@@ -6,8 +6,8 @@
         {{ partial "nav.html" . }}
         <div class="container">
             <div class="row">
-                <div id="content" class="col-md-12">
-                    <div class="domain-title"><span>{{ .Parent.Title }}</span></div>
+                <div id="content" class="domain-page-titles col-md-12">
+                    <div class="domain-title">{{ .Parent.Title }}</div>
                     <h1>{{ .Title }}</h1>
                 </div>
             </div>
@@ -16,14 +16,17 @@
                     <main>
                         {{ .Content }}
                     </main>
-                    <nav class="row justify-content-center" aria-labelledby="lateral-navigation">
-                        <div class="col-4">
-                            {{ range first 1 (where .Pages "Type" "learning-objective-pre-assessment") }}   
-                            <p>Gauge your <span>current</span> understanding</p>
-                            <a class="btn btn-primary btn-lg" href="{{.Permalink }}">Next</a>
-                            {{ end }}
-                        </div>
-                    </nav>
+                    <div class="container">
+                        <nav class="row justify-content-center" aria-labelledby="lateral-navigation">
+                            <div id="lateral-navigation" class="col-12 btn-toolbar justify-content-center">
+                                <div class="input-group">
+                                    {{ range first 1 (where .Pages "Type" "learning-objective-pre-assessment") }}   
+                                    <a class="btn btn-secondary btn-lg" href="{{.Permalink }}">Next</a>
+                                    {{ end }}
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
                 </div>
                 <div class="col-md-3">
                     <nav aria-labelledby="knowledge-domain-navigation">

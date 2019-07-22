@@ -4,10 +4,21 @@ date: 2019-05-13
 layout: learning-objective-post-assessment
 type: learning-objective-post-assessment
 weight: 3
-q1: ["SENTINAL_0", "SENTINAL_1", "SENTINAL_2", "SENTINAL_3", "SENTINAL_4"]
+q1: ["Strongly disagree", "Disagree", "Neither agree nor disagree", "Agree", "Strongly agree"]
 ---
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren
-no sea takimata sanctus est Lorem ipsum dolor sit amet.
+A 32-year old female patient presents for a 6-month periodic examination and
+cleaning. You have been providing dental treatment to this patient since they
+were 19 years old.
 
+Three years ago, when she was pregnant, you provided treatment and follow-up
+care for pregnancy gingivitis. Last year she was in a car accident and had to
+have surgery on her rotator cuff. You notice during this examination that her
+oral hygiene and home care is not as thorough as it once was. Due to your
+long-standing rapport with her, she divulges with you that she suffered from
+postpartum depression and the hydrocodone she was prescribed post shoulder
+surgery made her feel much better. She asks you if by chance you could
+prescribe her hydrocodone because of your history with her and how comfortable
+she has become with you.
+
+How prepared do you feel as a dental clinician to address the overall health
+(including non-dental) of your patient population?

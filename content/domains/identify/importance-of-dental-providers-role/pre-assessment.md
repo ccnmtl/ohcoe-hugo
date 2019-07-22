@@ -4,11 +4,7 @@ date: 2019-05-13
 layout: learning-objective-pre-assessment
 type: learning-objective-pre-assessment
 weight: 1
-q1: ["SENTINAL_0", "SENTINAL_1", "SENTINAL_2", "SENTINAL_3", "SENTINAL_4"]
+q1: ["Strongly disagree", "Disagree", "Neither agree nor disagree", "Agree", "Strongly agree"]
 ---
-Foo
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren
-no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
+How prepared do you feel as a dental clinician to address the overall health
+(including non-dental) of your patient population?

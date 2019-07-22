@@ -33,3 +33,8 @@ body.learning-objective-child main h1 {
 #cumulative-review-title {
     @extend %page-title;
 }
+
+form.assessment-form h1#assessment-form-title {
+    font-weight: 800;
+    font-size: 1.25em;
+}

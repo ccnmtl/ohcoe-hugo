@@ -42,9 +42,9 @@ function progressIcons() {
             sliceScore(meanPostScore).map(applySlicedScore, 'post-');
 
             $('#domain-pre-diff').append(
-                'Pre-Assessment Score: ' + meanPreScore);
+                '<div>Pre-Assessment Score: ' + meanPreScore + '</div>');
             $('#domain-post-diff').append(
-                'Post-Assessment Score: ' + meanPostScore);
+                '<div>Post-Assessment Score: ' + meanPostScore + '</div>');
         }
     });
 

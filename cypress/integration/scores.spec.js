@@ -8,7 +8,7 @@ describe('Domain Review Scoring', function() {
         cy.get('#q1-4').click();
 
         cy.visit('http://localhost:1313/domains/identify/review/');
-        cy.get('#1-1-l-obj-title').contains('Screen for substance disorders and patients at risk in the dental setting').should('exist');
+        cy.get('#1-1-l-obj-title').contains('Screen').should('exist');
         cy.get('#1-1-l-obj-title a').each(function(el) {
             cy.wrap(el).should('have.attr', 'href')
                 .and('eq', 'http://localhost:1313/domains/identify/screen-for-substance-disorders/');
@@ -57,7 +57,7 @@ describe('Cumulative Review Scoring', function() {
         cy.visit('http://localhost:1313/cumulative-review/');
         cy.get('h2#domain-title-1').should('not.have.css', 'display', 'none');
         cy.get('#1-1-l-obj-title').contains(
-            'Screen for substance disorders and patients at risk in the dental setting'
+            'Screen'
         ).should('exist');
         cy.get('#1-1-l-obj-title a').each(function(el) {
             cy.wrap(el).should('have.attr', 'href')

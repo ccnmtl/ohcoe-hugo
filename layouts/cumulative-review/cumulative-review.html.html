@@ -73,11 +73,6 @@
                 <button id="review-print" class="btn btn-primary btn-lg" href="#">Print</button>
             </div>
         </main>
+        {{ partial "footer.html" }}
     </body>
-    {{ partial "footer.html" }}
-    <div class="container">
-        <code>
-            {{ printf "%#v" .  }} 
-        </code>
-    </div>
 </html>

@@ -1,29 +1,29 @@
 nav[aria-labelledby="knowledge-domain-navigation"] {
     background-color: #FFFFFF;
 
-    li {
-        a {
-            color: #000000;
-        }
-        &.predecessor {
-            color: $secondary-green;
-            a {
-                color: $secondary-green;
-            }
-        }
-        &.active {
-            color: $secondary-yellow;
-            text-decoration: underline;
+    > ul {
+        > li {
+            font-weight: 600;
         }
     }
 
     ul {
         list-style-type: none;
-    }
 
-    ol {
-        > li {
-            font-weight: 600;
+        li {
+            a {
+                color: #000000;
+            }
+            &.predecessor {
+                color: $secondary-green;
+                a {
+                    color: $secondary-green;
+                }
+            }
+            &.active {
+                color: $secondary-yellow;
+                text-decoration: underline;
+            }
         }
     }
 }

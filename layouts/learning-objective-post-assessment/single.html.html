@@ -22,9 +22,8 @@
                         </article>
                     </main>
                     <section>
-                        <h1>Self Assessment</h1>
-                        <form data-domainId="">
-                            <h2>How would you describe your comfort level?</h2>
+                        <form class="assessment-form">
+                            <h1 id="assessment-form-title">Indicate your level of agreement with the previous statement:</h1>
                             {{ $currentPage := . }}
                             {{ range $idx, $el := .Params.q1 }}
                             <div class="form-check">

@@ -31,7 +31,7 @@
                 <div class="col-md-3">
                     <nav aria-labelledby="knowledge-domain-navigation">
                         <div id="knowledge-domain-navigation" class="sr-only">{{ .Parent.Title }} Domain Navigation</div>
-                        <ol>
+                        <ul>
                             <li class="predecessor"><a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a></li>
                             {{ $currentPage := . }}
                             {{ range .Parent.Sections.ByWeight  }}
@@ -47,7 +47,7 @@
                                 {{ end }}
                             </ul>
                             {{ end }}
-                        </ol>
+                        </ul>
                     </nav>
                 </div>
             </div>

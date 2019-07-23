@@ -8,8 +8,8 @@ weight: 1
 ---
 A 40-year old male patient presents to the clinic in acute pain. While the
 dental assistant begins to take diagnostic radiographs the patient repeatedly
-doses off. When you arrive to the operatory the patient finishes a conversation
-on the telephone then begins to hold his face reporting excruciating pain.
+dozes off. When you arrive to the operatory, the patient finishes a conversation
+on the telephone, then begins to hold his face reporting excruciating pain.
 
 The patient's wisdom tooth is partially impacted with no caries, no pathology,
 no inflammation of gingiva. As the patient begins to describe his symptoms; you

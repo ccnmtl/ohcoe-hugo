@@ -7,4 +7,4 @@ weight: 1
 q1: ["Strongly disagree", "Disagree", "Neither agree nor disagree", "Agree", "Strongly agree"]
 ---
 I’m familiar with screening (PDMP) and assessment (social history
-questionnaire) tools that would help to monitor a patient in this scenario?
+questionnaire) tools that would help to monitor a patient in this scenario.

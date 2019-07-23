@@ -20,5 +20,5 @@ surgery made her feel much better. She asks you if by chance you could
 prescribe her hydrocodone because of your history with her and how comfortable
 she has become with you.
 
-How prepared do you feel as a dental clinician to address the overall health
-(including non-dental) of your patient population?
+I feel prepared as a dental clinician to address the overall health
+(including non-dental) of your patient population.

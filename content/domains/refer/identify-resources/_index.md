@@ -1,5 +1,6 @@
 ---
-title: Describe how a dental practitioner can identify resources in their community in which to make a referral 
+title: Identify
+sub-title: Describe how a dental practitioner can identify resources in their community in which to make a referral 
 date: 2019-05-13
 layout: learning-objective
 type: learning-objective

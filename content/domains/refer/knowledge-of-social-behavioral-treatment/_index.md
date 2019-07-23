@@ -1,5 +1,6 @@
 ---
-title: Demonstrate knowledge of social and behavioral treatment modalities for patients identified as being at-risk or having substance abuse disorder 
+title: Demonstrate
+sub-title: Demonstrate knowledge of social and behavioral treatment modalities for patients identified as being at-risk or having substance abuse disorder 
 date: 2019-05-13
 layout: learning-objective
 type: learning-objective

@@ -1,5 +1,6 @@
 ---
-title: Appreciate the importance of providers collaborating to support patients with substance abuse
+title: Collaborate
+sub-title: Appreciate the importance of providers collaborating to support patients with substance abuse
 date: 2019-05-13
 layout: learning-objective
 type: learning-objective

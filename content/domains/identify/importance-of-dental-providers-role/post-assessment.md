@@ -16,8 +16,8 @@ have surgery on her rotator cuff. You notice during this examination that her
 oral hygiene and home care is not as thorough as it once was. Due to your
 long-standing rapport with her, she divulges with you that she suffered from
 postpartum depression and the hydrocodone she was prescribed post shoulder
-surgery made her feel much better. She asks, if by chance, you could
-prescribe her hydrocodone because of your history with her and how comfortable
+surgery made her feel much better. She asks if, by chance, you could
+prescribe her hydrocodone, because of your history and how comfortable
 she has become with you.
 
 I feel prepared as a dental clinician to address the overall health

@@ -57,11 +57,6 @@
                 </div>
             </div>
         </div>
+        {{ partial "footer.html" }}
     </body>
-    {{ partial "footer.html" }}
-    <div class="container">
-        <code>
-            {{ printf "%#v" .Parent.Parent.Parent.Sections }} 
-        </code>
-    </div>
 </html>

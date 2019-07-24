@@ -17,46 +17,49 @@
                         {{ .Content }}
                         <h2>Total Score</h2>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-7">
                                 <div class="row">
-                                    <div id="domain-pre-diff" class="col-12"></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         {{ partial "heart-icon.html" "pre-0"}}
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         {{ partial "heart-icon.html" "pre-1"}}
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         {{ partial "heart-icon.html" "pre-2"}}
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         {{ partial "heart-icon.html" "pre-3"}}
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-4 score-diff-container">
+                                <div id="domain-pre-diff"></div>
+                            </div>
+                        </div>
+                        <div class="row post-assessment-score-row">
+                            <div class="col-md-7">
                                 <div class="row">
-                                    <div id="domain-post-diff" class="col-12"></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         {{ partial "heart-icon.html" "post-0"}}
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         {{ partial "heart-icon.html" "post-1"}}
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         {{ partial "heart-icon.html" "post-2"}}
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         {{ partial "heart-icon.html" "post-3"}}
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-1"></div>
+                            <div class="col-md-4 score-diff-container">
+                                <div id="domain-post-diff"></div>
+                            </div>
                         </div>
-                        <div id="domain-growth-diff"></div>
                         <h2>Detailed Score</h2>
                         <div id="{{ anchorize .Parent.Weight }}" class="domain-results">
                             <table class="table">

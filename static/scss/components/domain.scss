@@ -1,3 +1,19 @@
 #other-role-text, #other-speciality-text {
     width: auto;
 }
+
+.score-diff-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.post-assessment-score-row {
+    margin-bottom: 3rem;
+}
+
+#domain-pre-diff, #domain-post-diff,
+#cumulative-pre-diff, #cumulative-post-diff {
+    font-weight: 600;
+}
+

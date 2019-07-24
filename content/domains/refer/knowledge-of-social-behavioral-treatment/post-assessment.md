@@ -21,5 +21,5 @@ him by his roommate. He begs you to not tell his parents of his
 does have a problem. He does not want to participate in group rehabilitation
 but prefers individualized care. Which treatment options are available?
 
-To ensure this patients' follow-through, I would feel comfortable referring him
+To ensure this patient's follow-through, I would feel comfortable referring him
 to the appropriate substance use disorder services.

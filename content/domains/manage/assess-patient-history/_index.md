@@ -1,11 +1,16 @@
 ---
-title: Assess a patient’s current and past drug use history to determine treatment options 
+title: Assess
+sub-title: Assess a patient’s current and past drug use history to determine treatment options 
 date: 2019-05-13
 layout: learning-objective
 type: learning-objective
 weight: 2
 ---
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren
-no sea takimata sanctus est Lorem ipsum dolor sit amet.
+A 52-year old female patient presents to the clinic for a comprehensive
+examination. When reviewing the patient's medical and social history, you find
+that she has a history of smoking 5 cigarettes daily, but has not smoked a
+cigarette for 5 years.
+
+The patient's family history includes a deceased mother who was addicted to
+crystal meth, a father who is a recovering alcoholic, and a younger sister who
+has no significant findings. 

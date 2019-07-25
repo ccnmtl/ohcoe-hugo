@@ -6,13 +6,17 @@
         {{ partial "nav.html" . }}
         <main id="cumulative-review">
             <div class="container">
-                <h1 id="cumulative-review-title">{{ .Title }}</h1>
-                {{ .Content }}
-                <div id="demographic-q-responses" style="display: none">
-                    <h1>Demographic Questions</h1>
-                </div>
-                <div id="review-no-score">
-                        <p>At least one pair of pre and post assessment questions need to answered for scores to appear.</p>
+                <div class="row">
+                    <div class="col-12">
+                        <h1 id="cumulative-review-title">{{ .Title }}</h1>
+                        {{ .Content }}
+                        <div id="demographic-q-responses" style="display: none">
+                            <h1>Demographic Questions</h1>
+                        </div>
+                        <div id="review-no-score">
+                            <p>At least one pair of pre and post assessment questions need to answered for scores to appear.</p>
+                        </div>
+                    </div>
                 </div>
                 <div id="review-score-container">
                     <div class="row justify-content-center">

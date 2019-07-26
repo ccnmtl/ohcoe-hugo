@@ -15,65 +15,70 @@
                 <div class="col-md-9">
                     <main id="domain-review">
                         {{ .Content }}
-                        <h2>Total Score</h2>
-                        <div class="row">
-                            <div class="col-md-7">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        {{ partial "heart-icon.html" "pre-0"}}
-                                    </div>
-                                    <div class="col-md-3">
-                                        {{ partial "heart-icon.html" "pre-1"}}
-                                    </div>
-                                    <div class="col-md-3">
-                                        {{ partial "heart-icon.html" "pre-2"}}
-                                    </div>
-                                    <div class="col-md-3">
-                                        {{ partial "heart-icon.html" "pre-3"}}
+                        <div id="review-no-score">
+                            <p>At least one pair of pre and post assessment questions need to answered for scores to appear.</p>
+                        </div>
+                        <div id="review-score-container">
+                            <h2>Total Score</h2>
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            {{ partial "heart-icon.html" "pre-0"}}
+                                        </div>
+                                        <div class="col-md-3">
+                                            {{ partial "heart-icon.html" "pre-1"}}
+                                        </div>
+                                        <div class="col-md-3">
+                                            {{ partial "heart-icon.html" "pre-2"}}
+                                        </div>
+                                        <div class="col-md-3">
+                                            {{ partial "heart-icon.html" "pre-3"}}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-1"></div>
-                            <div class="col-md-4 score-diff-container">
-                                <div id="domain-pre-diff"></div>
-                            </div>
-                        </div>
-                        <div class="row post-assessment-score-row">
-                            <div class="col-md-7">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        {{ partial "heart-icon.html" "post-0"}}
-                                    </div>
-                                    <div class="col-md-3">
-                                        {{ partial "heart-icon.html" "post-1"}}
-                                    </div>
-                                    <div class="col-md-3">
-                                        {{ partial "heart-icon.html" "post-2"}}
-                                    </div>
-                                    <div class="col-md-3">
-                                        {{ partial "heart-icon.html" "post-3"}}
-                                    </div>
+                                <div class="col-md-1"></div>
+                                <div class="col-md-4 score-diff-container">
+                                    <div id="domain-pre-diff"></div>
                                 </div>
                             </div>
-                            <div class="col-md-1"></div>
-                            <div class="col-md-4 score-diff-container">
-                                <div id="domain-post-diff"></div>
+                            <div class="row post-assessment-score-row">
+                                <div class="col-md-7">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            {{ partial "heart-icon.html" "post-0"}}
+                                        </div>
+                                        <div class="col-md-3">
+                                            {{ partial "heart-icon.html" "post-1"}}
+                                        </div>
+                                        <div class="col-md-3">
+                                            {{ partial "heart-icon.html" "post-2"}}
+                                        </div>
+                                        <div class="col-md-3">
+                                            {{ partial "heart-icon.html" "post-3"}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                                <div class="col-md-4 score-diff-container">
+                                    <div id="domain-post-diff"></div>
+                                </div>
                             </div>
-                        </div>
-                        <h2>Detailed Score</h2>
-                        <div id="{{ anchorize .Parent.Weight }}" class="domain-results">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Pre-Assessment Score</th>
-                                        <th scope="col">Post-Assessment Score</th>
-                                        <th scope="col">Change in Score</th>
-                                        <th scope="col">Learning Objective</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                </tbody> 
-                            </table>
+                            <h2>Detailed Score</h2>
+                            <div id="{{ anchorize .Parent.Weight }}" class="domain-results">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Learning Objective</th>
+                                            <th scope="col">Pre-Assessment Score</th>
+                                            <th scope="col">Post-Assessment Score</th>
+                                            <th scope="col">Change in Score</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody> 
+                                </table>
+                            </div>
                         </div>
                     </main>
                     <div class="container">

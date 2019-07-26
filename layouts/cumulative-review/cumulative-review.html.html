@@ -6,59 +6,68 @@
         {{ partial "nav.html" . }}
         <main id="cumulative-review">
             <div class="container">
-                <h1 id="cumulative-review-title">{{ .Title }}</h1>
-                {{ .Content }}
-                <div id="demographic-q-responses" style="display: none">
-                    <h1>Demographic Questions</h1>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-9">
-                        <div class="row">
-                            <div class="col-md-7">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        {{ partial "heart-icon.html" "pre-0"}}
-                                    </div>
-                                    <div class="col-md-3">
-                                        {{ partial "heart-icon.html" "pre-1"}}
-                                    </div>
-                                    <div class="col-md-3">
-                                        {{ partial "heart-icon.html" "pre-2"}}
-                                    </div>
-                                    <div class="col-md-3">
-                                        {{ partial "heart-icon.html" "pre-3"}}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-1"></div>
-                            <div class="col-md-4 score-diff-container">
-                                <div id="cumulative-pre-diff"></div>
-                            </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h1 id="cumulative-review-title">{{ .Title }}</h1>
+                        {{ .Content }}
+                        <div id="demographic-q-responses" style="display: none">
+                            <h1>Demographic Questions</h1>
+                        </div>
+                        <div id="review-no-score">
+                            <p>At least one pair of pre and post assessment questions need to answered for scores to appear.</p>
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-9">
-                        <div class="row post-assessment-score-row">
-                            <div class="col-md-7">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        {{ partial "heart-icon.html" "post-0"}}
-                                    </div>
-                                    <div class="col-md-3">
-                                        {{ partial "heart-icon.html" "post-1"}}
-                                    </div>
-                                    <div class="col-md-3">
-                                        {{ partial "heart-icon.html" "post-2"}}
-                                    </div>
-                                    <div class="col-md-3">
-                                        {{ partial "heart-icon.html" "post-3"}}
+                <div id="review-score-container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-9">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            {{ partial "heart-icon.html" "pre-0"}}
+                                        </div>
+                                        <div class="col-md-3">
+                                            {{ partial "heart-icon.html" "pre-1"}}
+                                        </div>
+                                        <div class="col-md-3">
+                                            {{ partial "heart-icon.html" "pre-2"}}
+                                        </div>
+                                        <div class="col-md-3">
+                                            {{ partial "heart-icon.html" "pre-3"}}
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="col-md-1"></div>
+                                <div class="col-md-4 score-diff-container">
+                                    <div id="cumulative-pre-diff"></div>
+                                </div>
                             </div>
-                            <div class="col-md-1"></div>
-                            <div class="col-md-4 score-diff-container">
-                                <div id="cumulative-post-diff"></div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-9">
+                            <div class="row post-assessment-score-row">
+                                <div class="col-md-7">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            {{ partial "heart-icon.html" "post-0"}}
+                                        </div>
+                                        <div class="col-md-3">
+                                            {{ partial "heart-icon.html" "post-1"}}
+                                        </div>
+                                        <div class="col-md-3">
+                                            {{ partial "heart-icon.html" "post-2"}}
+                                        </div>
+                                        <div class="col-md-3">
+                                            {{ partial "heart-icon.html" "post-3"}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                                <div class="col-md-4 score-diff-container">
+                                    <div id="cumulative-post-diff"></div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -19,17 +19,21 @@ function scores() {
                 var tableRow = $('<tr id="' + prefix + '"></tr>');
                 tableRow.html(
                     /* eslint-disable-next-line max-len */
+                    '<td id="' + prefix +'-l-obj-title"><a href="' + localStorage.getItem(prefix + '-url') + '">' +
+                    localStorage.getItem(prefix) + '</a>' +
+                    /* eslint-disable-next-line max-len */
                     '<td id="' + prefix +'-l-obj-pre-score">' + preScore + '</td>' +
                     /* eslint-disable-next-line max-len */
                     '<td id="' + prefix +'-l-obj-post-score">' + postScore + '</td>' +
                     /* eslint-disable-next-line max-len */
-                    '<td id="' + prefix +'-l-obj-score-diff">' + learningObjectiveScore + '</td>' +
-                    /* eslint-disable-next-line max-len */
-                    '<td id="' + prefix +'-l-obj-title"><a href="' + localStorage.getItem(prefix + '-url') + '">' +
-                    localStorage.getItem(prefix) + '</a>');
+                    '<td id="' + prefix +'-l-obj-score-diff">' + learningObjectiveScore + '</td>');
                 resultsContainer.append(tableRow[0]);
 
-                // Unhide the parent contains if there's at least one
+                // Unhide the scores if any questions are answered
+                $('#review-no-score').hide();
+                $('#review-score-container').show();
+
+                // Unhide the parent container if there's at least one
                 // question answered.
                 $('#' + (idx + 1)).show();
                 $('#domain-score-' + (idx + 1)).show();

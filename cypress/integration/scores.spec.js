@@ -1,5 +1,18 @@
 /* eslint-disable scanjs-rules/identifier_localStorage, max-len */
 describe('Domain Review Scoring', function() {
+    it('Hides the score information if no questions have been answered', function(){
+        cy.visit('http://localhost:1313/domains/identify/review/');
+        cy.get('#review-score-container').should('have.css', 'display', 'none');
+    });
+    it('Show the score information if at least one pair of questions have been answered', function(){
+        cy.visit('http://localhost:1313/domains/identify/screen-for-substance-disorders/pre-assessment/');
+        cy.get('#q1-0').click();
+        cy.visit('http://localhost:1313/domains/identify/screen-for-substance-disorders/post-assessment/');
+        cy.get('#q1-4').click();
+
+        cy.visit('http://localhost:1313/domains/identify/review/');
+        cy.get('#review-score-container').should('not.have.css', 'display', 'none');
+    });
     it('Answer a question, check that the correct score, title, and link is displayed on the domain review', function() {
         // Sets the pre score to 0, post score to 4
         cy.visit('http://localhost:1313/domains/identify/screen-for-substance-disorders/pre-assessment/');
@@ -48,6 +61,19 @@ describe('Domain Review Scoring', function() {
 });
 
 describe('Cumulative Review Scoring', function() {
+    it('Hides the score information if no questions have been answered', function(){
+        cy.visit('http://localhost:1313/cumulative-review/');
+        cy.get('#review-score-container').should('have.css', 'display', 'none');
+    });
+    it('Show the score information if at least one pair of questions have been answered', function(){
+        cy.visit('http://localhost:1313/domains/identify/screen-for-substance-disorders/pre-assessment/');
+        cy.get('#q1-0').click();
+        cy.visit('http://localhost:1313/domains/identify/screen-for-substance-disorders/post-assessment/');
+        cy.get('#q1-4').click();
+
+        cy.visit('http://localhost:1313/cumulative-review/');
+        cy.get('#review-score-container').should('not.have.css', 'display', 'none');
+    });
     it('Answer a question, check that the correct score, title, link, and domain is displayed on the cumulative review', function() {
         cy.visit('http://localhost:1313/domains/identify/screen-for-substance-disorders/pre-assessment/');
         cy.get('#q1-0').click();

@@ -1,14 +1,14 @@
 <div class="container navbar-container">
-    <nav class="navbar navbar-expand-md navbar-dark" aria-labeledby="primary-navigation">
-        <a id="primary-navigation" class="navbar-brand" href="{{ .Site.BaseURL }}">
+    <nav id="primary-nav" class="navbar navbar-expand-md navbar-dark" aria-label="primary">
+        <a class="navbar-brand" href="{{ .Site.BaseURL }}" aria-label="Return to the home page">
             <div id="logo">
                 {{ partial "logo-horizontal.html" }}
             </div>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample" aria-controls="navbarsExample" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primary-navbar" aria-controls="primary-navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarsExample">
+        <div class="collapse navbar-collapse" id="primary-navbar">
             <ul class="navbar-nav ml-auto">
                 {{ $currentPage := .  }}
                 {{ range .Site.Menus.main }}

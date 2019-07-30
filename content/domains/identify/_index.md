@@ -9,4 +9,3 @@ weight: 1
 videoId: "A9aLIXkf05Y"
 ---
 The Identify Domain
-

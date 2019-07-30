@@ -18,11 +18,6 @@
                                                      data-learning-objective="{{ .Parent.Title }}"
                                                      data-learning-objective-url="{{ .Parent.Permalink }}">
                         <h1>{{ .Title }}</h1>
-                        <article>
-                            {{ .Content }}
-                        </article>
-                    </main>
-                    <section>
                         <form class="assessment-form">
                             <h1 id="assessment-form-title">Indicate your level of agreement with the following statement:</h1>
                             <p>{{ .Content }}</p>
@@ -34,7 +29,7 @@
                             </div>
                             {{ end }}
                         </form>
-                    </section>
+                    </main>
 
                     <div class="container">
                         <nav class="row justify-content-center" aria-labelledby="lateral-navigation">

@@ -10,7 +10,7 @@
     align-items: center;
     padding: 3em;
     
-    h1 {
+    span {
         color: $secondary-brown;
         text-align: center;
         font-weight: 900;
@@ -51,13 +51,20 @@
     }
     .domain-logo {
         width: 50%;
+        margin-bottom: -50px;
+    }
+
+    span.hp-domain-title {
+        @extend .display-4;
     }
 }
 
 #get-started {color: #FFFFFF;}
 
-h3#mission {padding: 1em 0em 1em 1em;}
-h3#mission a {color: #FFFFFF;}
+span.tagline {
+    font-size: 1.75rem;
+    a {
+        color: #FFFFFF;
+    }
+}
 
-
-.hp-domains h3.display-4 {margin-top: -50px;}

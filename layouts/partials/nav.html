@@ -14,11 +14,11 @@
                 {{ range .Site.Menus.main }}
                     {{ if .HasChildren}}
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle {{ if (or ($currentPage.HasMenuCurrent "main" .) (false)) }} active{{ end  }}
+                            <a id="dropdown-{{ .Weight }}" class="nav-link dropdown-toggle {{ if (or ($currentPage.HasMenuCurrent "main" .) (false)) }} active{{ end  }}
                                 {{ range .Children }}{{ if (eq .Page $currentPage.Parent )}} active{{ end}}{{ end }}" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 {{ .Name }}
                             </a>  
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu" aria-labelledby="dropdown-{{ .Weight }}">
                                 {{ range .Children }}
                                 <a class="dropdown-item {{ if (or (eq .Page $currentPage) (eq .Page $currentPage.Parent ))}}active{{ end}}" href="{{ .URL }}">{{ .Name }}</a>
                                 {{ end }}

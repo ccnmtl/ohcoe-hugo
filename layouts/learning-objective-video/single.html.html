@@ -6,34 +6,36 @@
         {{ partial "nav.html" .Parent }}
         <div class="container">
             <div class="row">
-                <div id="content" class="domain-page-titles col-md-12">
+                <header id="content" class="domain-page-titles col-md-12">
                     <div class="domain-title">{{ .Parent.Parent.Title }}</div>
                     <div class="learning-objective-title">{{ .Parent.Title }}</div>
-                </div>
+                </header>
             </div>
             <div class="row">
                 <div class="col-md-9">
                     <main>
                         <h1>{{ .Title }}</h1>
+                        <section>
                         {{ .Content }}
-                    </main>
-                    <article>
-                        <h1>Primary Video</h1>
-                        <p>Watch this video to increase your understanding</p>
-                        {{ partial "video.html" (dict "videoId" .Params.primaryVideoId "videoTitle" (printf "%s video" .Parent.Title)) }}
-                        <h1>Secondary Video</h1>
-                        <p>For a deeper understanding, watch these videos</p>
-                        <div class="row">
-                        {{ range $video := .Params.supplimentalVideo }}
-                            <div class="col-md-6 supplimental-video">
-                            {{ partial "video.html" (dict "videoId" (index $video "id") "videoTitle" "Supplimentary Video") }}
-                                <aside>
-                                    {{ index $video "desc" }} 
-                                </aside>
+                        </section>
+                        <article>
+                            <h2>Primary Video</h2>
+                            <p>Watch this video to increase your understanding</p>
+                            {{ partial "video.html" (dict "videoId" .Params.primaryVideoId "videoTitle" (printf "%s video" .Parent.Title)) }}
+                            <h2>Secondary Video</h2>
+                            <p>For a deeper understanding, watch these videos</p>
+                            <div class="row">
+                            {{ range $video := .Params.supplimentalVideo }}
+                                <div class="col-md-6 supplimental-video">
+                                {{ partial "video.html" (dict "videoId" (index $video "id") "videoTitle" "Supplimentary Video") }}
+                                    <div>
+                                        {{ index $video "desc" }} 
+                                    </div>
+                                </div>
+                            {{ end }}
                             </div>
-                        {{ end }}
-                        </div>
-                    </article>
+                        </article>
+                    </main>
                     <div class="container">
                         <nav class="row justify-content-center" aria-labelledby="lateral-navigation">
                             <div id="lateral-navigation" class="col-12 btn-toolbar justify-content-center">

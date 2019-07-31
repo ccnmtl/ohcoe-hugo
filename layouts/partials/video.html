@@ -1,8 +1,5 @@
-{{ $videoId := .  }}
 <div class="embed-responsive embed-responsive-16by9">
-    {{ if $videoId }}
-    <iframe id="ytplayer-{{ $videoId }}" class="ytplayer" type="text/html" width="640" height="360"
-        src="https://www.youtube.com/embed/{{ $videoId }}?enablejsapi=1"
-        frameborder="0"></iframe>
-    {{ end }}
+    <iframe id="ytplayer-{{ .videoId }}" class="ytplayer" type="text/html" width="640" height="360"
+        src="https://www.youtube.com/embed/{{ .videoId }}?enablejsapi=1"
+        frameborder="0" aria-label="{{ .videoTitle }}"></iframe>
 </div>

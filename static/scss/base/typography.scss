@@ -7,7 +7,12 @@ p, ul, ol, ul ul, ol ol {font-family: 'Open Sans', sans-serif;}
 
 a#primary-navigation, h2 {text-transform: uppercase;}
 
-a {color: #a0a61f;}
+a {
+    color: #a0a61f;
+    &:hover {
+        text-decoration: underline!important;
+    }
+}
 
 %page-title {
     font-size: 2.5em;
@@ -42,6 +47,3 @@ form.assessment-form h1#assessment-form-title {
     font-weight: 800;
     font-size: 1.25em;
 }
-
-a:hover {text-decoration: underline!important;}
-

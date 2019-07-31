@@ -20,13 +20,13 @@
                     <article>
                         <h1>Primary Video</h1>
                         <p>Watch this video to increase your understanding</p>
-                        {{ partial "video.html" .Params.primaryVideoId }}
+                        {{ partial "video.html" (dict "videoId" .Params.primaryVideoId "videoTitle" (printf "%s video" .Parent.Title)) }}
                         <h1>Secondary Video</h1>
                         <p>For a deeper understanding, watch these videos</p>
                         <div class="row">
                         {{ range $video := .Params.supplimentalVideo }}
                             <div class="col-md-6 supplimental-video">
-                            {{ partial "video.html" (index $video "id") }}
+                            {{ partial "video.html" (dict "videoId" (index $video "id") "videoTitle" "Supplimentary Video") }}
                                 <aside>
                                     {{ index $video "desc" }} 
                                 </aside>

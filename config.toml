@@ -6,5 +6,9 @@ googleAnalytics = "UA-51144540-32"
 [menu]
   [[menu.main]]
     identifier = "domains"
-    name = "Domains of Expertise"
+    name = "Domains"
     weight = 2
+  [[menu.main]]
+    identifier = "resources"
+    name = "Resources"
+    weight = 3

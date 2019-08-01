@@ -13,7 +13,13 @@ footer > .container {
     padding: 0px;
 }
 
-nav a.nav-link {color: white!important;}
+nav#primary-nav {
+    a.nav-link {
+        color: white!important;
+    }
+    font-size: 1.1rem;
+    font-weight: 700;
+}
 
 .dropdown-menu {background-color: $primary-green;}
 

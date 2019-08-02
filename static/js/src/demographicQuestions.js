@@ -5,15 +5,25 @@ function demographicQuestions() {
     /* Demographic Questions */
     // Save responses to localStorage
     $('.demographic-questions input[type="text"]').each(function(idx, el){
-        $(el).on('focus', function(e){
-            var radioInput = e.target.parentNode.querySelector(
-                'input[type="radio"]');
-            radioInput.setAttribute('checked', 'true');
-        });
         $(el).on('blur', function(e){
-            var radioInput = e.target.parentNode.querySelector(
-                'input[type="radio"]');
-            radioInput.setAttribute('value', e.target.value);
+            var radioId = '#' + e.target.id.replace('-text', '');
+            $(radioId)[0].setAttribute('value', e.target.value);
+        });
+    });
+    // When the 'other' radio button is clicked, shift focus to text field
+    $('.demographic-questions input[type="radio"]').each(function(idx, el){
+        $(el).on('change', function(e){
+            var id = e.target.id;
+            if (id === 'other-role' || id === 'other-speciality') {
+                // show the text field
+                $('#' + id + '-text').show().focus();
+            } else {
+                // hide the text field
+                var name = e.target.name;
+                if (name === 'role' || name === 'speciality') {
+                    $('#other-' + name + '-text').hide();
+                }
+            }
         });
     });
 

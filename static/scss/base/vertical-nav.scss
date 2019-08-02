@@ -1,30 +1,27 @@
 nav[aria-labelledby="knowledge-domain-navigation"] {
     background-color: #FFFFFF;
-
-    > ul {
-        > li {
-            font-weight: 600;
+    // Set styles for the top level items
+    font-weight: 600;
+    * {
+        list-style-type: none;
+    }
+    a {
+        color: #000000;
+    }
+    li.predecessor {
+        color: $secondary-green;
+        a {
+            color: $secondary-green;
         }
     }
+    li.active {
+        color: $secondary-yellow;
+        text-decoration: underline;
+    }
 
-    ul {
-        list-style-type: none;
-
-        li {
-            a {
-                color: #000000;
-            }
-            &.predecessor {
-                color: $secondary-green;
-                a {
-                    color: $secondary-green;
-                }
-            }
-            &.active {
-                color: $secondary-yellow;
-                text-decoration: underline;
-            }
-        }
+    // Set styles for items one level deep
+    li.knowledge-domain-navigation-sub-item * {
+        font-weight: 400;
     }
 }
 

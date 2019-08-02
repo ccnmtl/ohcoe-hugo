@@ -6,19 +6,23 @@
         {{ $currentPage := . }}
         {{ range .Parent.Parent.Sections.ByWeight  }}
         <li {{ if le .Weight $currentPage.Parent.Weight }}class="predecessor"{{ end }}><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-        <ul>
-            {{ range .Pages.ByWeight }}
-                {{ if eq $currentPage . }}
-                <li class="active">{{ .Title }}</li>
-                {{ else }}
-                <li {{ if (and (lt .Weight $currentPage.Weight) (le .Parent.Weight $currentPage.Parent.Weight)) }}
-                    class="predecessor"
-                    {{ else if (lt .Parent.Weight $currentPage.Parent.Weight) }}
-                    class="predecessor"
-                    {{ end }}><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ if .Pages }}
+        <li class="knowledge-domain-navigation-sub-item">
+            <ul>
+                {{ range .Pages.ByWeight }}
+                    {{ if eq $currentPage . }}
+                    <li class="active">{{ .Title }}</li>
+                    {{ else }}
+                    <li {{ if (and (lt .Weight $currentPage.Weight) (le .Parent.Weight $currentPage.Parent.Weight)) }}
+                        class="predecessor"
+                        {{ else if (lt .Parent.Weight $currentPage.Parent.Weight) }}
+                        class="predecessor"
+                        {{ end }}><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                    {{ end }}
                 {{ end }}
-            {{ end }}
-        </ul>
+            </ul>
+        </li>
+        {{ end }}
         {{ end }}
     </ul>
 </nav>

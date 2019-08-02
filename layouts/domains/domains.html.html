@@ -6,79 +6,85 @@
         {{ partial "nav.html" . }}
         <div class="container">
             <div class="row">
-                <div id="content" class="domain-page-titles col-md-12">
+                <header id="content" class="domain-page-titles col-md-12">
                     <div class="domain-title">{{ .Title }}</div>
                     <h1>Introduction to {{ .Title }}</h1>
-                </div>
+                </header>
             </div>
             <div class="row">
                 <div class="col-md-9">
-                    <section class="demographic-questions">
-                        <h1>Demographic Questions</h1>
-                        <form id="demographic-info" style="display: none">
-                            <h2>Please select your current role in your organization:</h2>
-                            <div id="demographic-current-role" class="form-group">
-                                <div class="demographic-q-select form-check">
-                                    <input type="radio" name="role" id="no-answer-role" class="form-check-input" value="prefer_not_answer" checked/>
-                                    <label for="no-answer-role" class="form-check-label">Prefer Not to Answer</label>
-                                </div>
-                                <div class="demographic-q-select form-check">
-                                    <input type="radio" name="role" id="faculty" class="form-check-input" value="faculty" />
-                                    <label for="faculty" class="form-check-label">Faculty Member</label>
-                                </div>
-                                <div class="demographic-q-select form-check">
-                                    <input type="radio" name="role" id="resident" class="form-check-input" value="resident"/>
-                                    <label for="resident" class="form-check-label">Resident</label>
-                                </div>
-                                <div class="demographic-q-select form-check">
-                                    <input type="radio" name="role" id="dentist" class="form-check-input" value="dentist"/>
-                                    <label for="dentist" class="form-check-label">Practicing Dentist</label>
-                                </div>
-                                <div class="demographic-q-select form-check">
-                                    <input type="radio" name="role" id="student" class="form-check-input" value="student"/>
-                                    <label for="student" class="form-check-label">Student</label>
-                                </div>
-                                <div class="demographic-q-select form-check d-flex">
-                                    <input type="radio" name="role" id="other-role" class="form-check-input" value="other"/>
-                                    <label for="other-role" class="form-check-label mr-2">Other:</label>
-                                    <input type="text" name="role" id="other-role-text" class="form-control" value=""/>
-                                </div>
-                            </div>
-                            <h2>Please select your speciality:</h2>
-                            <div id="demographic-speciality" class="form-group">
-                                <div class="demographic-q-select form-check">
-                                    <input type="radio" name="speciality" id="no-answer-speciality" class="form-check-input" value="prefer_not_answer" checked/>
-                                    <label for="no-answer-speciality" class="form-check-label">Prefer Not to Answer</label>
-                                </div>
-                                <div class="demographic-q-select form-check">
-                                    <input type="radio" name="speciality" id="public-health" class="form-check-input" value="public_health"/>
-                                    <label for="public-health" class="form-check-label">Dentistry - Public Health Dentistry</label>
-                                </div>
-                                <div class="demographic-q-select form-check">
-                                    <input type="radio" name="speciality" id="general" class="form-check-input" value="general"/>
-                                    <label for="general" class="form-check-label">Dentistry - General Dentistry</label>
-                                </div>
-                                <div class="demographic-q-select form-check">
-                                    <input type="radio" name="speciality" id="pediatric" class="form-check-input" value="pediatric"/>
-                                    <label for="pediatric" class="form-check-label">Dentistry - Pediatric Dentistry</label>
-                                </div>
-                                <div class="demographic-q-select form-check d-flex">
-                                    <input type="radio" name="speciality" id="other-speciality" class="form-check-input" value="other"/>
-                                    <label for="other-speciality" class="form-check-label mr-2">Other:</label>
-                                    <input type="text" name="role" id="other-speciality-text" class="form-control" value=""/>
-                                </div>
-                            </div>
-                            <div id="demographic-submit">
-                                <input type="submit" class="btn btn-primary" value="Submit" />
-                            </div>
-                        </form>
-                        <div id="demographic-confirmation" class="alert alert-success" role="alert" style="display: none">
-                            Thank you for your response.
-                        </div>
-                    </section>
                     <main>
-                        {{ partial "video.html" .Params.videoId }}
-                        {{ .Content }}
+                        <section class="demographic-questions">
+                            <h2>Your role and speciality</h2>
+                            <form id="demographic-info" style="display: none">
+                                <fieldset id="demographic-current-role" class="form-group">
+                                    <legend>
+                                        <strong>Please select your current role in your organization:</strong>
+                                    </legend>
+                                    <div class="demographic-q-select form-check">
+                                        <input type="radio" name="role" id="no-answer-role" class="form-check-input" value="prefer_not_answer" checked/>
+                                        <label for="no-answer-role" class="form-check-label">Prefer Not to Answer</label>
+                                    </div>
+                                    <div class="demographic-q-select form-check">
+                                        <input type="radio" name="role" id="faculty" class="form-check-input" value="faculty" />
+                                        <label for="faculty" class="form-check-label">Faculty Member</label>
+                                    </div>
+                                    <div class="demographic-q-select form-check">
+                                        <input type="radio" name="role" id="resident" class="form-check-input" value="resident"/>
+                                        <label for="resident" class="form-check-label">Resident</label>
+                                    </div>
+                                    <div class="demographic-q-select form-check">
+                                        <input type="radio" name="role" id="dentist" class="form-check-input" value="dentist"/>
+                                        <label for="dentist" class="form-check-label">Practicing Dentist</label>
+                                    </div>
+                                    <div class="demographic-q-select form-check">
+                                        <input type="radio" name="role" id="student" class="form-check-input" value="student"/>
+                                        <label for="student" class="form-check-label">Student</label>
+                                    </div>
+                                    <div class="demographic-q-select form-check d-flex">
+                                        <input type="radio" name="role" id="other-role" class="form-check-input" value="other"/>
+                                        <label for="other-role" class="form-check-label mr-2">Other</label>
+                                    </div>
+                                </fieldset>
+                                <input type="text" name="role-text" id="other-role-text" class="form-control" value=""/>
+                                <fieldset id="demographic-speciality" class="form-group">
+                                    <legend>
+                                        <strong>Please select your speciality:</strong>
+                                    </legend>
+                                    <div class="demographic-q-select form-check">
+                                        <input type="radio" name="speciality" id="no-answer-speciality" class="form-check-input" value="prefer_not_answer" checked/>
+                                        <label for="no-answer-speciality" class="form-check-label">Prefer Not to Answer</label>
+                                    </div>
+                                    <div class="demographic-q-select form-check">
+                                        <input type="radio" name="speciality" id="public-health" class="form-check-input" value="public_health"/>
+                                        <label for="public-health" class="form-check-label">Dentistry - Public Health Dentistry</label>
+                                    </div>
+                                    <div class="demographic-q-select form-check">
+                                        <input type="radio" name="speciality" id="general" class="form-check-input" value="general"/>
+                                        <label for="general" class="form-check-label">Dentistry - General Dentistry</label>
+                                    </div>
+                                    <div class="demographic-q-select form-check">
+                                        <input type="radio" name="speciality" id="pediatric" class="form-check-input" value="pediatric"/>
+                                        <label for="pediatric" class="form-check-label">Dentistry - Pediatric Dentistry</label>
+                                    </div>
+                                    <div class="demographic-q-select form-check d-flex">
+                                        <input type="radio" name="speciality" id="other-speciality" class="form-check-input" value="other"/>
+                                        <label for="other-speciality" class="form-check-label mr-2">Other</label>
+                                    </div>
+                                </fieldset>
+                                <input type="text" name="speciality-text" id="other-speciality-text" class="form-control" value="" aria-label="Other specialty"/>
+                                <div id="demographic-submit">
+                                    <input type="submit" class="btn btn-primary" value="Submit" />
+                                </div>
+                            </form>
+                            <div id="demographic-confirmation" class="alert alert-success" role="alert" style="display: none">
+                                Thank you for your response.
+                            </div>
+                        </section>
+                        <section>
+                            {{ partial "video.html" (dict "videoId" .Params.videoId "videoTitle" (printf "Introduction to the %s domain" .Title)) }}
+                            {{ .Content }}
+                        </section>
                     </main>
                     <div class="container">
                         <nav class="row justify-content-center" aria-labelledby="lateral-navigation">
@@ -99,11 +105,15 @@
                             <li class="active">{{ .Title }}</li>
                             {{ range .Sections.ByWeight  }}
                             <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-                            <ul>
-                                {{ range .Pages }}
-                                <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-                                {{ end }}
-                            </ul>
+                            {{ if .Pages }}
+                            <li class="knowledge-domain-navigation-sub-item">
+                                <ul>
+                                    {{ range .Pages }}
+                                    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                                    {{ end }}
+                                </ul>
+                            </li>
+                            {{ end }}
                             {{ end }}
                         </ul>
                     </nav>

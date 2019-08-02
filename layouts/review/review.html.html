@@ -6,10 +6,10 @@
         {{ partial "nav.html" . }}
         <div class="container">
             <div class="row">
-                <div id="content" class="domain-page-titles col-md-12">
+                <header id="content" class="domain-page-titles col-md-12">
                     <div class="domain-title">{{ .Parent.Title }}</div>
                     <h1>{{ .Title }}</h1>
-                </div>
+                </header>
             </div>
             <div class="row">
                 <div class="col-md-9">
@@ -119,11 +119,15 @@
                             {{ else }}
                             <li class="predecessor"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
                             {{ end }}
-                            <ul>
-                                {{ range .Pages }}
-                                <li class="predecessor"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-                                {{ end }}
-                            </ul>
+                            {{ if .Pages }}
+                            <li class="knowledge-domain-navigation-sub-item">
+                                <ul>
+                                    {{ range .Pages }}
+                                    <li class="predecessor"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                                    {{ end }}
+                                </ul>
+                            </li>
+                            {{ end }}
                             {{ end }}
                         </ul>
                     </nav>

@@ -6,10 +6,10 @@
         {{ partial "nav.html" .Parent }}
         <div class="container">
             <div class="row">
-                <div id="content" class="domain-page-titles col-md-12">
+                <header id="content" class="domain-page-titles col-md-12">
                     <div class="domain-title">{{ .Parent.Parent.Title }}</div>
                     <div class="learning-objective-title">{{ .Parent.Title }}</div>
-                </div>
+                </header>
             </div>
             <div class="row">
                 <div class="col-md-9">
@@ -21,7 +21,10 @@
                             {{ .Parent.Content }}
                         </article>
                         <form class="assessment-form">
-                            <h1 id="assessment-form-title">Indicate your level of agreement with the following statement:</h1>
+                            <fieldset>
+                                <legend>
+                                    <strong id="assessment-form-title">Indicate your level of agreement with the following statement:</strong>
+                                </legend>
                             <p>{{ .Content }}</p>
                             {{ $currentPage := . }}
                             {{ range $idx, $el := .Params.q1 }}
@@ -30,6 +33,7 @@
                                 <label class="form-check-label" for="q1-{{ $idx }}">{{ $el }}</label>
                             </div>
                             {{ end }}
+                            </fieldset>
                         </form>
                     </main>
                     <div class="container">

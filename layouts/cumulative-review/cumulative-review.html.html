@@ -2,13 +2,19 @@
 <html lang="en">
     {{ partial "head.html" . }}
     <body>
-        {{ partial "skip.html" . }}
+        {{ partial "skip.html" }}
         {{ partial "nav.html" . }}
+        <div class="container">
+            <div class="row">
+                <header id="content" class="col-12">
+                    <h1 id="cumulative-review-title">{{ .Title }}</h1>
+                </header>
+            </div>
+        </div>
         <main id="cumulative-review">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 id="cumulative-review-title">{{ .Title }}</h1>
                         {{ .Content }}
                         <div id="demographic-q-responses" style="display: none">
                             <h1>Demographic Questions</h1>
@@ -78,6 +84,7 @@
                 <div id="domain-score-{{ anchorize .Weight }}" style="display: none"></div>
                 <div id="{{ anchorize .Weight }}" class="domain-results" style="display: none">
                     <table class="table">
+                        <caption class="sr-only">{{ .Title }}</caption>
                         <thead>
                             <tr>
                                 <th scope="col">Learning Objective</th>

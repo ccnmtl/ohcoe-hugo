@@ -23,18 +23,23 @@ describe('Demographic Questions', function() {
         });
     });
 
-    it('Selects the "other" radio button when text is entered into the "other" field', function() {
+    it('The "other" text box is hidden if other is not selected', function() {
         cy.visit('http://localhost:1313/domains/identify/');
-        cy.get('#other-role-text').type('Space Lizard');
-        cy.get('#other-role').should('be.checked');
-        cy.get('#other-speciality-text').type('Space Lizard');
-        cy.get('#other-speciality').should('be.checked');
+        cy.get('#other-role-text').should('have.css', 'display', 'none');
+    });
+
+    it('The "other" text box is shown when other is selected', function() {
+        cy.visit('http://localhost:1313/domains/identify/');
+        cy.get('#other-role').click();
+        cy.get('#other-role-text').should('not.have.css', 'display', 'none');
     });
 
     it('Sets the value of the "other" radio button when its text box blurs', function() {
         cy.visit('http://localhost:1313/domains/identify/');
+        cy.get('#other-role').click();
         cy.get('#other-role-text').type('Space Lizard').blur();
         cy.get('#other-role').should('have.value', 'Space Lizard');
+        cy.get('#other-speciality').click();
         cy.get('#other-speciality-text').type('Space Lizard').blur();
         cy.get('#other-speciality').should('have.value', 'Space Lizard');
     });
@@ -57,6 +62,7 @@ describe('Demographic Questions', function() {
     it('Displays the answers on the cumulative review page', function() {
         cy.visit('http://localhost:1313/domains/identify/');
         cy.get('#faculty').click();
+        cy.get('#other-speciality').click();
         cy.get('#other-speciality-text').type('Space Lizard').blur();
         cy.get('#demographic-info').submit();
 

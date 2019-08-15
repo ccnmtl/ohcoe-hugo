@@ -5,6 +5,15 @@ nav[aria-labelledby="knowledge-domain-navigation"] {
     * {
         list-style-type: none;
     }
+    ul li:first-child {
+        padding-bottom: 1em;
+    }
+    ul ul li:first-child {
+        padding-bottom: 0em;
+    }
+    ul ul { 
+        margin-bottom: 1em; padding-left: 1em;
+    }
     a {
         color: #000000;
     }
@@ -29,8 +38,9 @@ nav[aria-labelledby="lateral-navigation"] {
     background-color: #FFFFFF;
 
     #lateral-navigation {
-        background-color: $tertiary-green;
+        border: 1px solid $tertiary-green;
         border-radius: 0.25rem;
-        padding: 2em 1em;
+        padding: .5em;
+        margin-top: 2em;
     }
 } 

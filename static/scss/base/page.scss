@@ -5,3 +5,14 @@ body {
 .container {
     background-color: #FFFFFF;
 }
+body.container {
+    background-color: #FFFFFF;
+}
+
+form.assessment-form, .demographic-questions {
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    padding: 2em; 
+    margin-bottom: 2em; 
+    background-color: #eee;
+    }

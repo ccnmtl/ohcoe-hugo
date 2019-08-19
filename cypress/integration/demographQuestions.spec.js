@@ -9,7 +9,7 @@ describe('Demographic Questions', function() {
     it('Displays the demograph questions on the top of each domain', function() {
         ['identify', 'refer', 'manage'].map(function(domain) {
             cy.visit('http://localhost:1313/domains/' + domain + '/');
-            cy.get('#demographic-info').should('not.have.css', 'display', 'none');
+            cy.get('#role-specialty-modal').should('not.have.css', 'display', 'none');
         });
     });
 
@@ -19,7 +19,7 @@ describe('Demographic Questions', function() {
 
         ['identify', 'refer', 'manage'].map(function(domain) {
             cy.visit('http://localhost:1313/domains/' + domain + '/');
-            cy.get('#demographic-info').should('have.css', 'display', 'none');
+            cy.get('#role-specialty-modal').should('have.css', 'display', 'none');
         });
     });
 
@@ -42,13 +42,6 @@ describe('Demographic Questions', function() {
         cy.get('#other-speciality').click();
         cy.get('#other-speciality-text').type('Space Lizard').blur();
         cy.get('#other-speciality').should('have.value', 'Space Lizard');
-    });
-
-    it('Show the "thank you" bar after submitting', function() {
-        cy.visit('http://localhost:1313/domains/identify/');
-        cy.get('#demographic-info').submit();
-        cy.get('#demographic-info').should('have.css', 'display', 'none');
-        cy.get('#demographic-confirmation').should('not.have.css', 'display', 'none');
     });
 
     it('Saves responses to local storage', function() {

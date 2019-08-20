@@ -3,7 +3,10 @@
 }
 
 #logo {
-    width: 400px;
+    width: 200px;
+    @include media-breakpoint-up(md) {
+        width: 400px;
+    }
     path {
         fill: #FFFFFF;
     }

@@ -34,10 +34,7 @@ function demographicQuestions() {
         var speciality = sanitize(e.target.elements.speciality.value);
         localStorage.setItem('role', role);
         localStorage.setItem('speciality', speciality);
-
-        this.style.display = 'none';
-        this.nextElementSibling.style.display = '';
-
+        $('#role-specialty-modal').modal('hide');
     });
 
     const DEMO_ANSWERS = {
@@ -61,7 +58,8 @@ function demographicQuestions() {
 
     // Show the form if the values are not set
     if (!role && !speciality) {
-        $('#demographic-info').show();
+        //$('#demographic-info').show();
+        $('#role-specialty-modal').modal('show');
     }
 
     // Render on Cumulative Review page

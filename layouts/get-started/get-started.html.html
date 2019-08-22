@@ -5,19 +5,17 @@
         {{ partial "skip.html" . }}
         {{ partial "nav.html" . }}
         <main>
-            <div class="container">
-                <section>
+            <div class="container" style="padding: 1em 3em 1em 3em;">
                 <div class="row">
                     <div id="content" class="col-12">
                         <h1 id="basic-page-title">Get Started</h1>
                     </div>
                 </div>
-                </section>
-                <section style="margin-top: 3em;">
+            </div>
+            <div class="container" style="padding: 1em 3em 3em 3em;">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2>Project Overview</h2>
-                        <p class="lead">
+                        <p class="lead display-5">
                             Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
                         </p>
                     </div>
@@ -25,9 +23,9 @@
                         {{ partial "video.html" (dict "videoId" "S7SLep244ss" "videoTitle" "Dr. Edelstein explains how to use the Project OHCOE site") }}
                     </div>
                 </div>
-                </section>
-                <section style="margin-top: 3em;">
-                <div class="row">
+            </div>
+            <div class="container" style="padding: 1em 3em 1em 3em; background-color: #16A085; color: #fff;">
+                <div class="row text-center">
                     <div class="col-md-12">
                         <h2>Real-World Advice</h2>
                         <p class="lead">
@@ -82,8 +80,9 @@
                     </div>
                  </div>
                 </section>
-                <section style="margin-top: 3em;">
-                <div class="row">
+            </div>
+            <div class="container" style="padding: 1em 3em 1em 3em;">
+                <div class="row text-center">
                     <div class="col-12">
                         <h2>Path to Understanding</h2>
                         <p class="lead">
@@ -93,42 +92,41 @@
                 </div>
                 <div class="row text-center">
                     <div class="col">
-                        {{ partial "icon-read.html" }}
+                        <div class="icon-path">{{ partial "icon-read.html" }}</div>
                         <h3><span class="line-break">Step 1:</span>Read</h3>
                         <p>
                             Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
                         </p>
                     </div>
                     <div class="col">
-                        {{ partial "icon-measure.html" }}
+                       <div class="icon-path"> {{ partial "icon-measure.html" }}</div>
                         <h3><span class="line-break">Step 2:</span>Measure</h3>
                         <p>
                             Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
                         </p>
                     </div>
                     <div class="col">
-                        {{ partial "icon-watch.html" }}
+                       <div class="icon-path"> {{ partial "icon-watch.html" }}</div>
                         <h3><span class="line-break">Step 3:</span>Watch</h3>
                         <p>
                             Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
                         </p>
                     </div>
                     <div class="col">
-                        {{ partial "icon-measure.html" }}
-                        <h3><span class="line-break">Step 4:</span>Measure</h3>
+                      <div class="icon-path">  {{ partial "icon-compare.html" }}</div>
+                        <h3><span class="line-break">Step 4:</span>Compare</h3>
                         <p>
                             Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
                         </p>
                     </div>
                     <div class="col">
-                        {{ partial "icon-assess.html" }}
+                       <div class="icon-path"> {{ partial "icon-analyze.html" }}</div>
                         <h3><span class="line-break">Step 5:</span>Analyze</h3>
                         <p>
                             Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
                         </p>
                     </div>
                 </div>
-                </section>
             </div>
         </main> 
         {{ partial "footer.html" }}

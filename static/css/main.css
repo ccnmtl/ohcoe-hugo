@@ -6439,7 +6439,10 @@ h2 {
   fill: #000000; }
 
 #logo {
-  width: 400px; }
+  width: 200px; }
+  @media (min-width: 768px) {
+    #logo {
+      width: 400px; } }
   #logo path {
     fill: #FFFFFF; }
 

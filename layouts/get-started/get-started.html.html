@@ -5,7 +5,7 @@
         {{ partial "skip.html" . }}
         {{ partial "nav.html" . }}
         <main>
-            <div class="container" style="padding: 1em 3em 1em 3em;">
+            <div class="container get-started-container">
                 <div class="row">
                     <div id="content" class="col-12">
                         <h1 id="basic-page-title">Get Started</h1>
@@ -24,7 +24,10 @@
                     </div>
                 </div>
             </div>
-            <div class="container" style="padding: 1em 3em 1em 3em; background-color: #16A085; color: #fff;">
+            <div class="container">
+                <div class="get-started-spacer"></div>
+            </div>
+            <div class="container get-started-container">
                 <div class="row text-center">
                     <div class="col-md-12">
                         <h2>Real-World Advice</h2>
@@ -81,6 +84,9 @@
                  </div>
                 </section>
             </div>
+            <div class="container">
+                <div class="get-started-spacer"></div>
+            </div>
             <div class="container" style="padding: 1em 3em 1em 3em;">
                 <div class="row text-center">
                     <div class="col-12">
@@ -99,32 +105,86 @@
                         </p>
                     </div>
                     <div class="col">
-                       <div class="icon-path"> {{ partial "icon-measure.html" }}</div>
+                       <div class="icon-path">{{ partial "icon-measure.html" }}</div>
                         <h3><span class="line-break">Step 2:</span>Measure</h3>
                         <p>
                             Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
                         </p>
                     </div>
                     <div class="col">
-                       <div class="icon-path"> {{ partial "icon-watch.html" }}</div>
+                       <div class="icon-path">{{ partial "icon-watch.html" }}</div>
                         <h3><span class="line-break">Step 3:</span>Watch</h3>
                         <p>
                             Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
                         </p>
                     </div>
                     <div class="col">
-                      <div class="icon-path">  {{ partial "icon-compare.html" }}</div>
+                      <div class="icon-path">{{ partial "icon-compare.html" }}</div>
                         <h3><span class="line-break">Step 4:</span>Compare</h3>
                         <p>
                             Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
                         </p>
                     </div>
                     <div class="col">
-                       <div class="icon-path"> {{ partial "icon-analyze.html" }}</div>
+                       <div class="icon-path">{{ partial "icon-analyze.html" }}</div>
                         <h3><span class="line-break">Step 5:</span>Analyze</h3>
                         <p>
                             Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
                         </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="get-started-spacer"></div>
+            </div>
+            <div class="container text-center get-started-container">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h2>Three Domains of Knowledge</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 domains">
+                        <div class="domain-logo">
+                            <a href="/identify/" aria-label="Start the Identify domain">{{ partial "icon-feature-identify.html" }}</a>
+                        </div>
+                        <span class="domain-title">Identify</span>
+                        <p>
+                            Ipsum ipsa aperiam unde ab molestias Ipsam ratione
+                            debitis debitis illo aspernatur id Laborum
+                            explicabo quod incidunt ipsa odio. Et hic
+                            necessitatibus perferendis eius aliquid Fugit non
+                            est voluptate a?
+                        </p>
+                        <a href="/identify/" class="btn btn-secondary btn-lg">Enter Domain</a>
+                    </div>
+                    <div class="col-md-4 domains">
+                        <div class="domain-logo">
+                            <a href="/refer/" aria-label="Start the Refer domain">{{ partial "icon-feature-refer.html" }}</a>
+                        </div>
+                        <span class="domain-title">Refer</span>
+                        <p>
+                            Ipsum ipsa aperiam unde ab molestias Ipsam ratione
+                            debitis debitis illo aspernatur id Laborum
+                            explicabo quod incidunt ipsa odio. Et hic
+                            necessitatibus perferendis eius aliquid Fugit non
+                            est voluptate a?
+                        </p>
+                        <a href="/refer/" class="btn btn-secondary btn-lg">Enter Domain</a>
+                    </div>
+                    <div class="col-md-4 domains">
+                        <div class="domain-logo">
+                            <a href="/manage/" aria-label="Start the Manage domain">{{ partial "icon-feature-manage.html" }}</a>
+                        </div>
+                        <span class="domain-title">Manage</span>
+                        <p>
+                            Ipsum ipsa aperiam unde ab molestias Ipsam ratione
+                            debitis debitis illo aspernatur id Laborum
+                            explicabo quod incidunt ipsa odio. Et hic
+                            necessitatibus perferendis eius aliquid Fugit non
+                            est voluptate a?
+                        </p>
+                        <a href="/manage/" class="btn btn-secondary btn-lg">Enter Domain</a>
                     </div>
                 </div>
             </div>

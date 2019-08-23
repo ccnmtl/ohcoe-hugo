@@ -8,10 +8,11 @@ p, ul, ol, ul ul, ol ol {font-family: 'Open Sans', sans-serif;}
 a#primary-navigation, h2 {text-transform: uppercase;}
 
 a {
-    color: $secondary-yellow;
-    &:hover {
-        text-decoration: underline!important;
-    }
+    color: #000000;
+}
+
+table a {
+    text-decoration: underline !important;
 }
 
 %page-title {
@@ -55,3 +56,7 @@ a:hover {text-decoration: underline!important;}
 }
 
 h2 {margin-top: 2em;}
+
+.modal h2 {
+    margin-top: 0em;
+}

@@ -12,3 +12,7 @@ googleAnalytics = "UA-51144540-32"
     identifier = "resources"
     name = "Resources"
     weight = 3
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    weight = 4

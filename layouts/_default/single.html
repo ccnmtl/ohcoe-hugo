@@ -6,8 +6,12 @@
         {{ partial "nav.html" . }}
         <main id="basic-page">
             <div class="container">
-                <h1 id="basic-page-title">{{ .Title }}</h1>
-                {{ .Content }}
+                <div class="row">
+                    <div class="col-12">
+                        <h1 id="basic-page-title">{{ .Title }}</h1>
+                        {{ .Content }}
+                    </div>
+                </div>
             </div>
         </main>
         {{ partial "footer.html" }}

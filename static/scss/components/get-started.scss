@@ -1,0 +1,25 @@
+.get-started-container {
+    padding: 1em 3em 1em 3em;
+}
+
+.get-started-spacer {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.domains {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    
+    p {
+        padding: 0em 3em;
+    }
+    .domain-logo {
+        width: 50%;
+    }
+
+    span.domain-title {
+        @extend .display-4;
+    }
+}
+

@@ -5,25 +5,85 @@
         {{ partial "skip.html" . }}
         {{ partial "nav.html" . }}
         <main>
-            <div class="container">
+            <div class="container" style="padding: 1em 3em 1em 3em;">
                 <div class="row">
                     <div id="content" class="col-12">
                         <h1 id="basic-page-title">Get Started</h1>
                     </div>
                 </div>
+            </div>
+            <div class="container" style="padding: 1em 3em 3em 3em;">
                 <div class="row">
                     <div class="col-md-6">
-                        <p class="lead display-4">
-                            This is a template for a simple marketing copy. 
+                        <p class="lead display-5">
+                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
                         </p>
                     </div>
                     <div class="col-md-6">
                         {{ partial "video.html" (dict "videoId" "S7SLep244ss" "videoTitle" "Dr. Edelstein explains how to use the Project OHCOE site") }}
                     </div>
                 </div>
-                <hr> 
-                <div class="row">
-                    <div class="col-12 text-center">
+            </div>
+            <div class="container" style="padding: 1em 3em 1em 3em; background-color: #16A085; color: #fff;">
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <h2>Real-World Advice</h2>
+                        <p class="lead">
+                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
+                        </p>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-8">
+                        <h3 aria-hidden="true">Name</h3>
+                        <p aria-hidden="true">
+                            Bio: Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="sr-only">Name</h3>
+                        <p class="sr-only">
+                            Bio: Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
+                        </p>
+                        {{ partial "video.html" (dict "videoId" "-akUss3uj0M" "videoTitle" "Meet our faculty") }}
+                    </div>
+                </div>
+                <div class="row mb-2">
+                   <div class="col-md-8">
+                        <h3 aria-hidden="true">Name</h3>
+                        <p aria-hidden="true">
+                            Bio: Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
+                        </p>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <h3 class="sr-only">Name</h3>
+                        <p class="sr-only">
+                            Bio: Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
+                        </p>
+                        {{ partial "video.html" (dict "videoId" "N4eJXuCeSjA" "videoTitle" "Meet our faculty") }}
+                    </div>
+                 </div>
+                <div class="row mb-2">
+                   <div class="col-md-8">
+                        <h3 aria-hidden="true">Name</h3>
+                        <p aria-hidden="true">
+                            Bio: Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="sr-only">Name</h3>
+                        <p class="sr-only">
+                            Bio: Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
+                        </p>
+                        {{ partial "video.html" (dict "videoId" "bzXC1spPZ-I" "videoTitle" "Meet our faculty") }}
+                    </div>
+                 </div>
+                </section>
+            </div>
+            <div class="container" style="padding: 1em 3em 1em 3em;">
+                <div class="row text-center">
+                    <div class="col-12">
                         <h2>Path to Understanding</h2>
                         <p class="lead">
                             Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
@@ -32,136 +92,42 @@
                 </div>
                 <div class="row text-center">
                     <div class="col">
-                        {{ partial "icon-read.html" }}
+                        <div class="icon-path">{{ partial "icon-read.html" }}</div>
                         <h3><span class="line-break">Step 1:</span>Read</h3>
                         <p>
                             Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
                         </p>
                     </div>
                     <div class="col">
-                        {{ partial "icon-measure.html" }}
+                       <div class="icon-path"> {{ partial "icon-measure.html" }}</div>
                         <h3><span class="line-break">Step 2:</span>Measure</h3>
                         <p>
                             Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
                         </p>
                     </div>
                     <div class="col">
-                        {{ partial "icon-watch.html" }}
+                       <div class="icon-path"> {{ partial "icon-watch.html" }}</div>
                         <h3><span class="line-break">Step 3:</span>Watch</h3>
                         <p>
                             Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
                         </p>
                     </div>
                     <div class="col">
-                        {{ partial "icon-measure.html" }}
-                        <h3><span class="line-break">Step 4:</span>Measure</h3>
+                      <div class="icon-path">  {{ partial "icon-compare.html" }}</div>
+                        <h3><span class="line-break">Step 4:</span>Compare</h3>
                         <p>
                             Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
                         </p>
                     </div>
                     <div class="col">
-                        {{ partial "icon-assess.html" }}
+                       <div class="icon-path"> {{ partial "icon-analyze.html" }}</div>
                         <h3><span class="line-break">Step 5:</span>Analyze</h3>
                         <p>
                             Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
                         </p>
                     </div>
                 </div>
-                <hr /> 
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h2>Domains of Expertise</h2>
-                        <p class="lead">
-                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 text-center">
-                        {{ partial "icon-feature-identify.html" }}
-                        <h3>Identify</h3>
-                        <p>
-                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
-                        </p>
-                        <p>
-                            <a class="btn btn-secondary" href="#" role="button">Begin &raquo;</a>
-                        </p>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        {{ partial "icon-feature-refer.html" }}
-                        <h3>Refer</h3>
-                        <p>
-                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
-                        </p>
-                        <p>
-                            <a class="btn btn-secondary" href="#" role="button">Begin &raquo;</a>
-                        </p>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        {{ partial "icon-feature-manage.html" }}
-                        <h3>Manage</h3>
-                        <p>
-                            Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. 
-                        </p>
-                        <p>
-                            <a class="btn btn-secondary" href="#" role="button">Begin &raquo;</a>
-                        </p>
-                    </div>
-                </div>
-                <hr> 
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h2>Real-World Advice</h2>
-                        <p class="lead">
-                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
-                        </p>
-                    </div>
-                </div>
-                <div class="row mb-2">
-                    <div class="col-md-4">
-                        <h3 class="sr-only">Name</h3>
-                        <p class="sr-only">
-                            Bio: Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
-                        </p>
-                        {{ partial "video.html" (dict "videoId" "-akUss3uj0M" "videoTitle" "Meet our faculty") }}
-                    </div>
-                    <div class="col-md-8">
-                        <h3 aria-hidden="true">Name</h3>
-                        <p aria-hidden="true">
-                            Bio: Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
-                        </p>
-                    </div>
-                </div>
-                <div class="row mb-2">
-                    <div class="col-md-4">
-                        <h3 class="sr-only">Name</h3>
-                        <p class="sr-only">
-                            Bio: Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
-                        </p>
-                        {{ partial "video.html" (dict "videoId" "N4eJXuCeSjA" "videoTitle" "Meet our faculty") }}
-                    </div>
-                    <div class="col-md-8">
-                        <h3 aria-hidden="true">Name</h3>
-                        <p aria-hidden="true">
-                            Bio: Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
-                        </p>
-                    </div>
-                </div>
-                <div class="row mb-2">
-                    <div class="col-md-4">
-                        <h3 class="sr-only">Name</h3>
-                        <p class="sr-only">
-                            Bio: Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
-                        </p>
-                        {{ partial "video.html" (dict "videoId" "bzXC1spPZ-I" "videoTitle" "Meet our faculty") }}
-                    </div>
-                    <div class="col-md-8">
-                        <h3 aria-hidden="true">Name</h3>
-                        <p aria-hidden="true">
-                            Bio: Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
-                        </p>
-                    </div>
-                </div>
+            </div>
         </main> 
         {{ partial "footer.html" }}
     </body>

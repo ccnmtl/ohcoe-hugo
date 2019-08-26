@@ -1,0 +1,25 @@
+.ohcoe-breadcrumb {
+    background-color: #FFFFFF;
+
+    font-weight: 400;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    margin-top: 1em;
+
+    ol {
+        display: flex;
+        flex-flow: row nowrap;
+        padding-inline-start: 0;
+    }
+
+    li {
+        list-style-type: none;
+        .bc-sep {
+            margin: 0 0.5em;
+        }
+    }
+    
+    a {
+        text-decoration: underline;
+    }
+}

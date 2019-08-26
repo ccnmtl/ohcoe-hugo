@@ -7,10 +7,15 @@
         <div class="container">
             <div class="row">
                 <header id="content" class="domain-page-titles col-md-12">
-                    <div class="domain-title">{{ .Parent.Title }}</div>
+                    <nav class="ohcoe-breadcrumb" aria-label="Breadcrumb">
+                        <ol>
+                            <li class="bc-inner"><a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a></li>
+                            <li class="bc-last" aria-current="page"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                        </ol>
+                    </nav>
                     <h1>{{ .Title }}</h1>
                 </header>
-            </div>
+            /div>
             <div class="row">
                 <div class="col-md-9">
                     <main id="domain-review">

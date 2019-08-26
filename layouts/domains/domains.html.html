@@ -6,15 +6,18 @@
         {{ partial "nav.html" . }}
         <div class="container">
             <div class="row">
-                <header id="content" class="domain-page-titles col-md-12">
-                    <div class="domain-title">{{ .Title }}</div>
+                <header id="content" class="domain-page-titles col-12">
+                    <nav class="ohcoe-breadcrumb" aria-label="Breadcrumb">
+                        <ol>
+                            <li class="bc-last" aria-current="page"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                        </ol>
+                    </nav>
                     <h1>Introduction to {{ .Title }}</h1>
                 </header>
             </div>
             <div class="row">
                 <div class="col-md-9">
                     <main>
-                        
                         <section>
                             {{ partial "video.html" (dict "videoId" .Params.videoId "videoTitle" (printf "Introduction to the %s domain" .Title)) }}
                             {{ .Content }}

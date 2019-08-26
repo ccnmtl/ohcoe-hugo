@@ -1,5 +1,5 @@
 ---
-title: Teacher's Guide 
+title: Clinical Narrative 
 date: 2019-05-10
 menu:
   main:

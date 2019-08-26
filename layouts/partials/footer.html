@@ -1,8 +1,20 @@
 <footer>
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <button type="button" id="reset-trigger" class="btn btn-secondary" data-toggle="modal" data-target="#resetModal">
+        <div class="row justify-content-between">
+            <div class="col-md-3 partner">
+                <a href="https://dental.columbia.edu">
+                    {{ partial "logo-dental" }}
+                    <span class="sr-only">College of Dental Medicine</span>
+                </a>
+            </div>
+            <div class="col-md-4 partner">
+                <a href="https://ctl.columbia.edu">
+                    {{ partial "logo-ctl" }}
+                    <span class="sr-only">Center for Teaching and Learning</span>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <button type="button" id="reset-trigger" class="btn btn-light" data-toggle="modal" data-target="#resetModal">
                     Reset Your Data 
                 </button>
             </div>
@@ -14,7 +26,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="resetModalLabel">Reset Your Data</h5>
+                <h2 class="modal-title" id="resetModalLabel">Reset Your Data</h2>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

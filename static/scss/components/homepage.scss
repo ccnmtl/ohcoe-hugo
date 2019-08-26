@@ -20,7 +20,7 @@
 
 @include media-breakpoint-up(md) {
     #hp-hero {
-        padding: 3em;
+        padding: 6em 3em;
     }
 }
 
@@ -32,29 +32,6 @@
     #hp-project-intro-logo {
         width: 100%;
         fill: #FFFFFF;
-    }
-}
-
-#hp-project-tag {
-    background-color: $secondary-yellow;
-    padding: 2em 1em;
-    color: #FFFFFF;
-}
-
-.hp-domains {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    
-    p {
-        padding: 0em 3em 3em 3em;
-    }
-    .domain-logo {
-        width: 50%;
-    }
-
-    span.hp-domain-title {
-        @extend .display-4;
     }
 }
 

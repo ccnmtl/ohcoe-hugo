@@ -1,5 +1,5 @@
 ---
-title: "Manage: Review"
+title: "Review"
 date: 2019-05-10
 layout: review 
 type: review 

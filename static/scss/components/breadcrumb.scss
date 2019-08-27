@@ -15,11 +15,8 @@
     li {
         list-style-type: none;
         .bc-sep {
-            margin: 0 0.5em;
+            margin-right: 0.5em;
+            margin-left: 0.3em;
         }
-    }
-    
-    a {
-        text-decoration: underline;
     }
 }

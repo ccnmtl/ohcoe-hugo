@@ -4,7 +4,7 @@ date: 2019-05-13
 layout: learning-objective-post-assessment
 type: learning-objective-post-assessment
 weight: 3
-q1: ["Strongly disagree", "Disagree", "Neither agree nor disagree", "Agree", "Strongly agree"]
+q1: ["Strongly agree", "Agree", "Neither agree nor disagree", "Disagree", "Strongly disagree" ]
 ---
-I feel confident understanding the intersection of dentistry, social support
-services, and the opioid epidemic.
+I understand the importance of dentistry collaborating with other social
+support services to help curtail the opioid epidemic.

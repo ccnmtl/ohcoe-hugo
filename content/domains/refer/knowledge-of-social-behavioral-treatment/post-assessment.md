@@ -4,7 +4,6 @@ date: 2019-05-13
 layout: learning-objective-post-assessment
 type: learning-objective-post-assessment
 weight: 3
-q1: ["Strongly disagree", "Disagree", "Neither agree nor disagree", "Agree", "Strongly agree"]
+q1: ["Strongly agree", "Agree", "Neither agree nor disagree", "Disagree", "Strongly disagree" ]
 ---
-To ensure this patient's follow-through, I would feel comfortable referring him
-to the appropriate substance use disorder services.
+I am aware of appropriate referral options that can be presented to this patient.

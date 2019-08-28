@@ -6,5 +6,5 @@ type: learning-objective-pre-assessment
 weight: 1
 q1: ["Strongly agree", "Agree", "Neither agree nor disagree", "Disagree", "Strongly disagree" ]
 ---
-I’m aware of patient community resources related to substance use disorders,
+I'm aware of patient community resources related to substance use disorders,
 beyond simply providing printed or digital referrals.

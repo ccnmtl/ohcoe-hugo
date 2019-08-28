@@ -6,5 +6,5 @@ type: learning-objective-post-assessment
 weight: 3
 q1: ["Strongly agree", "Agree", "Neither agree nor disagree", "Disagree", "Strongly disagree" ]
 ---
-I’m familiar with screening (PDMP) and assessment (social history
+I'm familiar with screening (PDMP) and assessment (social history
 questionnaire) tools that would help to monitor this patient.

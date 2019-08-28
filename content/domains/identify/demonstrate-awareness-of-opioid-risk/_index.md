@@ -16,4 +16,4 @@ not make it to the oral surgeon and ibuprofen was not enough for the pain. The
 patient then begins to reveal that he has a history of cocaine abuse and Motrin
 has never been able to relieve his pain, especially oral pain. The patient asks
 specifically for Percocet 5mg/325mg because that is what has worked in the past
-due to his “very low threshold for pain.”
+due to his "very low threshold for pain."

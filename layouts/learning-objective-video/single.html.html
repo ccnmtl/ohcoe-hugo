@@ -33,7 +33,7 @@
                             <h2>Primary Video</h2>
                             <p>Watch this video to increase your understanding</p>
                             {{ partial "video.html" (dict "videoId" .Params.primaryVideoId "videoTitle" (printf "%s video" .Parent.Title)) }}
-                            <h2>Secondary Video</h2>
+                            <h2>Supplemental Video</h2>
                             <p>For a deeper understanding, watch these videos</p>
                             <div class="row">
                             {{ range $video := .Params.supplimentalVideo }}

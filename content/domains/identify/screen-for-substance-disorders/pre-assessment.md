@@ -4,7 +4,6 @@ date: 2019-05-13
 layout: learning-objective-pre-assessment
 type: learning-objective-pre-assessment
 weight: 1
-q1: ["Strongly disagree", "Disagree", "Neither agree nor disagree", "Agree", "Strongly agree"]
+q1: ["Strongly agree", "Agree", "Neither agree nor disagree", "Disagree", "Strongly disagree" ]
 ---
-I am comfortable addressing with the patient conducting a screening to
-determine risk or presence of substance use disorder.
+I am comfortable discussing the need to conduct a screening to determine risk or presence of substance use disorder with this patient.

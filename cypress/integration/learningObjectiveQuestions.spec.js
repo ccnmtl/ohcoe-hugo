@@ -4,7 +4,7 @@ describe('Learning Objective Questions', function() {
         var url = 'http://localhost:1313/domains/identify/screen-for-substance-disorders/pre-assessment/';
         cy.visit(url).should(function(win) {
             cy.log(localStorage);
-            expect(localStorage.getItem('1-1')).to.eq('Screen');
+            expect(localStorage.getItem('1-1')).to.eq('Screening');
             var learningObjectiveUrl = 'http://localhost:1313/domains/identify/screen-for-substance-disorders/';
             expect(localStorage.getItem('1-1-url')).to.eq(learningObjectiveUrl);
         });

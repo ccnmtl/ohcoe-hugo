@@ -7,14 +7,10 @@ weight: 2
 primaryVideoId: "A9aLIXkf05Y"
 supplimentalVideo:
     - id: "-akUss3uj0M"
-      desc: "Elit dolor natus est sint ipsa accusantium enim Quisquam quisquam minima dolorem et commodi? Nihil quibusdam ut ipsa culpa quas doloribus Accusamus natus corrupti sunt inventore labore? Tempore at obcaecati"
+      desc: "Identifying at-risk patients at an initial visit"
     - id: "N4eJXuCeSjA"
-      desc: "Elit dolor natus est sint ipsa accusantium enim Quisquam quisquam minima dolorem et commodi? Nihil quibusdam ut ipsa culpa quas doloribus Accusamus natus corrupti sunt inventore labore? Tempore at obcaecati"
-    - id: "o1EMBZOzQD8"
-      desc: "Elit dolor natus est sint ipsa accusantium enim Quisquam quisquam minima dolorem et commodi? Nihil quibusdam ut ipsa culpa quas doloribus Accusamus natus corrupti sunt inventore labore? Tempore at obcaecati"
+      desc: "Collecting important patient info on an initial visit"
 ---
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren
-no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Listen to the experts address considerations that will inform how you might treat this case.
 
+If you would like to hear more on the topic of using tools to screen for substance disorders, please watch the additional resources below.

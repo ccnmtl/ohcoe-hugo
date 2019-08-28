@@ -1,195 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
-    {{ partial "head.html" . }}
-    <body>
-        {{ partial "skip.html" . }}
-        {{ partial "nav.html" . }}
-        <main>
-            <div class="container get-started-container">
-                <div class="row">
-                    <div id="content" class="col-12">
-                        <h1 id="basic-page-title">Get Started</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="container get-started-container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <p class="lead display-5">
-                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
-                        </p>
-                    </div>
-                    <div class="col-md-6">
-                        {{ partial "video.html" (dict "videoId" "S7SLep244ss" "videoTitle" "Dr. Edelstein explains how to use the Project OHCOE site") }}
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="get-started-spacer"></div>
-            </div>
-            <div class="container get-started-container">
-                <div class="row text-center">
-                    <div class="col-12">
-                        <h2>Path to Understanding</h2>
-                        <p class="lead">
-                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
-                        </p>
-                    </div>
-                </div>
-                <div class="row text-center">
-                    <div class="col">
-                        <div class="icon-path">{{ partial "icon-read.html" }}</div>
-                        <h3><span class="line-break">Step 1:</span>Read</h3>
-                        <p>
-                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
-                        </p>
-                    </div>
-                    <div class="col">
-                       <div class="icon-path">{{ partial "icon-measure.html" }}</div>
-                        <h3><span class="line-break">Step 2:</span>Measure</h3>
-                        <p>
-                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
-                        </p>
-                    </div>
-                    <div class="col">
-                       <div class="icon-path">{{ partial "icon-watch.html" }}</div>
-                        <h3><span class="line-break">Step 3:</span>Watch</h3>
-                        <p>
-                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
-                        </p>
-                    </div>
-                    <div class="col">
-                      <div class="icon-path">{{ partial "icon-compare.html" }}</div>
-                        <h3><span class="line-break">Step 4:</span>Compare</h3>
-                        <p>
-                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
-                        </p>
-                    </div>
-                    <div class="col">
-                       <div class="icon-path">{{ partial "icon-analyze.html" }}</div>
-                        <h3><span class="line-break">Step 5:</span>Analyze</h3>
-                        <p>
-                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="get-started-spacer"></div>
-            </div>
-            <div class="container get-started-container">
-                <div class="row text-center">
-                    <div class="col-md-12">
-                        <h2>Real-World Advice</h2>
-                        <p class="lead">
-                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
-                        </p>
-                    </div>
-                </div>
-                <div class="row mb-2">
-                    <div class="col-md-8">
-                        <h3 aria-hidden="true">Marc Schlenoff DDS</h3>
-                        <p aria-hidden="true">
-                            Marc directs the Columbia University College of Dental Medicine’s Advanced Education in General Dentistry Program. Reflecting his skill as a teacher, Marc was recognized as “Attending Dentist of the Year” at New York Presbyterian Hospital-Weill Cornell Medical Center.
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <h3 class="sr-only">Marc Schlenoff DDS</h3>
-                        <p class="sr-only">
-                            Marc directs the Columbia University College of Dental Medicine’s Advanced Education in General Dentistry Program. Reflecting his skill as a teacher, Marc was recognized as “Attending Dentist of the Year” at New York Presbyterian Hospital-Weill Cornell Medical Center.
-                        </p>
-                        {{ partial "video.html" (dict "videoId" "-akUss3uj0M" "videoTitle" "Meet Marc Schlenoff DDS") }}
-                    </div>
-                </div>
-                <div class="row mb-2">
-                   <div class="col-md-8">
-                        <h3 aria-hidden="true">Kareem Merrick DDS</h3>
-                        <p aria-hidden="true">
-                            Kareem is clinician who directs Dental Services for Brightpoint Health’s 23 sites across New York City. He has over 10 years’ experience providing dental care for the most vulnerable, marginalized, and challenging patients.
-                        </p>
-                    </div>
-                    
-                    <div class="col-md-4">
-                        <h3 class="sr-only">Kareem Merrick DDS</h3>
-                        <p class="sr-only">
-                            Kareem is clinician who directs Dental Services for Brightpoint Health’s 23 sites across New York City. He has over 10 years’ experience providing dental care for the most vulnerable, marginalized, and challenging patients.
-                        </p>
-                        {{ partial "video.html" (dict "videoId" "N4eJXuCeSjA" "videoTitle" "Meet Kareem Merrick DDS") }}
-                    </div>
-                 </div>
-                <div class="row mb-2">
-                   <div class="col-md-8">
-                        <h3 aria-hidden="true">Aimee Chiligiris PsyD</h3>
-                        <p aria-hidden="true">
-                            Aimee is a clinical psychologist specializing in the treatment of substance use disorders. Her distinguished training includes a doctorate from The Chicago School of Professional Psychology and postdoctoral training at the Hazelden Betty Ford Foundation.
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <h3 class="sr-only">Aimee Chiligiris PsyD</h3>
-                        <p class="sr-only">
-                            Aimee is a clinical psychologist specializing in the treatment of substance use disorders. Her distinguished training includes a doctorate from The Chicago School of Professional Psychology and postdoctoral training at the Hazelden Betty Ford Foundation.
-                        </p>
-                        {{ partial "video.html" (dict "videoId" "bzXC1spPZ-I" "videoTitle" "Meet Aimee Chiligiris PsyD") }}
-                    </div>
-                 </div>
-                </section>
-            </div>
-            <div class="container">
-                <div class="get-started-spacer"></div>
-            </div>
-            <div class="container text-center get-started-container">
-                <div class="row text-center">
-                    <div class="col-12">
-                        <h2>Three Domains of Knowledge</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 domains">
-                        <div class="domain-logo">
-                            <a href="/domains/identify/" aria-label="Start the Identify domain">{{ partial "icon-feature-identify.html" }}</a>
-                        </div>
-                        <span class="domain-title">Identify</span>
-                        <p>
-                            Ipsum ipsa aperiam unde ab molestias Ipsam ratione
-                            debitis debitis illo aspernatur id Laborum
-                            explicabo quod incidunt ipsa odio. Et hic
-                            necessitatibus perferendis eius aliquid Fugit non
-                            est voluptate a?
-                        </p>
-                        <a href="/domains/identify/" class="btn btn-secondary btn-lg">Enter Domain</a>
-                    </div>
-                    <div class="col-md-4 domains">
-                        <div class="domain-logo">
-                            <a href="/domains/refer/" aria-label="Start the Refer domain">{{ partial "icon-feature-refer.html" }}</a>
-                        </div>
-                        <span class="domain-title">Refer</span>
-                        <p>
-                            Ipsum ipsa aperiam unde ab molestias Ipsam ratione
-                            debitis debitis illo aspernatur id Laborum
-                            explicabo quod incidunt ipsa odio. Et hic
-                            necessitatibus perferendis eius aliquid Fugit non
-                            est voluptate a?
-                        </p>
-                        <a href="/domains/refer/" class="btn btn-secondary btn-lg">Enter Domain</a>
-                    </div>
-                    <div class="col-md-4 domains">
-                        <div class="domain-logo">
-                            <a href="/domains/manage/" aria-label="Start the Manage domain">{{ partial "icon-feature-manage.html" }}</a>
-                        </div>
-                        <span class="domain-title">Manage</span>
-                        <p>
-                            Ipsum ipsa aperiam unde ab molestias Ipsam ratione
-                            debitis debitis illo aspernatur id Laborum
-                            explicabo quod incidunt ipsa odio. Et hic
-                            necessitatibus perferendis eius aliquid Fugit non
-                            est voluptate a?
-                        </p>
-                        <a href="/domains/manage/" class="btn btn-secondary btn-lg">Enter Domain</a>
-                    </div>
-                </div>
-            </div>
-        </main> 
-        {{ partial "footer.html" }}
-    </body>
+{{ partial "head.html" . }} 
+<body>
+{{ partial "skip.html" . }} {{ partial "nav.html" . }} <main> 
+<div class="container get-started-container">
+	<div class="row">
+		<div id="content" class="col-12">
+			<h1 id="basic-page-title">
+				Get Started 
+			</h1>
+		</div>
+	</div>
+</div>
+<div class="container" style="padding: 0em 3em 4em 3em;">
+	<div class="row">
+		<div class="col-md-6">
+			<p class="lead">
+				This Training will prepare you to confidently: 
+			</p>
+			<ol class="lead">
+				<li>Identify patients with or at risk for opioid use</li>
+				<li>Refer select patients for counseling services, and</li>
+				<li>Manage these patients' dental care without contributing to their substance use disorder.</li>
+			</ol>
+			<p class="lead">
+				Unfortunately, dentists have contributed to the national opioid abuse epidemic.* We can now contribute to ending this scourge by learning more about how to handle this problem at the chair. 
+			</p>
+			<p>
+				<small>* In 2016, the proportion of dental prescriptions that were opioids were 37 times greater in the US than in England. (Suda KJ et al, JAMA Network Open 2019. DOI:10.1001/jamanetworkopen.2019.4303</small> 
+			</p>
+		</div>
+		<div class="col-md-6">
+			{{ partial "video.html" (dict "videoId" "S7SLep244ss" "videoTitle" "Dr. Edelstein explains how to use the Project OHCOE site") }} 
+			<h3 class="sr-only">
+				Burton Edelstein DDS MPH 
+			</h3>
+			<p class="sr-only">
+                Burton Edelstein DDS MPH, is professor of Dental Medicine and Health Policy &amp; Management at Columbia University where he chairs the Section of Population Oral Health. He is also senior fellow in Public Policy and president emeritus of the DC-based Children’s Dental Health Project (www.cdhp.org), a nonprofit policy organization that advances the oral health interests of children and their families			
+            </p>
+			<h3 aria-hidden="true">
+				Burton Edelstein DDS MPH
+			</h3>
+			<p aria-hidden="true">
+                Burton Edelstein DDS MPH, is professor of Dental Medicine and Health Policy &amp; Management at Columbia University where he chairs the Section of Population Oral Health. He is also senior fellow in Public Policy and president emeritus of the DC-based <a href="http://www.cdhp.org" target="_blank">Children’s Dental Health Project</a>, a nonprofit policy organization that advances the oral health interests of children and their families			
+            </p>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="get-started-spacer">
+	</div>
+</div>
+<div class="container" style="padding: 0em 3em 4em 3em;">
+	<div class="row text-center">
+		<div class="col-12">
+			<h2>
+				Path to Understanding 
+			</h2>
+			<p class="lead" style="padding-bottom: 3em;">
+				Each module provides a real-world case study that features engaging videos, which allows you to measure both your current and new understanding. 
+			</p>
+		</div>
+	</div>
+	<div class="row text-center">
+		<div class="col">
+			<div class="icon-path">
+				{{ partial "icon-read.html" }} 
+			</div>
+			<h3>
+				<span class="line-break">Step 1:</span>Read 
+			</h3>
+			<p>
+				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
+			</p>
+		</div>
+		<div class="col">
+			<div class="icon-path">
+				{{ partial "icon-measure.html" }} 
+			</div>
+			<h3>
+				<span class="line-break">Step 2:</span>Measure 
+			</h3>
+			<p>
+				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
+			</p>
+		</div>
+		<div class="col">
+			<div class="icon-path">
+				{{ partial "icon-watch.html" }} 
+			</div>
+			<h3>
+				<span class="line-break">Step 3:</span>Watch 
+			</h3>
+			<p>
+				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
+			</p>
+		</div>
+		<div class="col">
+			<div class="icon-path">
+				{{ partial "icon-compare.html" }} 
+			</div>
+			<h3>
+				<span class="line-break">Step 4:</span>Compare 
+			</h3>
+			<p>
+				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
+			</p>
+		</div>
+		<div class="col">
+			<div class="icon-path">
+				{{ partial "icon-analyze.html" }} 
+			</div>
+			<h3>
+				<span class="line-break">Step 5:</span>Assess 
+			</h3>
+			<p>
+				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
+			</p>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="get-started-spacer">
+	</div>
+</div>
+<div class="container get-started-container" style="padding: 0em 3em 4em 3em;">
+	<div class="row text-center">
+		<div class="col-md-12">
+			<h2>
+				Real-World Advice 
+			</h2>
+			<p class="lead" style="padding-bottom: 3em;">
+				With support from the federal Bureau of Health Workforce (Grant D88HP20109), this Training brings you clinically relevant advice and guidance from <a href="#">three experts</a>. By watching their on-camera interviews and completing the training, we believe that you will enhance your capacity to care for patients affected by substance use disorders. 
+			</p>
+		</div>
+	</div>
+	<div class="row mb-2">
+		<div class="col-md-4">
+			<h3 class="sr-only">
+				Aimee Chiligiris PsyD 
+			</h3>
+			<p class="sr-only">
+				Aimee is a clinical psychologist specializing in the treatment of substance use disorders. Her distinguished training includes a doctorate from The Chicago School of Professional Psychology and postdoctoral training at the Hazelden Betty Ford Foundation. 
+			</p>
+			{{ partial "video.html" (dict "videoId" "-akUss3uj0M" "videoTitle" "Meet our Aimee Chiligiris PsyD") }} 
+		</div>
+		<div class="col-md-8">
+			<h3 aria-hidden="true">
+				Aimee Chiligiris PsyD 
+			</h3>
+			<p aria-hidden="true">
+				Aimee is a clinical psychologist specializing in the treatment of substance use disorders. Her distinguished training includes a doctorate from The Chicago School of Professional Psychology and postdoctoral training at the Hazelden Betty Ford Foundation. 
+			</p>
+		</div>
+	</div>
+	<div class="row mb-2">
+		<div class="col-md-4">
+			<h3 class="sr-only">
+				Kareem Merrick DDS 
+			</h3>
+			<p class="sr-only">
+				Kareem is clinician who directs Dental Services for Brightpoint Health's 23 sites across New York City. He has over 10 years' experience providing dental care for the most vulnerable, marginalized, and challenging patients. 
+			</p>
+			{{ partial "video.html" (dict "videoId" "N4eJXuCeSjA" "videoTitle" "Meet our Kareem Merrick DDS") }} 
+		</div>
+		<div class="col-md-8">
+			<h3 aria-hidden="true">
+				Kareem Merrick DDS 
+			</h3>
+			<p aria-hidden="true">
+				Kareem is clinician who directs Dental Services for Brightpoint Health's 23 sites across New York City. He has over 10 years' experience providing dental care for the most vulnerable, marginalized, and challenging patients. 
+			</p>
+		</div>
+	</div>
+	<div class="row mb-2">
+		<div class="col-md-4">
+			<h3 class="sr-only">
+				Marc Schlenoff DDS 
+			</h3>
+			<p class="sr-only">
+				Marc directs the Columbia University College of Dental Medicine's Advanced Education in General Dentistry Program. Reflecting his skill as a teacher, Marc was recognized as "Attending Dentist of the Year" at New York Presbyterian Hospital-Weill Cornell Medical Center. 
+			</p>
+			{{ partial "video.html" (dict "videoId" "bzXC1spPZ-I" "videoTitle" "Meet our Marc Schlenoff DDS") }} 
+		</div>
+		<div class="col-md-8">
+			<h3 aria-hidden="true">
+				Marc Schlenoff DDS 
+			</h3>
+			<p aria-hidden="true">
+				Marc directs the Columbia University College of Dental Medicine's Advanced Education in General Dentistry Program. Reflecting his skill as a teacher, Marc was recognized as "Attending Dentist of the Year" at New York Presbyterian Hospital-Weill Cornell Medical Center. 
+			</p>
+		</div>
+	</div>
+	</section>
+</div>
+<div class="container">
+	<div class="get-started-spacer">
+	</div>
+</div>
+<div class="container get-started-container" style="padding: 0em 3em 4em 3em;">
+	<div class="row text-center">
+		<div class="col-12">
+			<h2>
+				Learning Objectives 
+			</h2>
+			<p class="lead">
+				Expertise within these three domains of knowledge will help you help your patients who are at risk for opioid addiction. 
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4 domains">
+			<div class="domain-logo">
+				<a href="/identify/" aria-label="Start the Identify domain">{{ partial "icon-feature-identify.html" }}</a> 
+			</div>
+			<h3 class="domain-title">
+				Identify 
+			</h3>
+			<h5 class="text-center">
+				Identify patients<br />with&mdash;or at risk for&mdash;for<br />substance use disorders. 
+			</h5>
+			<p>
+				<a href="/identify/" class="btn btn-secondary btn-lg">Enter Domain</a> 
+			</p>
+			<p>Learn how to:</p>
+			<p>
+				<em>Screen</em>- Screen for substance disorders and patients at risk in the dental setting. 
+			</p>
+			<p>
+				<em>Use Tools</em>- Demonstrate awareness of different opioid risk assessment and drug monitoring tools that help to identify at-risk patients. 
+			</p>
+			<p>
+				<em>Take Charge</em>- Appreciate the importance a dental provider's role in screening for substance disorders and patients at-risk. 
+			</p>
+		</div>
+		<div class="col-md-4 domains">
+			<div class="domain-logo">
+				<a href="/refer/" aria-label="Start the Refer domain">{{ partial "icon-feature-refer.html" }}</a> 
+			</div>
+			<h3 class="domain-title">
+				Refer 
+			</h3>
+			<h5 class="text-center">
+				Refer patients<br />substance use<br />disorders. 
+			</h5>
+			<p>
+				<a href="/refer/" class="btn btn-secondary btn-lg">Enter Domain</a> 
+			</p>
+			<p>Learn how to:</p>
+			<p>
+				<em>Understand Opioid Treatment</em>- Demonstrate knowledge of social and behavioral treatment modalities for patients identified as being at-risk or having substance abuse disorder. 
+			</p>
+			<p>
+				<em>Find Community Resources</em>- Describe how a dental practitioner can identify resources in their community in which they make a referral. 
+			</p>
+			<p>
+				<em>Partner with Opioid Services</em>- Appreciate the importance of providers collaborating to support patients with substance abuse. 
+			</p>
+		</div>
+		<div class="col-md-4 domains">
+			<div class="domain-logo">
+				<a href="/manage/" aria-label="Start the Manage domain">{{ partial "icon-feature-manage.html" }}</a> 
+			</div>
+			<h3 class="domain-title">
+				Manage 
+			</h3>
+			<h5 class="text-center">
+				Manage the clinical care<br />of patients<br />with substance use disorders. 
+			</h5>
+			<p>
+				<a href="/manage/" class="btn btn-secondary btn-lg">Enter Domain</a> 
+			</p>
+			<p>Learn how to:</p>
+			<p>
+				<em>Expand Pain Armamentarium</em>- Identify appropriate and/or alternative pain management methods. 
+			</p>
+			<p>
+				<em>Consider Patient Drug History</em>- Assess a patient's current and past drug use history to determine treatment options. 
+			</p>
+			<p>
+				<em>Be Responsible</em>- Appreciate the importance a dental provider's role in prescribing medications to minimize opioid exposure. 
+			</p>
+		</div>
+	</div>
+</div>
+</main> {{ partial "footer.html" }} 
+</body>
 </html>
-

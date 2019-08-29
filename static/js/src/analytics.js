@@ -68,19 +68,38 @@ function analytics() {
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+    /* eslint-disable */
     function onPlayerReady(event) {
         // Stub
+        console.log('player ready');
+        // Initalize/update global object with times set to 0
     }
 
     function onPlayerStateChange(event) {
         // Stub
+        console.log('player state change');
+        console.log(event);
+        console.log(event.target.a.id)
+        // Set var to 0 on play start, add seconds played on stop
+        console.log(event.target.getCurrentTime());
     }
 
     var players = new Array();
+
+    class VideoTracker {
+        constructor(vidId) {
+            this.id = vidId;
+            this.totalTime = 0;
+            this.startTime = null;
+        }
+
+
+    }
     window.onYouTubeIframeAPIReady = function() {
         // Reduce over an array of iFrames on the page, instantiate new
         // players for each, and push to an array
         $('.ytplayer').each(function(idx, el){
+            console.log('new player');
             var player = new YT.Player(el.id, {
                 events: {
                     'onReady': onPlayerReady,

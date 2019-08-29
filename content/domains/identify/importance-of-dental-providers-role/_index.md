@@ -1,6 +1,6 @@
 ---
 title: Take Charge 
-sub-title: Appreciate the importance a dental provider’s role in screening for substance disorders and patients at-risk 
+sub-title: Appreciate the importance a dental provider's role in screening for substance disorders and patients at-risk 
 date: 2019-05-13
 layout: learning-objective
 type: learning-objective

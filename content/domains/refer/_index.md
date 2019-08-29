@@ -8,5 +8,8 @@ menu:
 weight: 2
 videoId: "A9aLIXkf05Y"
 ---
-The Refer Domain
+__Refer__ patients with substance use disorders
 
+* __Understand Opioid Treatment__: Demonstrate knowledge of social and behavioral treatment modalities for patients identified as being at-risk or having substance abuse disorder.
+* __Find Community Resources__: Describe how a dental practitioner can identify resources in their community in which they make a referral.
+* __Partner with Opioid Services__: Appreciate the importance of providers collaborating to support patients with substance abuse.

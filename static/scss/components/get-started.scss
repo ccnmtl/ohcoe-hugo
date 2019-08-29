@@ -1,6 +1,14 @@
 .get-started-container {
-    padding: 1em 3em 1em 3em;
+    padding: 0em 3em 4em 3em;
 }
+
+.get-started-lede-display {
+    @extend h3;
+}
+
+.get-started-domain-sub {
+    @extend h5;
+} 
 
 .get-started-spacer {
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);

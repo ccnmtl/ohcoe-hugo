@@ -5,5 +5,3 @@ layout: review
 type: review 
 weight: 4
 ---
-The Manage Domain Review
-More content

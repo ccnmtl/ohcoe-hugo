@@ -68,48 +68,106 @@ function analytics() {
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    /* eslint-disable */
-    function onPlayerReady(event) {
-        // Stub
-        console.log('player ready');
-        // Initalize/update global object with times set to 0
-    }
-
-    function onPlayerStateChange(event) {
-        // Stub
-        console.log('player state change');
-        console.log(event);
-        console.log(event.target.a.id)
-        // Set var to 0 on play start, add seconds played on stop
-        console.log(event.target.getCurrentTime());
-    }
-
-    var players = new Array();
-
     class VideoTracker {
-        constructor(vidId) {
-            this.id = vidId;
+        constructor() {
             this.totalTime = 0;
+            // Uses startTime as a flag to track if a video is playing
             this.startTime = null;
         }
 
+        videoStart(time) {
+            if (!this.startTime) {
+                this.startTime = time;
+            }
+        }
+
+        videoStop(time) {
+            if (this.startTime) {
+                this.totalTime += (time - this. startTime);
+                this.startTime = null;
+            }
+        }
+
+        getTotalTime(time) {
+            if (this.startTime) {
+                this.totalTime += (time - this. startTime);
+                this.startTime = null;
+                return this.totalTime;
+            }
+            return this.totalTime;
+        }
 
     }
+
+    function onPlayerStateChange(event) {
+        var tracker = window.videoTrackers[event.target.a.id];
+        var time = event.target.getCurrentTime();
+
+        if (event.data == 1) {
+            tracker.videoStart(time);
+        } else {
+            tracker.videoStop(time);
+        }
+    }
+
+    var players = new Array();
+    var videoTrackers = new Object();
+
     window.onYouTubeIframeAPIReady = function() {
         // Reduce over an array of iFrames on the page, instantiate new
         // players for each, and push to an array
         $('.ytplayer').each(function(idx, el){
-            console.log('new player');
             var player = new YT.Player(el.id, {
                 events: {
-                    'onReady': onPlayerReady,
                     'onStateChange': onPlayerStateChange
                 }
             });
             players.push(player);
+
+            var tracker = new VideoTracker();
+            videoTrackers[el.id] = tracker;
+        });
+
+        // Add event listeners for page navigation
+        $('a[href^="/"],a[href^="http"]').each(function(idx, el){
+            $(el).on('click', function(e){
+                e.preventDefault();
+
+                let analyticsSubmitted = false;
+                function followLink() {
+                    if (!analyticsSubmitted) {
+                        analyticsSubmitted = true;
+                        location.href = $(e.target).attr('href');
+                    }
+                }
+                setTimeout(followLink, 200);
+
+                window.players.forEach(function(elt){
+                    let tracker = window.videoTrackers[elt.a.id];
+                    let totalTime = tracker.getTotalTime(elt.getCurrentTime());
+                    let videoDuration = elt.getDuration();
+                    if (totalTime > 0) {
+                        gtag('event', 'video_interaction', {
+                            'event_category': 'seconds_played',
+                            'event_label': elt.m.videoData.title,
+                            'value': totalTime
+                        });
+
+                        if (videoDuration > 0) {
+                            gtag('event', 'video_interaction', {
+                                'event_category': 'seconds_played_pct',
+                                'event_label': elt.m.videoData.title,
+                                'value': (totalTime / videoDuration) * 100
+                            });
+                        }
+                    }
+                });
+            });
         });
     };
+
     window.players = players;
+    window.videoTrackers = videoTrackers;
 }
 
 export { analytics };

@@ -103,7 +103,7 @@ function analytics() {
         var tracker = window.videoTrackers[event.target.a.id];
         var time = event.target.getCurrentTime();
 
-        if (event.data == 1) {
+        if (event.data === 1) {
             tracker.videoStart(time);
         } else {
             tracker.videoStop(time);
@@ -137,9 +137,11 @@ function analytics() {
                 function followLink() {
                     if (!analyticsSubmitted) {
                         analyticsSubmitted = true;
+                        /* eslint-disable scanjs-rules/assign_to_href */
                         location.href = $(e.target).attr('href');
                     }
                 }
+                /* eslint-disable-next-line scanjs-rules/call_setTimeout */
                 setTimeout(followLink, 200);
 
                 window.players.forEach(function(elt){

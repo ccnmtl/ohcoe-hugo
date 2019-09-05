@@ -4,6 +4,12 @@
 
 .get-started-lede-display {
     @extend h3;
+    padding-top: .75em;
+    display: block;
+}
+
+.get-started-lede {
+    padding-bottom: 3em;
 }
 
 .get-started-domain-sub {
@@ -25,6 +31,20 @@
     .domain-logo {
         width: 50%;
     }
+    
+    // Domain Icons
+    .icon-feature-sad-person {
+        fill: indigo;
+    }
+
+    .icon-feature-heart {
+        fill: red;
+    }
+
+    .icon-feature-book {
+        fill: black;
+    }
+
 
     span.domain-title {
         @extend .display-4;

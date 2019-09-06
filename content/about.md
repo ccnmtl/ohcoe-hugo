@@ -18,7 +18,7 @@ Abuse Disorders).
 __Contributors__:
 
 * Kavita P. Ahluwalia, DDS, MPH
-* Emily Byington, MSW
+* Emily Byington, LMSW
 * Aimee Chiligiris, PsyD
 * Burton L. Edelstein, DDS, MPH
 * Ivette Estrada, MA, MPhil
@@ -28,3 +28,8 @@ __Contributors__:
 * Marc D. Schlenoff, DDS
 * Stacey Whalen, LMSW
 * Michelle A. Witter, DMD
+
+
+__CTL__:
+
+* TBD

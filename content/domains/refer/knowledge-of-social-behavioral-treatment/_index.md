@@ -10,7 +10,7 @@ A 20 year-old male presents to the clinic for a periodic examination. Medical
 history shows that he suffers from clinical depression and receives therapy on
 his school's campus with a psychiatrist. This young man has been your patient
 for 6 years and he is back home for the summer from his sophomore year in
-college. He has always had excellent oral hygiene & has never had dental
+college. He has always had excellent oral hygiene and has never had dental
 caries. Upon today's examination, the patient has one surface caries on 6 teeth
 with interproximal radiographic calculus. When further questioned, he explains
 the stresses of being a college student and divulges that he has been taking a

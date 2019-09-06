@@ -48,7 +48,11 @@ form.assessment-form h1#assessment-form-title {
     display: block
 }
 
-h2 {margin-top: 2em;}
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2em;
+}
 
 .modal h2 {
     margin-top: 0em;

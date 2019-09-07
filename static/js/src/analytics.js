@@ -68,29 +68,108 @@ function analytics() {
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    function onPlayerReady(event) {
-        // Stub
+    class VideoTracker {
+        constructor() {
+            this.totalTime = 0;
+            // Uses startTime as a flag to track if a video is playing
+            this.startTime = null;
+        }
+
+        videoStart(time) {
+            if (!this.startTime) {
+                this.startTime = time;
+            }
+        }
+
+        videoStop(time) {
+            if (this.startTime) {
+                this.totalTime += (time - this. startTime);
+                this.startTime = null;
+            }
+        }
+
+        getTotalTime(time) {
+            if (this.startTime) {
+                this.totalTime += (time - this. startTime);
+                this.startTime = null;
+                return this.totalTime;
+            }
+            return this.totalTime;
+        }
+
     }
 
     function onPlayerStateChange(event) {
-        // Stub
+        var tracker = window.videoTrackers[event.target.a.id];
+        var time = event.target.getCurrentTime();
+
+        if (event.data === 1) {
+            tracker.videoStart(time);
+        } else {
+            tracker.videoStop(time);
+        }
     }
 
     var players = new Array();
+    var videoTrackers = new Object();
+
     window.onYouTubeIframeAPIReady = function() {
         // Reduce over an array of iFrames on the page, instantiate new
         // players for each, and push to an array
         $('.ytplayer').each(function(idx, el){
             var player = new YT.Player(el.id, {
                 events: {
-                    'onReady': onPlayerReady,
                     'onStateChange': onPlayerStateChange
                 }
             });
             players.push(player);
+
+            var tracker = new VideoTracker();
+            videoTrackers[el.id] = tracker;
+        });
+
+        // Add event listeners for page navigation
+        $('a[href^="/"],a[href^="http"]').each(function(idx, el){
+            $(el).on('click', function(e){
+                e.preventDefault();
+
+                let analyticsSubmitted = false;
+                function followLink() {
+                    if (!analyticsSubmitted) {
+                        analyticsSubmitted = true;
+                        /* eslint-disable scanjs-rules/assign_to_href */
+                        location.href = $(e.target).attr('href');
+                    }
+                }
+                /* eslint-disable-next-line scanjs-rules/call_setTimeout */
+                setTimeout(followLink, 200);
+
+                window.players.forEach(function(elt){
+                    let tracker = window.videoTrackers[elt.a.id];
+                    let totalTime = tracker.getTotalTime(elt.getCurrentTime());
+                    let videoDuration = elt.getDuration();
+                    if (totalTime > 0) {
+                        gtag('event', 'video_interaction', {
+                            'event_category': 'seconds_played',
+                            'event_label': elt.m.videoData.title,
+                            'value': totalTime
+                        });
+
+                        if (videoDuration > 0) {
+                            gtag('event', 'video_interaction', {
+                                'event_category': 'seconds_played_pct',
+                                'event_label': elt.m.videoData.title,
+                                'value': (totalTime / videoDuration) * 100
+                            });
+                        }
+                    }
+                });
+            });
         });
     };
+
     window.players = players;
+    window.videoTrackers = videoTrackers;
 }
 
 export { analytics };

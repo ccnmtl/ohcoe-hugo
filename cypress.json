@@ -1,3 +1,7 @@
 {
-    "blacklistHosts": "www.google-analytics.com"
+    "blacklistHosts": [
+        "*googletagmanager.com",
+        "*google-analytics.com",
+        "*doubleclick.net"
+    ]
 }

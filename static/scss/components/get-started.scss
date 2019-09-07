@@ -25,14 +25,16 @@
     flex-flow: column nowrap;
     align-items: center;
     
-    p {
+    p,.domain-sub-head  {
+        align-self: flex-start;
         padding: 0em 3em;
     }
+
+    // Domain Icons
     .domain-logo {
         width: 50%;
     }
     
-    // Domain Icons
     .icon-feature-sad-person {
         fill: indigo;
     }
@@ -45,9 +47,12 @@
         fill: black;
     }
 
-
     span.domain-title {
         @extend .display-4;
     }
-}
 
+    .enter-domain {
+        display: block;
+        margin-bottom: 1rem;
+    }
+}

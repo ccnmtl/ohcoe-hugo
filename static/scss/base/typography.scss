@@ -8,9 +8,13 @@ h1, h2, h3, h4, h5, nav, .jumbotron-fluid, .btn {font-family: 'Montserrat', sans
 
 a#primary-navigation, h2 {text-transform: uppercase;}
 
+a {
+    color: #000000;
+    text-decoration: underline;
+}
 
-p a, li a {
-    color: #000000; text-decoration: underline!important;
+nav a, a.btn {
+    text-decoration: none;
 }
 
 a:hover {text-decoration: none!important;}
@@ -42,7 +46,6 @@ form.assessment-form h1#assessment-form-title {
     font-weight: 800;
     font-size: 1.25em;
 }
-
 
 .line-break {
     display: block

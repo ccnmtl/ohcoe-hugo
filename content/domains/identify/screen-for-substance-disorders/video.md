@@ -13,4 +13,4 @@ supplimentalVideo:
 ---
 Listen to the experts address considerations that will inform how you might treat this case.
 
-If you would like to hear more on the topic of Screening for substance disorders please watch the additional resources below.
+If you would like to hear more on the topic of screening for substance disorders please watch the additional resources below.

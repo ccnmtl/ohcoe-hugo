@@ -33,3 +33,11 @@ nav#primary-nav {
 }
 
 #lateral-navigation {margin-bottom: 2em;}
+
+nav li a,  {
+    text-decoration: none!important;
+}
+
+nav li a:hover,  {
+    text-decoration: underline!important;
+}

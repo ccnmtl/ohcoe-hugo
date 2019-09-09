@@ -1,5 +1,5 @@
 ---
-title: Clinical Narrative 
+title: Clinical Narratives 
 date: 2019-05-10
 menu:
   main:
@@ -31,7 +31,6 @@ Below are additional resources to help navigate patient relationships in clinica
 2. __Patient became angry and says, “The only option is to take the tooth out and you’re going to need to give me – Percocet -something like Darvocet or Vicodin – that’s like candy to me.  Save us both the trouble and I’ll just go to ED, for it tonight.”__
   * _Utilize resources to obtain further information from outside sources_: The dental provider politely stepped out of the room to return, the PDMP registry was checked and called the ER for patient hx. Patient was a confirmed a frequent flyer to the ED and known to bully provider for medication.
   * _Engage in honest discussion with patient upon return to operatory_ As much as I’d like to take you out of pain, the tooth presents as healthy and is possible that even if it were taken out, tooth #2 may not have been the source and could transfer becoming an expedition to determine which tooth or what the cause of this bad pain you feel is.  I suspect there is a loss with your pain threshold – have you used strong pain meds in the past? 
-
 3. __Patient says, “I’m not an addict” and is shown their prescription list, of repeated prescription narcotics.__
   * _Explain connection between substance use and impact on oral status_ The tooth may present as hypersensitive, hence a toothache. So just like if I were to consult with a surgeon I would like for us to consult with a trusted friend of mine who can address the pain in relation to opioid dependence to further investigate the source of your pain prior to us taking away from what appears to be a beautiful smile.  Let’s see if we can get them on the phone right now.
   * _Allow patient to decide your level of participation_: The patient was given privacy, to answer initial questions from counselor.

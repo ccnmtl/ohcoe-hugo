@@ -9,7 +9,7 @@ weight: 1
 ## Clinical Guidelines
 __American Dental Association information for Clinicians__
 
-* [Common Questions about Opioids](https://www.mouthhealthy.org/en/az-topics/o/opioids), for dentists, discusses types of drugs, pain management, and safe management of medications.
+* [Common Questions about Opioids](https://www.mouthhealthy.org/en/az-topics/o/opioids" target="_blank), for dentists, discusses types of drugs, pain management, and safe management of medications.
 * [The Opioid Crisis](https://www.ada.org/en/advocacy/advocacy-issues/opioid-crisis) has links to ADA and governmental policies and information for patients, as well as a link to the [ADA Center for Professional Success](https://success.ada.org/en/wellness/preventing-opioid-abuse) with its links to various ADA resources.
 * The ADA also sells a [“Practical Guide to Substance Use Disorders and Safe Prescribing”](https://ebusiness.ada.org/productcatalog/product.aspx?ID=8349) for member price $69.95.
 

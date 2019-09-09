@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap');
 
 
 body {font-family: 'Open Sans', sans-serif;}
 
 h1, h2, h3, h4, h5, nav, .jumbotron-fluid, .btn {font-family: 'Montserrat', sans-serif;}
 
-p {padding: 0;}
-
 a#primary-navigation, h2 {text-transform: uppercase;}
 
-a {
-    color: #000000;
+
+p a, li a {
+    color: #000000; text-decoration: underline!important;
 }
+
+a:hover {text-decoration: none!important;}
 
 table a {
     text-decoration: underline !important;
@@ -42,7 +43,6 @@ form.assessment-form h1#assessment-form-title {
     font-size: 1.25em;
 }
 
-a:hover {text-decoration: underline!important;}
 
 .line-break {
     display: block
@@ -53,3 +53,5 @@ h2 {margin-top: 2em;}
 .modal h2 {
     margin-top: 0em;
 }
+
+strong {font-weight: 700;}

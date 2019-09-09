@@ -14,6 +14,7 @@
 
 .get-started-domain-sub {
     @extend h5;
+    display: block;
 } 
 
 .get-started-spacer {
@@ -24,9 +25,20 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+
+    p {
+        margin-bottom: 0;
+    }
     
-    p,.domain-sub-head  {
+    p, ul, .domain-sub-head  {
         align-self: flex-start;
+    }
+
+    p, .domain-sub-head  {
+        padding: 0em 2em;
+    }
+    
+    ul {
         padding: 0em 3em;
     }
 

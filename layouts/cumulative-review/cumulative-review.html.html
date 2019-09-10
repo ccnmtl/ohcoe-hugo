@@ -80,7 +80,7 @@
                 <div id="cumulative-growth-diff"></div>
                 <h2>Detailed Score</h2>
                 {{ range (where $.Site.Pages "Type" "domain")  }}
-                <h3 id="domain-title-{{ anchorize .Weight }}" style="display: none">{{ .Title }}</h3>
+                <h3 id="domain-title-{{ anchorize .Weight }}" style="display: none" data-cy="domain-title-{{ anchorize .Weight }}" >{{ .Title }}</h3>
                 <div id="domain-score-{{ anchorize .Weight }}" style="display: none"></div>
                 <div id="{{ anchorize .Weight }}" class="domain-results" style="display: none">
                     <table class="table">

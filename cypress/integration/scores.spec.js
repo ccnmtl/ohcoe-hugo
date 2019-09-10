@@ -81,7 +81,7 @@ describe('Cumulative Review Scoring', function() {
         cy.get('#q1-4').click();
 
         cy.visit('http://localhost:1313/cumulative-review/');
-        cy.get('h2#domain-title-1').should('not.have.css', 'display', 'none');
+        cy.get('[data-cy=domain-title-1]').should('not.have.css', 'display', 'none');
         cy.get('#1-1-l-obj-title').contains(
             'Screen'
         ).should('exist');
@@ -105,8 +105,8 @@ describe('Cumulative Review Scoring', function() {
         cy.get('#q1-4').click();
 
         cy.visit('http://localhost:1313/cumulative-review/');
-        cy.get('h2#domain-title-1').should('not.have.css', 'display', 'none');
-        cy.get('h2#domain-title-2').should('have.css', 'display', 'none');
-        cy.get('h2#domain-title-3').should('not.have.css', 'display', 'none');
+        cy.get('[data-cy=domain-title-1]').should('not.have.css', 'display', 'none');
+        cy.get('[data-cy=domain-title-2]').should('have.css', 'display', 'none');
+        cy.get('[data-cy=domain-title-3]').should('not.have.css', 'display', 'none');
     });
 });

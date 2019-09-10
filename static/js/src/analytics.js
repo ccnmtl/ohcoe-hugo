@@ -137,8 +137,13 @@ function analytics() {
                 function followLink() {
                     if (!analyticsSubmitted) {
                         analyticsSubmitted = true;
+
+                        let target = e.target;
+                        while (!$(target).attr('href')) {
+                            target = target.parentElement;
+                        }
                         /* eslint-disable scanjs-rules/assign_to_href */
-                        location.href = $(e.target).attr('href');
+                        location.href = $(target).attr('href');
                     }
                 }
                 /* eslint-disable-next-line scanjs-rules/call_setTimeout */

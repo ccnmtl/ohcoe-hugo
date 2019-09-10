@@ -19,8 +19,14 @@
                 <div class="col-md-9">
                     <main>
                         <section>
-                            {{ partial "video.html" (dict "videoId" .Params.videoId "videoTitle" (printf "Introduction to the %s domain" .Title)) }}
-                            {{ .Content }}
+                            <div class="row">
+                                <div class="col-md-5">
+                                    {{ .Content }}
+                                </div>
+                                <div class="col-md-7">
+                                    {{ partial "video.html" (dict "videoId" .Params.videoId "videoTitle" (printf "Introduction to the %s domain" .Title)) }}
+                                </div>
+                            </div>
                         </section>
                     </main>
                     <div class="container">
@@ -62,17 +68,18 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h2 class="modal-title" id="role-specialty-modal-title">Describe Yourself</h2>
+                        <h2 class="modal-title" id="role-specialty-modal-title">About You</h2>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <form id="demographic-info">
                         <div class="modal-body">
+                            <p>Please share with us your role and specialty.</p>
                             <section class="demographic-questions">
                                 <fieldset id="demographic-current-role" class="form-group">
                                     <legend>
-                                        Please select your current role in your organization:
+                                        Your role in your organization:
                                     </legend>
                                     <div class="demographic-q-select form-check">
                                         <input type="radio" name="role" id="faculty" class="form-check-input" value="faculty" />
@@ -102,7 +109,7 @@
                                 <input type="text" name="role-text" id="other-role-text" class="form-control" value=""/>
                                 <fieldset id="demographic-speciality" class="form-group">
                                     <legend>
-                                        Please select your speciality:
+                                        Your speciality:
                                     </legend>
                                     <div class="demographic-q-select form-check">
                                         <input type="radio" name="speciality" id="public-health" class="form-check-input" value="public_health"/>

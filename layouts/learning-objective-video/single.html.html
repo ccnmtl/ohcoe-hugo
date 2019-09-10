@@ -36,10 +36,8 @@
                             <div class="row">
                             {{ range $video := .Params.supplimentalVideo }}
                                 <div class="col-md-6 supplimental-video">
-                                {{ partial "video.html" (dict "videoId" (index $video "id") "videoTitle" "Supplimentary Video") }}
-                                    <div>
-                                        {{ index $video "desc" }} 
-                                    </div>
+                                    <p>{{ index $video "desc" }}</p>
+                                    {{ partial "video.html" (dict "videoId" (index $video "id") "videoTitle" "Supplimentary Video") }}
                                 </div>
                             {{ end }}
                             </div>

@@ -42,5 +42,9 @@ nav[aria-labelledby="lateral-navigation"] {
         border-radius: 0.25rem;
         padding: .5em;
         margin-top: 2em;
+
+        a.btn, button {
+            margin-bottom: 0;
+        }
     }
 } 

@@ -15,7 +15,7 @@ Pediatric and Public Health Dentistry Program (D88HP20109, Supplement for Oral
 Health Care Management and Identification of Individuals with Chronic Substance
 Abuse Disorders).
 
-__Contributors:__
+## Contributors
 
 * Kavita P. Ahluwalia, DDS, MPH
 * Emily Byington, LMSW
@@ -30,7 +30,7 @@ __Contributors:__
 * Michelle A. Witter, DMD
 
 
-__Center for Teaching and Learning:__
+## Center for Teaching and Learning
 
 * [Catherine Ross](https://ctl.columbia.edu/about/team/catherine-ross/), Executive Director
 * [Maurice Matiz](https://ctl.columbia.edu/about/team/matiz/), Senior Director
@@ -47,11 +47,30 @@ __Center for Teaching and Learning:__
 * [Nick Buonincontri](https://ctl.columbia.edu/about/team/buonincontri/), Programmer 
 
 
-__Contact and Feedback:__
+## Accessibility
+Columbia University's Center for Teaching and Learning and College of Dental Medicine are committed to make Project OHCOE inclusive and accessible for all.
+
+### Conformance Status
+The Project OHCOE site is produced in accordance with the [Web Content Accessibility Guidlines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/). The site is partially conformant to WCAG 2.0 Level AA.
+
+### Limitations
+The Project OHCOE site has been audited internal and evaluated with the assessment tools listed below. Some parts of the site may not fully conform to the WCAG 2.0 standards:
+
+* The Project OHCOE site uses YouTube to deliver video content to the user. Parts of the YouTube player interface may not have sufficient contrast with elements placed underneath them.
+
+### Assessment Approach
+We assessed and tested AHE using the following tools. All pages show minor to no violations of the accessibility standards.
+
+* [Axe](https://www.deque.com/axe/) web accessibility testing tool by [Deque Systems](https://www.deque.com/)
+  * We run this tool on every build of the site to ensure that we maintain conformance to the standards.
+* [VoiceOver](https://www.apple.com/accessibility/mac/vision/), the screen reader by Apple
+* [Lighthouse](https://developers.google.com/web/tools/lighthouse/), an open-source automated auditor by Google
+
+## Contact and Feedback
 For information about Project OHCOE, or to offer feedback, please contact: ohcoe@columbia.edu
 
 
-__Licenses:__
+## Licenses
 
 Code licensed under [GPL 3.0](https://github.com/ccnmtl/ohcoe-hugo/blob/master/LICENSE)
 

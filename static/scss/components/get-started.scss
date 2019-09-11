@@ -15,6 +15,10 @@
 .get-started-domain-sub {
     @extend h5;
     display: block;
+    margin-bottom: 1em;
+    @include media-breakpoint-up(md) {
+        height: 4em;
+    }
 } 
 
 .get-started-spacer {

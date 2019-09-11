@@ -47,6 +47,10 @@ __Center for Teaching and Learning:__
 * [Nick Buonincontri](https://ctl.columbia.edu/about/team/buonincontri/), Programmer 
 
 
+__Contact and Feedback:__
+For information about Project OHCOE, or to offer feedback, please contact: ohcoe@columbia.edu
+
+
 __Licenses:__
 
 Code licensed under [GPL 3.0](https://github.com/ccnmtl/ohcoe-hugo/blob/master/LICENSE)

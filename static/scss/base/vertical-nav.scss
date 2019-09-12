@@ -44,6 +44,13 @@ nav[aria-labelledby="lateral-navigation"] {
         margin-top: 2em;
 
         a.btn, button {
+            @include media-breakpoint-up(md) {
+                margin-bottom: 0;
+
+            }
+        }
+        
+        .input-group a.btn:last-child {
             margin-bottom: 0;
         }
     }

@@ -1,6 +1,11 @@
 footer .partner a {
     color: #FFFFFF;
     fill: #FFFFFF;
+    @include media-breakpoint-down(md) {
+        display: block;
+        max-width: 200px;
+        margin: 0 auto 1em;
+    }
 }
 
 #ctl-logo {

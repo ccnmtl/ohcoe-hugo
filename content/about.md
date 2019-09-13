@@ -67,7 +67,7 @@ We assessed and tested AHE using the following tools. All pages show minor to no
 * [Lighthouse](https://developers.google.com/web/tools/lighthouse/), an open-source automated auditor by Google
 
 ## Contact and Feedback
-For information about Project OHCOE, or to offer feedback, please contact at <a href="mailto:ohcoe@columbia.edu">ohcoe@columbia.edu</a>.
+For information about Project OHCOE, or to offer feedback, please contact us at <a href="mailto:ohcoe@columbia.edu">ohcoe@columbia.edu</a>.
 
 
 ## Licenses

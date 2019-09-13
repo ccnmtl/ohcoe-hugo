@@ -2,14 +2,20 @@
     background-color: #FFFFFF;
 
     font-weight: 400;
-    font-size: 1.25em;
+    font-size: 0.7em;
+    @include media-breakpoint-up(md) {
+        font-size: 1.25em;
+    }
     text-transform: uppercase;
     margin-top: 1em;
 
     ol {
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: column nowrap;
         padding-inline-start: 0;
+        @include media-breakpoint-up(md) {
+            flex-flow: row nowrap;
+        }
     }
 
     li {

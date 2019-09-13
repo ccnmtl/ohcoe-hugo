@@ -1,0 +1,7 @@
+.domain-results {
+    thead {
+        @include media-breakpoint-down(md) {
+            font-size: 0.7em;
+        }
+    }
+} 

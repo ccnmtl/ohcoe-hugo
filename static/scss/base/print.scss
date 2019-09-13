@@ -1,0 +1,38 @@
+nav[aria-labelledby="knowledge-domain-navigation"] {
+    @extend .d-print-none;
+}
+
+nav[aria-labelledby="lateral-navigation"] {
+    background-color: #FFFFFF;
+    @extend .d-print-none;
+}
+
+.navbar {
+    @extend .d-print-block;
+    color-adjust: exact;
+
+    .navbar-toggler, .navbar-collapse {
+        @extend .d-print-none;
+    } 
+}
+
+.ohcoe-breadcrumb {
+    @extend .d-print-none;
+}
+
+.embed-responsive {
+    @extend .d-print-none;
+}
+
+.video-link-text {
+    display: none;
+    @extend .d-print-block;
+}
+
+#review-print {
+    @extend .d-print-none;
+}
+
+footer {
+    @extend .d-print-none;
+}

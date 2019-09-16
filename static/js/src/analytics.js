@@ -150,6 +150,11 @@ function analytics() {
                 setTimeout(followLink, 200);
 
                 window.players.forEach(function(elt){
+                    // Guard against player object not being fully loaded
+                    if (!elt.getCurrentTime) {
+                        return;
+                    }
+
                     let tracker = window.videoTrackers[elt.a.id];
                     let totalTime = tracker.getTotalTime(elt.getCurrentTime());
                     let videoDuration = elt.getDuration();

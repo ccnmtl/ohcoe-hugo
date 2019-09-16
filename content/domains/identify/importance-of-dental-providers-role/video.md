@@ -4,11 +4,11 @@ date: 2019-05-13
 layout: learning-objective-video
 type: learning-objective-video
 weight: 2
-primaryVideoId: "A9aLIXkf05Y"
+primaryVideoId: "LPdY86dHsWI"
 supplimentalVideo:
-    - id: "-akUss3uj0M"
+    - id: "88nysb2domE"
       desc: "Dentists' communication with patients"
-    - id: "N4eJXuCeSjA"
+    - id: "cNYme-eV0jc"
       desc: "Talking with patients about substance use"
 ---
 Listen to the experts address considerations that will inform how you might

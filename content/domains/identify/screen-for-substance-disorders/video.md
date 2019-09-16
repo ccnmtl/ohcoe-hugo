@@ -4,11 +4,11 @@ date: 2019-05-13
 layout: learning-objective-video
 type: learning-objective-video
 weight: 2
-primaryVideoId: "A9aLIXkf05Y"
+primaryVideoId: "c9Vl21f3SPI"
 supplimentalVideo:
-    - id: "-akUss3uj0M"
+    - id: "sXI5C7ozy4c"
       desc: "DSM identification of substance use disorders"
-    - id: "N4eJXuCeSjA"
+    - id: "zM198dpYxpE"
       desc: "Criteria for substance use disorders"
 ---
 Listen to the experts address considerations that will inform how you might treat this case.

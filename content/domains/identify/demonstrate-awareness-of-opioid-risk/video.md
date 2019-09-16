@@ -4,11 +4,11 @@ date: 2019-05-13
 layout: learning-objective-video
 type: learning-objective-video
 weight: 2
-primaryVideoId: "A9aLIXkf05Y"
+primaryVideoId: "p4zmncokpoY"
 supplimentalVideo:
-    - id: "-akUss3uj0M"
+    - id: "0dkeFozwvqQ"
       desc: "Identifying at-risk patients at an initial visit"
-    - id: "N4eJXuCeSjA"
+    - id: "7Wq4j4Kr8iw"
       desc: "Collecting important patient info on an initial visit"
 ---
 Listen to the experts address considerations that will inform how you might treat this case.

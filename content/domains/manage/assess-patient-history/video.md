@@ -4,11 +4,11 @@ date: 2019-05-13
 layout: learning-objective-video
 type: learning-objective-video
 weight: 2
-primaryVideoId: "A9aLIXkf05Y"
+primaryVideoId: "eYygt-QdcJI"
 supplimentalVideo:
-    - id: "-akUss3uj0M"
+    - id: "MvJ-TqpFCI4"
       desc: "Patient perception of dental provider care"
-    - id: "N4eJXuCeSjA"
+    - id: "xxfQTV_OsI4"
       desc: "Importance of obtaining patients medical and health history"
 ---
 Listen to the experts address considerations that will inform how you might treat this case.

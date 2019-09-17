@@ -4,11 +4,11 @@ date: 2019-05-13
 layout: learning-objective-video
 type: learning-objective-video
 weight: 2
-primaryVideoId: "A9aLIXkf05Y"
+primaryVideoId: "-7LGjlYYMcs"
 supplimentalVideo:
-    - id: "-akUss3uj0M"
+    - id: "BT-jXchW7Zs"
       desc: "Advantages of E-prescribing"
-    - id: "N4eJXuCeSjA"
+    - id: "46lj3XLoHO0"
       desc: "Widening the scope of providers collaboration"
 ---
 Listen to the experts address considerations that will inform how you might treat this case.

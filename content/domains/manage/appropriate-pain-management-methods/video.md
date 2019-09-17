@@ -4,11 +4,11 @@ date: 2019-05-13
 layout: learning-objective-video
 type: learning-objective-video
 weight: 2
-primaryVideoId: "A9aLIXkf05Y"
+primaryVideoId: "k24J_sSQj8g"
 supplimentalVideo:
-    - id: "-akUss3uj0M"
+    - id: "atJLJE3Ni4Y"
       desc: "Effectiveness of pre-operative analgesics"
-    - id: "N4eJXuCeSjA"
+    - id: "ZBPZxwFhk_U"
       desc: "Treating chronic and post-operative pain"
 ---
 Listen to the experts address considerations that will inform how you might treat this case.

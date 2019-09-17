@@ -4,11 +4,11 @@ date: 2019-05-13
 layout: learning-objective-video
 type: learning-objective-video
 weight: 2
-rimaryVideoId: "A9aLIXkf05Y"
+primaryVideoId: "SHjCA1Xg9TM"
 supplimentalVideo:
-    - id: "-akUss3uj0M"
+    - id: "PwJZCL3BfGU"
       desc: "Wisdom teeth extraction and exposure to opioid use"
-    - id: "N4eJXuCeSjA"
+    - id: "O75Wtm2mXTY"
       desc: "Prescribing appropriate and effective medications"
 ---
 Listen to the experts address considerations that will inform how you might treat this case.

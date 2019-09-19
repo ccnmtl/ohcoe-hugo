@@ -62,7 +62,7 @@ function demographicQuestions() {
         $('#role-specialty-modal').modal('show');
     }
 
-    // Render on Cumulative Review page
+    // Render on review pages
     if(document.getElementById('demographic-q-responses') &&
         role && speciality) {
         var roleText = DEMO_ANSWERS.role[role];

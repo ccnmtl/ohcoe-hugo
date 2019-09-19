@@ -4,6 +4,7 @@ date: 2019-05-10
 menu:
   main:
     parent: 'resources'
+    name: 'Training Resources'
 weight: 1
 ---
 ## Clinical Guidelines

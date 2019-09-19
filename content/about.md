@@ -4,6 +4,7 @@ date: 2019-05-10
 menu:
   main:
     parent: 'about'
+    name: 'The Project'
 weight: 1
 ---
 This "Opioid Training for Dental Providers" was developed by the Columbia

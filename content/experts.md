@@ -5,5 +5,6 @@ type: experts
 menu:
   main:
     parent: 'about'
+    name: 'The Experts'
 weight: 2
 ---

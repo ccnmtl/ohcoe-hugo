@@ -10,7 +10,7 @@ weight: 1
 ## Clinical Guidelines
 __American Dental Association information for Clinicians__
 
-* [Common Questions about Opioids](https://www.mouthhealthy.org/en/az-topics/o/opioids" target="_blank), for dentists, discusses types of drugs, pain management, and safe management of medications.
+* [Common Questions about Opioids](https://www.mouthhealthy.org/en/az-topics/o/opioids), for dentists, discusses types of drugs, pain management, and safe management of medications.
 * [The Opioid Crisis](https://www.ada.org/en/advocacy/advocacy-issues/opioid-crisis) has links to ADA and governmental policies and information for patients, as well as a link to the [ADA Center for Professional Success](https://success.ada.org/en/wellness/preventing-opioid-abuse) with its links to various ADA resources.
 * The ADA also sells a [“Practical Guide to Substance Use Disorders and Safe Prescribing”](https://ebusiness.ada.org/productcatalog/product.aspx?ID=8349) for member price $69.95.
 
@@ -21,8 +21,9 @@ __New York State Mandatory Prescriber Education Guidance for clinicians__
 
 __Federal Government Resources for clinicians__
 
-* The CDC’s Opioid [website](https://www.cdc.gov/drugoverdose/opioids/index.html) has links to discussions of the crisis history and trajectory (“understanding the epidemic”), Information for Providers, and a Resource Center.
+* The CDC’s Opioid [website](https://www.cdc.gov/drugoverdose/opioids/index.html) has links to discussions of the crisis history and trajectory ("understanding the epidemic"), Information for Providers, and a Resource Center.
 * The CDC’s Guideline for Prescribing Opioids for Chronic Pain (e.g. TMD) is available [here](https://www.cdc.gov/mmwr/volumes/65/rr/rr6501e1.htm?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fmmwr%2Fvolumes%2F65%2Frr%2Frr6501e1er.htm).
+* US Surgeon General's Website on Opioids includes [information on Naloxone](https://www.addiction.surgeongeneral.gov/).
 
 __American Dental Education Association__
 
@@ -32,7 +33,7 @@ __American Dental Education Association__
 
 __Screener and Opioid Assessment for Patients with Pain - Revised (SOAPP®-R)__
 
-* Tool available in [English](http://www.ccwjc.com/Forms/Chronic%20Pain/SOAPP-R.pdf)
+* Tool available in [English](https://www.oregonpainguidance.org/app/content/uploads/2016/05/SOAPP-R.pdf)
 * Tool available in [Spanish](http://www.venturafamilymed.org/images/resources/palcare/soapp-r-spanish.pdf)
 * Validation article: [Akbik H, Butler SF, Budman SH, Fernandez K et al. Validation and Clinical Application of the Screener and Opioid Assessment for Patients with Pain (SOAPP) J Pain Symptom Management 2006;32(3): 287-293.](https://doi.org/10.1016/j.jpainsymman.2006.03.010)
 
@@ -47,7 +48,7 @@ __Substance (Other Than Tobacco) Abuse Structured Assessment and Brief Intervent
 
 ## Websites of Interest
 
-* [Mental Health First Aid National Council for Behavioral Health (NCBH)](https://www.thenationalcouncil.org/opioid-use-disorders)
-* [National Academy of Medicine (NAM) Countering the U.S. Opioid Epidemic NAM Action Collaborative](https://nam.edu)
+* [National Council for Behavioral Health (NCBH)](https://www.thenationalcouncil.org/opioid-use-disorders)
+* [National Academy of Medicine (NAM)](https://nam.edu)
 * [Mental Health First Aid](www.thenationalcouncil.org)
-* [National Academy of Medicine Action Collaborative](https://www.youtube.com/watch?v=SM_uGFLe-p4&feature=youtu.be)
+* [National Academy of Medicine Action Collaborative: Countering the U.S. Opioid Epidemic](https://www.youtube.com/watch?v=SM_uGFLe-p4&feature=youtu.be)

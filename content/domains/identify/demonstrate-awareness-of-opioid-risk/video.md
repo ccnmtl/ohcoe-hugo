@@ -11,6 +11,6 @@ supplimentalVideo:
     - id: "7Wq4j4Kr8iw"
       desc: "Collecting important patient info on an initial visit"
 ---
-Listen to the experts address considerations that will inform how you might treat this case.
+Listen to the experts address considerations on topics related to the scenario you just read, which will inform how you might treat this case.
 
 If you would like to hear more on the topic of using tools to screen for substance disorders, please watch the additional resources below.

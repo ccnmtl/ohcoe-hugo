@@ -13,3 +13,24 @@ scores();
 progressIcons();
 analytics();
 demographicQuestions();
+
+function setEqualHeight(selector) {
+    var maxHeight = 0;
+
+    $(selector).each(function(idx, el) {
+        $(el).css('height', 'unset');
+        if ($(el).height() > maxHeight) {
+            maxHeight = $(el).height();
+        }
+    });
+
+    $(selector).each(function(idx, el) {
+        $(el).height(maxHeight);
+    });
+}
+
+setEqualHeight('.get-started-domain-sub');
+
+window.addEventListener('resize', function() {
+    setEqualHeight('.get-started-domain-sub');
+});

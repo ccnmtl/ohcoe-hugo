@@ -142,8 +142,15 @@ function analytics() {
                         while (!$(target).attr('href')) {
                             target = target.parentElement;
                         }
-                        /* eslint-disable scanjs-rules/assign_to_href */
-                        location.href = $(target).attr('href');
+
+                        var href = $(target).attr('href');
+                        var anchorTarget = $(target).attr('target');
+                        if (anchorTarget === '_blank') {
+                            window.open(href, '_blank');
+                        } else {
+                            /* eslint-disable scanjs-rules/assign_to_href */
+                            location.href = href;
+                        }
                     }
                 }
                 /* eslint-disable-next-line scanjs-rules/call_setTimeout */

@@ -31,13 +31,13 @@
                         </section>
                         <article>
                             <h2>Principal Video</h2>
-                            {{ partial "video.html" (dict "videoId" .Params.primaryVideoId "videoTitle" (printf "%s video" .Parent.Title)) }}
+                            {{ partial "video.html" (dict "videoId" .Params.primaryVideoId "videoTitle" (printf "%s video" .Parent.Title) "url" .Permalink) }}
                             <h2>Supplemental Video</h2>
                             <div class="row">
                             {{ range $video := .Params.supplimentalVideo }}
                                 <div class="col-md-6 supplimental-video">
                                     <p>{{ index $video "desc" }}</p>
-                                    {{ partial "video.html" (dict "videoId" (index $video "id") "videoTitle" "Supplimentary Video") }}
+                                    {{ partial "video.html" (dict "videoId" (index $video "id") "videoTitle" "Supplimentary Video" "url" .Permalink) }}
                                 </div>
                             {{ end }}
                             </div>

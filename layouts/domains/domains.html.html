@@ -24,7 +24,7 @@
                                     {{ .Content }}
                                 </div>
                                 <div class="col-md-7">
-                                    {{ partial "video.html" (dict "videoId" .Params.videoId "videoTitle" (printf "Introduction to the %s domain" .Title)) }}
+                                    {{ partial "video.html" (dict "videoId" .Params.videoId "videoTitle" (printf "Introduction to the %s domain" .Title) "url" .Permalink) }}
                                 </div>
                             </div>
                         </section>

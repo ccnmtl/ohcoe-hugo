@@ -13,12 +13,7 @@
 }
 
 .get-started-domain-sub {
-    @extend h5;
     display: block;
-    margin-bottom: 1em;
-    @include media-breakpoint-up(md) {
-        height: 4em;
-    }
 } 
 
 .get-started-spacer {
@@ -30,10 +25,6 @@
     flex-flow: column nowrap;
     align-items: center;
 
-    p {
-        margin-bottom: 0;
-    }
-    
     p, ul, .domain-sub-head  {
         align-self: flex-start;
     }
@@ -42,10 +33,6 @@
         padding: 0em 2em;
     }
     
-    ul {
-        padding: 0em 3em;
-    }
-
     // Domain Icons
     .domain-logo {
         width: 50%;

@@ -31,7 +31,7 @@
                         </p>
                     </div>
                     <div class="col-md-6">
-                        {{ partial "video.html" (dict "videoId" "x5JLs-ylLJA" "videoTitle" "Dr. Edelstein explains how to use the Project OHCOE site") }} 
+                        {{ partial "video.html" (dict "videoId" "5BTlhB0M67M" "videoTitle" "Dr. Edelstein explains how to use the Project OHCOE site" "url" .Permalink) }} 
                         <p class="get-started-lede-display">Burton Edelstein DDS MPH</p>
                         <p>
                             Burton Edelstein DDS MPH, is professor of Dental Medicine and Health Policy &amp; Management at Columbia University where he chairs the Section of Population Oral Health. He is also senior fellow in Public Policy and president emeritus of the DC-based <a href="http://www.cdhp.org" target="_blank">Children’s Dental Health Project</a>, a nonprofit policy organization that advances the oral health interests of children and their families			
@@ -55,7 +55,7 @@
                     </div>
                 </div>
                 <div class="row text-center">
-                    <div class="col">
+                    <div class="col-md">
                         <div class="icon-path">
                             {{ partial "icon-read.html" }} 
                         </div>
@@ -66,7 +66,7 @@
                             A short but real-world situation of a patient at risk for opioid addiction provides the first step.
                         </p>
                     </div>
-                    <div class="col">
+                    <div class="col-md">
                         <div class="icon-path">
                             {{ partial "icon-measure.html" }} 
                         </div>
@@ -77,7 +77,7 @@
                             Reflect upon your own understanding regarding the situation at hand with a pre-assessment.
                         </p>
                     </div>
-                    <div class="col">
+                    <div class="col-md">
                         <div class="icon-path">
                             {{ partial "icon-watch.html" }} 
                         </div>
@@ -88,7 +88,7 @@
                             Video interviews with experts provide a deeper dive with answers into how to handle the situation.
                         </p>
                     </div>
-                    <div class="col">
+                    <div class="col-md">
                         <div class="icon-path">
                             {{ partial "icon-compare.html" }} 
                         </div>
@@ -99,7 +99,7 @@
                             With this new information, reflect once again upon your current understanding with a post-assessment.
                         </p>
                     </div>
-                    <div class="col">
+                    <div class="col-md">
                         <div class="icon-path">
                             {{ partial "icon-analyze.html" }} 
                         </div>
@@ -135,7 +135,7 @@
                         <p class="sr-only">
                             Aimee is a clinical psychologist specializing in the treatment of substance use disorders. Her distinguished training includes a doctorate from The Chicago School of Professional Psychology and postdoctoral training at the Hazelden Betty Ford Foundation. 
                         </p>
-                        {{ partial "video.html" (dict "videoId" "AEJ1FoE9NTo" "videoTitle" "Meet Aimee Chiligiris PsyD") }} 
+                        {{ partial "video.html" (dict "videoId" "AEJ1FoE9NTo" "videoTitle" "Meet Aimee Chiligiris PsyD" "url" .Permalink) }} 
                     </div>
                     <div class="col-md-8">
                         <h3 aria-hidden="true">
@@ -154,7 +154,7 @@
                         <p class="sr-only">
                             Kareem is clinician who directs Dental Services for Brightpoint Health's 23 sites across New York City. He has over 10 years' experience providing dental care for the most vulnerable, marginalized, and challenging patients. 
                         </p>
-                        {{ partial "video.html" (dict "videoId" "Vdcs4tNg9Zw" "videoTitle" "Meet Kareem Merrick DDS") }} 
+                        {{ partial "video.html" (dict "videoId" "Vdcs4tNg9Zw" "videoTitle" "Meet Kareem Merrick DDS" "url" .Permalink) }} 
                     </div>
                     <div class="col-md-8">
                         <h3 aria-hidden="true">
@@ -173,7 +173,7 @@
                         <p class="sr-only">
                             Marc directs the Columbia University College of Dental Medicine's Advanced Education in General Dentistry Pro=gram. Reflecting his skill as a teacher, Marc was recognized as "Attending Dentist of the Year" at New York Presbyterian Hospital-Weill Cornell Medical Center. 
                         </p>
-                        {{ partial "video.html" (dict "videoId" "Hi1XPFoMuUs" "videoTitle" "Meet Marc Schlenoff DDS") }} 
+                        {{ partial "video.html" (dict "videoId" "Hi1XPFoMuUs" "videoTitle" "Meet Marc Schlenoff DDS" "url" .Permalink) }} 
                     </div>
                     <div class="col-md-8">
                         <h3 aria-hidden="true">
@@ -207,36 +207,20 @@
                             <a href="/domains/identify/" aria-label="Start the Identify domain">{{ partial "icon-feature-identify.html"  }}</a>
                         </div>
                         <h3 class="domain-title">Identify</h3>
-                        <p class="get-started-domain-sub text-center">
-                            Identify patients with or at risk for substance use disorders 
+                        <p class="get-started-domain-sub">
+                            Learn how to identify and take charge of your patients with, or at risk for, substance use disorders through the use of screening techniques and special tools.
                         </p>
-
                         <a href="/domains/identify/" class="btn btn-secondary btn-lg enter-domain">Enter Domain</a> 
-
-                        <p>Learn how to:</p>
-                        <ul>
-                            <li>Screen</li>
-                            <li>Use Tools</li>
-                            <li>Take Charge</li>
-                        </ul>
                     </div>
                     <div class="col-md-4 domains">
                         <div class="domain-logo">
                             <a href="/domains/refer/" aria-label="Start the Refer domain">{{ partial "icon-feature-refer.html" }}</a> 
                         </div>
                         <h3 class="domain-title">Refer</h3>
-                        <p class="get-started-domain-sub text-center">
-                            Refer patients' substance use&nbsp;disorders 
+                        <p class="get-started-domain-sub">
+                            Gain a deeper understanding of how opioid treatment works and how to refer your patients to other opioid service partners and community resources.
                         </p>
-
                         <a href="/domains/refer/" class="btn btn-secondary btn-lg enter-domain">Enter Domain</a> 
-
-                        <p>Learn how to:</p>
-                        <ul>
-                            <li>Understand Opioid Treatment</li>
-                            <li>Find Community Resources</li>
-                            <li>Partner with Opioid Services</li>
-                        </ul>
                     </div>
                     <div class="col-md-4 domains">
                         <div class="domain-logo">
@@ -245,18 +229,12 @@
                         <h3 class="domain-title">
                             Manage 
                         </h3>
-                        <p class="get-started-domain-sub text-center">
-                            Manage the clinical care of patients with substance use&nbsp;disorders. 
+                        <p class="get-started-domain-sub">
+                            Learn how to responsibly manage the clinical care of patients with substance use disorders though the consideration of patient drug history and the expansion of pain armamentarium.
                         </p>
                         <div class="text-center">
                             <a href="/domains/manage/" class="btn btn-secondary btn-lg">Enter Domain</a> 
                         </div>
-                        <p>Learn how to:</p>
-                        <ul>
-                            <li>Expand Pain Armamentarium</li>
-                            <li>Consider Patient Drug History</li>
-                            <li>Be Responsible</li>
-                        </ul>
                     </div>
                 </div>
             </div>

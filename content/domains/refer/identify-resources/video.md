@@ -11,6 +11,6 @@ supplimentalVideo:
     - id: "MT0vwhjGJA8"
       desc: "Dentists as facilitators in the referral process"
 ---
-Listen to the experts address considerations that will inform how you might treat this case.
+Listen to the experts address considerations on topics related to the scenario you just read, which will inform how you might treat this case.
 
 If you would like to hear more on the topic of understanding community resources for substance disorders, please watch the additional resources below.

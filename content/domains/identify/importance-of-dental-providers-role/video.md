@@ -11,7 +11,7 @@ supplimentalVideo:
     - id: "cNYme-eV0jc"
       desc: "Talking with patients about substance use"
 ---
-Listen to the experts address considerations that will inform how you might
+Listen to the experts address considerations on topics related to the scenario you just read, which will inform how you might
 treat this case.
 
 If you would like to hear more on the topic of dental providers' roles in

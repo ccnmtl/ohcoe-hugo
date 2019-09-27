@@ -146,6 +146,8 @@ function analytics() {
                         var href = $(target).attr('href');
                         var anchorTarget = $(target).attr('target');
                         if (anchorTarget === '_blank') {
+                        /* eslint-disable-next-line max-len */
+                        /* eslint-disable-next-line security/detect-non-literal-fs-filename */
                             window.open(href, '_blank');
                         } else {
                             /* eslint-disable scanjs-rules/assign_to_href */
@@ -157,6 +159,7 @@ function analytics() {
                 setTimeout(followLink, 200);
 
                 window.players.forEach(function(elt){
+                    elt.stopVideo();
                     // Guard against player object not being fully loaded
                     if (!elt.getCurrentTime) {
                         return;
@@ -165,17 +168,18 @@ function analytics() {
                     let tracker = window.videoTrackers[elt.a.id];
                     let totalTime = tracker.getTotalTime(elt.getCurrentTime());
                     let videoDuration = elt.getDuration();
+                    let videoData = elt.getVideoData();
                     if (totalTime > 0) {
                         gtag('event', 'video_interaction', {
                             'event_category': 'seconds_played',
-                            'event_label': elt.m.videoData.title,
+                            'event_label': videoData.title,
                             'value': totalTime
                         });
 
                         if (videoDuration > 0) {
                             gtag('event', 'video_interaction', {
                                 'event_category': 'seconds_played_pct',
-                                'event_label': elt.m.videoData.title,
+                                'event_label': videoData.title,
                                 'value': (totalTime / videoDuration) * 100
                             });
                         }

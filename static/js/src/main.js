@@ -31,6 +31,7 @@ function setEqualHeight(selector) {
 
 setEqualHeight('.get-started-domain-sub');
 
+/* eslint-disable-next-line scanjs-rules/call_addEventListener */
 window.addEventListener('resize', function() {
     setEqualHeight('.get-started-domain-sub');
 });

@@ -146,6 +146,8 @@ function analytics() {
                         var href = $(target).attr('href');
                         var anchorTarget = $(target).attr('target');
                         if (anchorTarget === '_blank') {
+                        /* eslint-disable-next-line max-len */
+                        /* eslint-disable-next-line security/detect-non-literal-fs-filename */
                             window.open(href, '_blank');
                         } else {
                             /* eslint-disable scanjs-rules/assign_to_href */

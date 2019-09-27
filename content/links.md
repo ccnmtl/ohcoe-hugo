@@ -31,17 +31,17 @@ __American Dental Education Association__
 
 ## Screening and Assessment Tools
 
-__Screener and Opioid Assessment for Patients with Pain - Revised (SOAPP®-R)__
+* The [NIH National Institute on Drug Abuse (NIDA) Screening and Prevention](https://www.drugabuse.gov/nidamed-medical-health-professionals/screening-tools-prevention) publishes a [Screening and Assessment Tools Chart](https://www.drugabuse.gov/nidamed-medical-health-professionals/screening-tools-resources/chart-screening-tools).
+* The SAMHSA Center for Substance Abuse Treatment (CSAT) publishes [Clinical Guidelines for the Use of Buprenorphine in the Treatment of Opioid Addiction, Patient Assessment](https://www.ncbi.nlm.nih.gov/books/NBK64237/)
 
-* Tool available in [English](https://www.oregonpainguidance.org/app/content/uploads/2016/05/SOAPP-R.pdf)
-* Tool available in [Spanish](http://www.venturafamilymed.org/images/resources/palcare/soapp-r-spanish.pdf)
-* Validation article: [Akbik H, Butler SF, Budman SH, Fernandez K et al. Validation and Clinical Application of the Screener and Opioid Assessment for Patients with Pain (SOAPP) J Pain Symptom Management 2006;32(3): 287-293.](https://doi.org/10.1016/j.jpainsymman.2006.03.010)
 
-__Current Opioid Misuse Measure (COMM)™__
+## Intervention Tools ##
 
-* [This tool](http://mytopcare.org/wp-content/uploads/2013/05/COMM.pdf) provides a brief patient self-assessment to monitor chronic pain patients on opioid therapy.
+__Substance Abuse and Mental Health Services Administration (SAMHSA)__
 
-## INTERVENTION TOOL ##
+* [Medication-Assisted treatment of Opioid Use Disorder Pocket Guide](https://store.samhsa.gov/product/Medication-Assisted-Treatment-of-Opioid-Use-Disorder-Pocket-Guide/SMA16-4892PG)
+* [Introduction to Medications for Opioid Use Disorder Treatment](https://store.samhsa.gov/product/TIP-63-Medications-for-Opioid-Use-Disorder-Introduction-to-Medications-for-Opioid-Use-Disorder-Treatment-Part-1-of-5-/SMA19-5063PT1)
+
 __Substance (Other Than Tobacco) Abuse Structured Assessment and Brief Intervention (SBIRT)__
 
 * [SBIRT](http://www.integration.samhsa.gov/clinical-practice/sbirt) is an evidence-based practice used to identify, reduce, and prevent problematic use, abuse, and dependence on alcohol and illicit drugs.
@@ -50,5 +50,4 @@ __Substance (Other Than Tobacco) Abuse Structured Assessment and Brief Intervent
 
 * [National Council for Behavioral Health (NCBH)](https://www.thenationalcouncil.org/opioid-use-disorders)
 * [National Academy of Medicine (NAM)](https://nam.edu)
-* [Mental Health First Aid](www.thenationalcouncil.org)
 * [National Academy of Medicine Action Collaborative: Countering the U.S. Opioid Epidemic](https://www.youtube.com/watch?v=SM_uGFLe-p4&feature=youtu.be)

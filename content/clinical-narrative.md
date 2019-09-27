@@ -1,9 +1,10 @@
 ---
-title: Clinical Narratives 
+title: 'Clinical Narratives: Building Rapport with Your Patients'
 date: 2019-05-10
 menu:
   main:
     parent: 'resources'
+    name: 'Clinical Narratives'
 weight: 2
 ---
 Below are additional resources to help navigate patient relationships in clinical scenarios related to opioid and substance use.

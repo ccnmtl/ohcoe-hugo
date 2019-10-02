@@ -25,9 +25,7 @@
                         {{ .Content }}
                         <p>
                             Congratulations on completing this domain. Below
-                            are results for you to review. From here, you can
-                            review individual learning objectives, print out
-                            your results, or continue to the next domain.
+                            are results for you to review. 
                         </p>
                         <div id="review-no-score">
                             <p>At least one pair of pre and post assessment questions need to be answered for scores to appear.</p>
@@ -79,6 +77,11 @@
                                 </div>
                             </div>
                             <h2>Detailed Score</h2>
+                            <p>
+                                From here, you can review individual learning
+                                objectives, print out your results, or continue to
+                                the next domain.
+                            </p>
                             <div id="{{ anchorize .Parent.Weight }}" class="domain-results">
                                 <table class="table">
                                     <thead>
@@ -93,6 +96,12 @@
                                     </tbody> 
                                 </table>
                             </div>
+                            <h2>Clinical Narratives</h2>
+                            <p>
+                                Read <a href="/clinical-narrative#{{ .Parent.Weight }}">the clinical narratives for this domain</a> for
+                                helpful prompts that can structure, guide, and
+                                frame your real-world conversations.
+                            </p>
                             <div id="demographic-q-responses" style="display: none">
                                 <h2>About You</h2>
                             </div>

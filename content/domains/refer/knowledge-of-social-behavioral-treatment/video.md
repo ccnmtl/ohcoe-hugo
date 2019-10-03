@@ -4,7 +4,7 @@ date: 2019-05-13
 layout: learning-objective-video
 type: learning-objective-video
 weight: 2
-primaryVideoId: "AK-YLo8hi1c"
+primaryVideoId: "yrUhjRLudDQ"
 supplimentalVideo:
     - id: "a-fzWWaVvUY"
       desc: "Non-opioid treatment options for pain"

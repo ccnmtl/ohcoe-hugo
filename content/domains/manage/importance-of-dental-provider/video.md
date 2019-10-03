@@ -4,7 +4,7 @@ date: 2019-05-13
 layout: learning-objective-video
 type: learning-objective-video
 weight: 2
-primaryVideoId: "SHjCA1Xg9TM"
+primaryVideoId: "Mrj6bee00yM"
 supplimentalVideo:
     - id: "PwJZCL3BfGU"
       desc: "Wisdom teeth extraction and exposure to opioid use"

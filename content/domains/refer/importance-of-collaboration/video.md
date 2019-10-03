@@ -4,7 +4,7 @@ date: 2019-05-13
 layout: learning-objective-video
 type: learning-objective-video
 weight: 2
-primaryVideoId: "-7LGjlYYMcs"
+primaryVideoId: "gtuhieGMl1I"
 supplimentalVideo:
     - id: "BT-jXchW7Zs"
       desc: "Advantages of E-prescribing"

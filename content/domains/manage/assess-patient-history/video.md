@@ -4,7 +4,7 @@ date: 2019-05-13
 layout: learning-objective-video
 type: learning-objective-video
 weight: 2
-primaryVideoId: "eYygt-QdcJI"
+primaryVideoId: "t0ZRh4nAgzw"
 supplimentalVideo:
     - id: "MvJ-TqpFCI4"
       desc: "Patient perception of dental provider care"

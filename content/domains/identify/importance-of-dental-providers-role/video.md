@@ -4,7 +4,7 @@ date: 2019-05-13
 layout: learning-objective-video
 type: learning-objective-video
 weight: 2
-primaryVideoId: "LPdY86dHsWI"
+primaryVideoId: "JZm0InzI7ZQ"
 supplimentalVideo:
     - id: "88nysb2domE"
       desc: "Dentists' communication with patients"

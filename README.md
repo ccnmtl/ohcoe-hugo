@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ccnmtl/ohcoe-hugo.svg?branch=master)](https://travis-ci.org/ccnmtl/ohcoe-hugo)
+
 Project OHCOE is a web-based resource to help teach dental practitioners how to
 help their patients that may an opioid problem.
 

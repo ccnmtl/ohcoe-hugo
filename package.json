@@ -46,7 +46,7 @@
   },
   "homepage": "https://github.com/ccnmtl/ohcoe-hugo#readme",
   "dependencies": {
-    "@sentry/browser": "^5.11.1",
+    "@sentry/browser": "^5.11.2",
     "popper.js": "^1.16.1"
   }
 }

@@ -41,7 +41,7 @@
     "nodemon": "^2.0.2",
     "postcss-cli": "^7.1.0",
     "start-server-and-test": "^1.10.8",
-    "webpack": "^4.41.5",
+    "webpack": "^4.41.6",
     "webpack-cli": "^3.3.10"
   },
   "homepage": "https://github.com/ccnmtl/ohcoe-hugo#readme",

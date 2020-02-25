@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.7.4",
-    "axe-core": "^3.4.1",
+    "axe-core": "^3.5.1",
     "bootstrap": "~4.4.1",
     "cypress": "^3.8.3",
     "cypress-axe": "^0.5.3",

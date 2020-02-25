@@ -36,6 +36,7 @@ describe('Demographic Questions', function() {
 
     it('Sets the value of the "other" radio button when its text box blurs', function() {
         cy.visit('http://localhost:1313/domains/identify/');
+        cy.get('#role-specialty-modal').should('not.have.css', 'display', 'none');
         cy.get('#other-role').click();
         cy.get('#other-role-text').type('Space Lizard').blur();
         cy.get('#other-role').should('have.value', 'Space Lizard');

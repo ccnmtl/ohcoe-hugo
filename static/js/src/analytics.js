@@ -100,6 +100,10 @@ function analytics() {
     }
 
     function onPlayerStateChange(event) {
+        // Return if target is not yet instantiated
+        if (!event.target.a) {
+            return;
+        }
         var tracker = window.videoTrackers[event.target.a.id];
         var time = event.target.getCurrentTime();
 
@@ -112,6 +116,8 @@ function analytics() {
 
     var players = new Array();
     var videoTrackers = new Object();
+    window.players = players;
+    window.videoTrackers = videoTrackers;
 
     window.onYouTubeIframeAPIReady = function() {
         // Reduce over an array of iFrames on the page, instantiate new
@@ -161,7 +167,7 @@ function analytics() {
                 window.players.forEach(function(elt){
                     elt.stopVideo();
                     // Guard against player object not being fully loaded
-                    if (!elt.getCurrentTime) {
+                    if (!elt.getCurrentTime || !elt.a) {
                         return;
                     }
 
@@ -188,9 +194,6 @@ function analytics() {
             });
         });
     };
-
-    window.players = players;
-    window.videoTrackers = videoTrackers;
 }
 
 export { analytics };

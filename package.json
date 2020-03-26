@@ -11,7 +11,7 @@
     "watch-scss": "node-sass --output static/css static/scss/main.scss && postcss -u autoprefixer -r static/css/main.css",
     "build-scss": "nodemon -e scss -x 'npm run watch-scss'",
     "eslint": "eslint static/js/*.js",
-    "watch": "webpack --watch",
+    "watch": "webpack --watch --mode development",
     "build": "webpack"
   },
   "repository": {

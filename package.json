@@ -24,7 +24,7 @@
     "url": "https://github.com/ccnmtl/ohcoe-hugo/issues"
   },
   "devDependencies": {
-    "autoprefixer": "^9.7.6",
+    "autoprefixer": "^9.8.0",
     "axe-core": "^3.5.3",
     "bootstrap": "~4.5.0",
     "cypress": "^4.5.0",

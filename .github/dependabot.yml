@@ -1,0 +1,19 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "10:00"
+  open-pull-requests-limit: 10
+  versioning-strategy: increase-if-necessary
+  ignore:
+  - dependency-name: webpack
+    versions:
+    - 5.20.1
+    - 5.34.0
+  - dependency-name: cypress
+    versions:
+    - 6.7.0
+    - 6.7.1
+    - 6.9.0

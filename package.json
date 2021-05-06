@@ -27,7 +27,7 @@
     "autoprefixer": "^9.8.0",
     "axe-core": "^4.0.0",
     "bootstrap": "~4.6.0",
-    "cypress": "^6.1.0",
+    "cypress": "^7.2.0",
     "cypress-axe": "^0.12.0",
     "eslint": "~7.25.0",
     "eslint-config-scanjs": "^1.0.0-beta4",

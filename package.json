@@ -37,7 +37,7 @@
     "jquery": "^3.5.1",
     "jsdom": "~16.5.0",
     "mocha": "~8.4.0",
-    "node-sass": "^5.0.0",
+    "node-sass": "^6.0.0",
     "nodemon": "^2.0.4",
     "postcss-cli": "^7.1.1",
     "start-server-and-test": "^1.11.0",

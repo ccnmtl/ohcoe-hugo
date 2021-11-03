@@ -1,4 +1,3 @@
-/* eslint-disable scanjs-rules/identifier_localStorage */
 function scores() {
     /* Display Results to Users */
     $('.domain-results').each(function(idx, domainResults){

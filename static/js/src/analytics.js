@@ -1,4 +1,3 @@
-/* eslint-disable scanjs-rules/identifier_localStorage */
 import { sanitize } from './utils.js';
 
 function analytics() {
@@ -63,7 +62,6 @@ function analytics() {
     /* Google Analytics YouTube Events */
     var tag = document.createElement('script');
     tag.id = 'iframe-api';
-    /* eslint-disable-next-line scanjs-rules/assign_to_src */
     tag.src = 'https://www.youtube.com/iframe_api';
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
@@ -156,12 +154,10 @@ function analytics() {
                         /* eslint-disable-next-line security/detect-non-literal-fs-filename */
                             window.open(href, '_blank');
                         } else {
-                            /* eslint-disable scanjs-rules/assign_to_href */
                             location.href = href;
                         }
                     }
                 }
-                /* eslint-disable-next-line scanjs-rules/call_setTimeout */
                 setTimeout(followLink, 200);
 
                 window.players.forEach(function(elt){

@@ -1,4 +1,3 @@
-/* eslint-disable scanjs-rules/identifier_localStorage */
 import {
     round, mean, sliceScore, applySlicedScore
 } from './utils.js';

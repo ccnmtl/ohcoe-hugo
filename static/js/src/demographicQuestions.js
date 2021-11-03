@@ -1,4 +1,3 @@
-/* eslint-disable scanjs-rules/identifier_localStorage */
 import { sanitize } from './utils.js';
 
 function demographicQuestions() {

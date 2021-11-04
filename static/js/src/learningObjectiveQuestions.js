@@ -1,4 +1,3 @@
-/* eslint-disable scanjs-rules/identifier_localStorage */
 function learningObjectiveQuestions() {
     /* Get and Set Values from Local Storage */
     var learningObectiveTitle = document.querySelector(

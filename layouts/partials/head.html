@@ -5,13 +5,12 @@
     <meta name="author" content="Columbia University, Center for Teaching and Learning">
     <title>{{ .Title }}</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ $.Site.GoogleAnalytics }}"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
-        gtag('config', '{{ $.Site.GoogleAnalytics }}', { 'anonymize_ip': true });
+        gtag('config', '{{ .Site.GoogleAnalytics }}', { 'anonymize_ip': true });
     </script>
     <!-- {{ .Site.Params.gaID }} -->
     <link rel="stylesheet" type="text/css" href="{{ "css/main.css" | absURL }}" />

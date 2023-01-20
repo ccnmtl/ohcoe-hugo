@@ -1,7 +1,7 @@
 baseURL = "https://ohcoe.ctl.columbia.edu"
 languageCode = "en-us"
 title = "Oral Health Care in the Opioid Crisis"
-googleAnalytics = "UA-51144540-32"
+googleAnalytics = "G-QNPRH4YYFB"
 
 [menu]
   [[menu.main]]

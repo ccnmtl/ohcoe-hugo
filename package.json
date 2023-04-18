@@ -7,7 +7,7 @@
     "serve": "make runserver",
     "cypress:test": "cypress run",
     "cypress:open": "cypress open",
-    "test": "start-server-and-test serve http://localhost:1313 cypress:test",
+    "test": "start-server-and-test serve http://127.0.0.1:1313 cypress:test",
     "watch-scss": "node-sass --output static/css static/scss/main.scss && postcss -u autoprefixer -r static/css/main.css",
     "build-scss": "nodemon -e scss -x 'npm run watch-scss'",
     "eslint": "eslint static/js/*.js",

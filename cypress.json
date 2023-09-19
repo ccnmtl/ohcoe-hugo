@@ -1,7 +1,0 @@
-{
-    "blockHosts": [
-        "*googletagmanager.com",
-        "*google-analytics.com",
-        "*doubleclick.net"
-    ]
-}

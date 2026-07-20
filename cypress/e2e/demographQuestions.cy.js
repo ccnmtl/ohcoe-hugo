@@ -37,11 +37,12 @@ describe('Demographic Questions', function() {
     it('Sets the value of the "other" radio button when its text box blurs', function() {
         cy.visit('http://localhost:1313/domains/identify/');
         cy.get('#role-specialty-modal').should('not.have.css', 'display', 'none');
+        cy.get('#role-specialty-modal').should('have.focus');
         cy.get('#other-role').click();
-        cy.get('#other-role-text').type('Space Lizard').blur();
+        cy.get('#other-role-text').type('Space Lizard').trigger('blur');
         cy.get('#other-role').should('have.value', 'Space Lizard');
         cy.get('#other-speciality').click();
-        cy.get('#other-speciality-text').type('Space Lizard').blur();
+        cy.get('#other-speciality-text').type('Space Lizard').trigger('blur');
         cy.get('#other-speciality').should('have.value', 'Space Lizard');
     });
 
@@ -55,11 +56,12 @@ describe('Demographic Questions', function() {
 
     it('Displays the answers on the cumulative review page', function() {
         cy.visit('http://localhost:1313/domains/identify/');
+        cy.get('#role-specialty-modal').should('have.focus');
         cy.get('#faculty').click();
         cy.get('#other-speciality').click();
-        cy.get('#other-speciality-text').type('Space Lizard').blur();
+        cy.get('#other-speciality-text').type('Space Lizard').trigger('blur');
+        cy.get('#other-speciality').should('have.value', 'Space Lizard');
         cy.get('#demographic-info').submit();
-
         cy.visit('http://localhost:1313/cumulative-review/');
         cy.get('#demographic-q-responses').contains('Faculty');
         cy.get('#demographic-q-responses').contains('Space Lizard');
